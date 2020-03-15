@@ -1,1 +1,4 @@
 .DS_Store
+
+# exclude vs code files
+/.vscode/*
