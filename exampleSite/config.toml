@@ -1,5 +1,8 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "Empire Sample Site"
+title = "Empire Podcast Network"
 themesdir = "../.."
 theme = "empire"
+
+[params]
+copyright_notice = "Copyright 2020 [Vic Hudson](https://vichudson1.com) & [Scott Willsey](https://scottwillsey.com)"

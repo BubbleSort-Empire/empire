@@ -3,11 +3,11 @@
 
 name = "Empire"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
-tags = []
-features = []
+licenselink = "https://github.com/vichudson1/empire/blob/master/LICENSE"
+description = "A Hugo theme suitable for running a podcast network."
+homepage = "https://github.com/vichudson1/empire/"
+tags = ["podcast", "responsive"]
+features = ["podcast"]
 min_version = "0.41"
 
 [author]
