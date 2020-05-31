@@ -1,0 +1,9 @@
+{{ define "main" }}
+<ul>
+    {{ range $index, $key := (sort (union (where .Site.Pages "Type" "podcast") (where .Site.Pages "Type" "aggregatedPodcast") ) ".Params.title" "asc") }}
+    <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
