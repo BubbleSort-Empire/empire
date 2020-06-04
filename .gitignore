@@ -2,3 +2,7 @@
 
 # exclude vs code files
 /.vscode/*
+
+# exclude build output
+/exampleSite/public
+/exampleSite/resources/_gen
