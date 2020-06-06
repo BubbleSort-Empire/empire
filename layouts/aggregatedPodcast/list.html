@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ with  .OutputFormats.Get "showslist" -}}
+  <a href="{{ .RelPermalink }}">Shows</a>
+{{- end }}
+<h2>{{ .CurrentSection.Title }} Episode List</h2>
+<ul>
+    {{ range where .Site.Pages "Section" .Section }}
+        {{ .Render "masterli" }}
+    {{ end }}
+</ul>
+{{ end }}

@@ -4,5 +4,26 @@ title = "Empire Podcast Network"
 themesdir = "../.."
 theme = "empire"
 
+
+[outputFormats]
+  [outputFormats.jsonfeed]
+    mediaType = "application/json"
+    baseName = "feed"
+    isPlainText = true
+  [outputFormats.showslist]
+    mediaType = "text/html"
+    baseName = "index"
+    isPlainText = false
+    path = "shows"
+
+[outputs]
+  home = ["html", "rss", "showslist"]
+  page = ["html"]
+  section = ["html", "rss", "showslist"]
+
+
+
+
+
 [params]
 copyright_notice = "Copyright 2020 [Vic Hudson](https://vichudson1.com) & [Scott Willsey](https://scottwillsey.com)"

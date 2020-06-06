@@ -1,4 +1,5 @@
 {{ define "main" }}
+<h1>All Shows hosted on {{ .Site.Title}}</h1>
 <ul>
     {{ range $index, $key := (sort (union (where .Site.Pages "Type" "podcast") (where .Site.Pages "Type" "aggregatedPodcast") ) ".Params.title" "asc") }}
     <li>
