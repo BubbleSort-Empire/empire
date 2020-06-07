@@ -1,8 +1,12 @@
 {{ define "main" }}
 <h2>{{ .CurrentSection.Title }} Episode List</h2>
+
+{{ $paginator := .Paginate .Pages.ByDate.Reverse }}
+
 <ul>
-    {{ range .Pages  }}
+    {{ range $paginator.Pages }}
     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{ end }}
 </ul>
+{{ partial "pagination.html" . }}
 {{ end }}
