@@ -1,7 +1,7 @@
 {{ define "main" }}
 <h1>All Shows hosted on {{ .Site.Title}}</h1>
 <ul>
-    {{ range $index, $key := (sort (union (where .Site.Pages "Type" "podcast") (where .Site.Pages "Type" "aggregatedPodcast") ) ".Params.title" "asc") }}
+    {{ range $index, $key := (sort (union (where .Pages "Type" "podcast") (where .Pages "Type" "aggregatedPodcast") ) ".Params.title" "asc") }}
     <li>
         <a href="{{ .Permalink }}">{{ .Title }}</a>
     </li>
