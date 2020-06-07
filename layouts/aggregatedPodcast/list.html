@@ -2,9 +2,13 @@
 <h2>{{ .CurrentSection.Title }} Episode List</h2>
 <h3>Currently viewing episodes from all {{ with  .OutputFormats.Get "showslist" -}} <a href="{{ .RelPermalink }}"> Sub Shows</a>{{- end }}</h3>
 
+{{ $paginator := .Paginate (where (where .Site.Pages.ByDate.Reverse "Section" .Section) "Type" "episode") }}
+
 <ul>
-    {{ range where .Site.Pages "Section" .Section }}
-        {{ .Render "masterli" }}
+    {{ range $paginator.Pages }}
+        {{ .Render "aggregatedListItem" }}
     {{ end }}
 </ul>
+
+{{ partial "pagination.html" . }}
 {{ end }}
