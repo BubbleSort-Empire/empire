@@ -4,6 +4,7 @@ title = "Empire Podcast Network"
 themesdir = "../.."
 theme = "empire"
 
+Paginate = 3
 
 [outputFormats]
   [outputFormats.jsonfeed]

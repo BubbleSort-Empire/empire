@@ -6,10 +6,13 @@
     {{- end }} 
 </h3>
 
+{{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "episode") }}
 
 <ul>
-    {{ range (where .Site.Pages.ByDate.Reverse "Type" "episode") }}
+    {{ range $paginator.Pages }}
         {{ .Render "masterli" }}
     {{ end }}
 </ul>
+
+{{ partial "pagination.html" . }}
 {{ end }}
