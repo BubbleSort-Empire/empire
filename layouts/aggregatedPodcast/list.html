@@ -6,7 +6,7 @@
 
 <ul>
     {{ range $paginator.Pages }}
-        {{ .Render "aggregatedListItem" }}
+        {{ .Render "listItems/aggregatedListItem" }}
     {{ end }}
 </ul>
 
