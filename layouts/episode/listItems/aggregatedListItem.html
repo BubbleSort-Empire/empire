@@ -1,4 +1,4 @@
 <li>
-    <h4><a href="{{ .Permalink }}">{{ .CurrentSection.Title }}: {{ .Title }}</a></h4>
-    <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+    <h4><a href="{{ .Permalink }}">{{ .Render "listItems/aggregatedListTitle" }}</a></h4>
+    {{ .Render "listItems/baseListItem" }}
 </li>

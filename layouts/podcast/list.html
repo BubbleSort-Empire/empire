@@ -5,7 +5,7 @@
 
 <ul>
     {{ range $paginator.Pages }}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ .Render "listItems/listItem" }}
     {{ end }}
 </ul>
 {{ partial "pagination.html" . }}
