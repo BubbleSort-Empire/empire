@@ -1,0 +1,4 @@
+<div>
+    <h1>Welcome to {{ .Site.Title}}</h1>
+    <h3>Currently viewing episodes from all {{ with  .OutputFormats.Get "showslist" -}} <a href="{{ .RelPermalink }}">Shows</a>{{- end }}</h3>
+</div>

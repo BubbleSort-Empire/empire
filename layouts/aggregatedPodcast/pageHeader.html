@@ -1,0 +1,4 @@
+<div>
+    <h2>{{ .CurrentSection.Title }} Episode List</h2>
+    <h3>Currently viewing episodes from all {{ with  .OutputFormats.Get "showslist" -}} <a href="{{ .RelPermalink }}"> Sub Shows</a>{{- end }}</h3>
+</div>

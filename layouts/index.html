@@ -1,13 +1,7 @@
 {{ define "main" }}
-<h1>Welcome to {{ .Site.Title}}</h1>
-<h3>Currently viewing episodes from all 
-    {{ with  .OutputFormats.Get "showslist" -}}
-    <a href="{{ .RelPermalink }}">Shows</a>
-    {{- end }} 
-</h3>
+{{ partial "masterListHeader" }}
 
 {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "episode") }}
-
 <ul>
     {{ range $paginator.Pages }}
         {{ .Render "listItems/masterListItem" }}

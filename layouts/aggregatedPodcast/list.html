@@ -1,13 +1,10 @@
 {{ define "main" }}
-<h2>{{ .CurrentSection.Title }} Episode List</h2>
-<h3>Currently viewing episodes from all {{ with  .OutputFormats.Get "showslist" -}} <a href="{{ .RelPermalink }}"> Sub Shows</a>{{- end }}</h3>
-
-{{ $paginator := .Paginate (where (where .Site.Pages.ByDate.Reverse "Section" .Section) "Type" "episode") }}
-
+{{- .Render "pageHeader" -}}
+{{- $paginator := .Paginate (where (where .Site.Pages.ByDate.Reverse "Section" .Section) "Type" "episode") -}}
 <ul>
-    {{ range $paginator.Pages }}
-        {{ .Render "listItems/aggregatedListItem" }}
-    {{ end }}
+    {{- range $paginator.Pages -}}
+        {{- .Render "listItems/aggregatedListItem" -}}
+    {{- end -}}
 </ul>
 
 {{ partial "pagination.html" . }}

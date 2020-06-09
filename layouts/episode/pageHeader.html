@@ -1,0 +1,5 @@
+<h1>{{ if ne .CurrentSection.Parent.Title .Site.Title }}{{ .CurrentSection.Parent.Title }} - {{ end }}{{ .CurrentSection.Title }}</h1>
+<h2>{{ .Title }}</h2>
+<div>
+    {{ .Params.description }}
+</div>
