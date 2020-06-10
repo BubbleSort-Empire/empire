@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ partial "masterListHeader" }}
+{{ partial "indexListHeader" . }}
 
 {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "episode") }}
 <ul>
