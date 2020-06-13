@@ -22,9 +22,19 @@ Paginate = 3
   page = ["html"]
   section = ["html", "rss", "showslist"]
 
+[menu]
 
+[[menu.main]]
+  name = "About"
+  weight = 1
+  url = "about/"
+  post = "navigation-link"
 
-
+[[menu.main]]
+  name = "Hosts"
+  weight = 2
+  url = "hosts/"
+  post = "navigation-link"
 
 [params]
 copyright_notice = "Copyright 2020 [Vic Hudson](https://vichudson1.com) & [Scott Willsey](https://scottwillsey.com)"
