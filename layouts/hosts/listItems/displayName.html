@@ -1,0 +1,5 @@
+{{- if ne .Params.nickName "" -}}
+    {{- .Params.nickName -}}
+{{- else -}}
+    {{ .Params.firstName }} {{ .Params.lastName }}
+{{- end -}}
