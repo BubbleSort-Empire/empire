@@ -1,0 +1,8 @@
+{{ define "main" }}
+<h2>Hosts of {{ .Site.Title }}</h2>
+<ul>
+    {{ range .Pages  }}
+        {{ .Render "listItems/hostListItem" }}
+    {{ end }}
+</ul>
+{{ end }}
