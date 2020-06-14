@@ -31,15 +31,15 @@ Paginate = 3
   post = "navigation-link"
 
 [[menu.main]]
-  name = "About"
-  weight = 3
-  url = "about/"
-  post = "navigation-link"
-
-[[menu.main]]
   name = "Hosts"
   weight = 2
   url = "hosts/"
+  post = "navigation-link"
+
+[[menu.main]]
+  name = "About"
+  weight = 3
+  url = "about/"
   post = "navigation-link"
 
 [params]

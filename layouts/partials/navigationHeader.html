@@ -1,9 +1,19 @@
-<input type="checkbox" id="menu-toggle" />
-<label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
-<ul class="navigation-list">
-    {{- with .Site.Menus.main -}}
-    {{- range sort . -}}
-    <li class="navigation-item"><a class="{{ .Post }}" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
-    {{- end -}}
-    {{- end -}}
-</ul>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <!-- Site name/logo -->
+    <a class="navbar-brand" href="#">Empire Theme</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+        {{- with .Site.Menus.main -}}
+        {{- range sort . -}}
+        <li class="nav-item"><a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+        {{- end -}}
+        {{- end -}}
+        </ul>
+    </div>
+</nav>
