@@ -28,19 +28,21 @@ Paginate = 3
   name = "Home"
   weight = 1
   url = "/"
-  post = "navigation-link"
+  
+[[menu.main]]
+  name = "Shows"
+  weight = 2
+  url = "shows/"
 
 [[menu.main]]
   name = "Hosts"
-  weight = 2
+  weight = 4
   url = "hosts/"
-  post = "navigation-link"
 
 [[menu.main]]
   name = "About"
-  weight = 3
+  weight = 6
   url = "about/"
-  post = "navigation-link"
 
 [params]
 copyright_notice = "Copyright 2020 [Vic Hudson](https://vichudson1.com) & [Scott Willsey](https://scottwillsey.com)"
