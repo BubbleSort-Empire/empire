@@ -1,18 +1,5 @@
 {{ define "main" }}
-<h2>{{ .Render "listItems/displayName" }}</h2>
-<img alt="{{ .Render "listItems/displayName" }}" src="{{ .Site.BaseURL }}/images/hosts/{{ .Params.image }}" class="img-fluid" width="250px">
-<div>
-    <p>
-        {{ .Content }}
-    </p>
-</div>
-<h3>Hosts These Shows</h3>
-<div>
-    <!-- list of shows hosted by host goes here using partials/podcastViews/artSquareListItem -->
-    <!-- this will be a horizontal list of show art and title linking to the shows index page -->
-</div>
-<h3>All Episode Appearances</h3>
-<div>
-    <!-- scrolling paginated list of all network episodes in which host appears goes here using episode/listItems/masterListItem -->
-</div>
+{{ .Render "views/headerView" }}
+{{ .Render "views/hostedShows" }}
+{{ .Render "views/hostedEpisodes" }}
 {{ end }}

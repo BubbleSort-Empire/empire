@@ -1,0 +1,13 @@
+<h3>Hosts These Shows</h3>
+{{- $.Scratch.Set "host-name" .File.BaseFileName -}}
+<div>
+    <!-- scrolling paginated list of all network episodes in which host appears goes here using episode/listItems/masterListItem -->
+    {{ range $page := (sort (union (where .Site.Pages "Type" "podcast") (where .Site.Pages "Type" "aggregatedPodcast") ) ".Params.title" "asc") }}
+      {{- $.Scratch.Set "show" . -}}
+      {{ range $page.Params.hosts }}
+        {{ if eq  . ($.Scratch.Get "host-name") }}
+            {{ partial "podcastViews/artSquareListItem" ($.Scratch.Get "show") }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+</div>

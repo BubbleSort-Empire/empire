@@ -1,0 +1,11 @@
+<h3>All Episode Appearances</h3>   
+{{ $.Scratch.Set "host-name" .File.BaseFileName }}
+<div>
+  {{ range $page := where $.Site.Pages "Type" "episode" }}
+        {{ range $page.Params.hosts }}
+            {{ if eq  . ($.Scratch.Get "host-name") }}
+              {{ $page.Render "listItems/masterListItem" }} 
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</div>
