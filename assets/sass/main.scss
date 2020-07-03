@@ -1,8 +1,9 @@
 @import 'colors';
 @import 'layout';
+@import 'functions';
 
 body {
-	background-color: $body-bg-color;
+	background-color: $background-color;
 }
 
 div#content {
@@ -16,4 +17,11 @@ div#content {
 			color: $links-active;
 		}
 	}
+}
+
+ul .pagination {
+	li {
+		padding: $pagination-padding;
+	}
+	padding: $pagination-padding;
 }
