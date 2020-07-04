@@ -22,7 +22,7 @@ div#content {
 	}
 
 	@media only screen and (min-width: 1280px) {
-		padding: $content-padding-topbottom $content-padding-leftright-widest;
+		padding: $content-padding-topbottom-widest $content-padding-leftright-widest;
 	}
 }
 
