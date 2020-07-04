@@ -6,8 +6,7 @@ body {
 	background-color: $background-color;
 }
 
-div#content {
-	padding: $content-padding-topbottom $content-padding-leftright;
+div.container-md {
 	a {
 		color: $links;
 		&:hover {
@@ -17,12 +16,4 @@ div#content {
 			color: $links-active;
 		}
 	}
-	@media only screen and (max-width: 700px) {
-		padding: $content-padding-topbottom $content-padding-leftright-mobile;
-	}
-
-	@media only screen and (min-width: 1280px) {
-		padding: $content-padding-topbottom-widest $content-padding-leftright-widest;
-	}
 }
-
