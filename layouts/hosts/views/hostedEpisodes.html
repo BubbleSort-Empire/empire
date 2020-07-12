@@ -1,11 +1,11 @@
-<h3>All Episode Appearances</h3>   
-{{ $.Scratch.Set "host-name" .File.BaseFileName }}
+{{- $episodes := where $.Site.Pages "Type" "episode" -}}
+{{- $hostedEpisodes := where $episodes "Params.hosts" "intersect" (slice .File.BaseFileName) -}}
+
+{{- if gt (len $hostedEpisodes) 0 -}}
+<h3>All Episode Appearances</h3> 
 <div>
-  {{ range $page := where $.Site.Pages "Type" "episode" }}
-        {{ range $page.Params.hosts }}
-            {{ if eq  . ($.Scratch.Get "host-name") }}
-              {{ $page.Render "listItems/masterListItem" }} 
-            {{ end }}
-        {{ end }}
-    {{ end }}
+  {{- range $hostedEpisodes -}}
+  {{ .Render "listItems/masterListItem" }}
+  {{- end -}}
 </div>
+{{- end -}}
