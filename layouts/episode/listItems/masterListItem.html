@@ -1,4 +1,21 @@
-<li>
-    <h4><a href="{{ .Permalink }}">{{ .Render "titles/masterListTitle" }}</a></h4>
-    {{ .Render "listItems/baseListItem" }}
-</li>
+<div class="row episode-row">
+    <div class="col-md-12">
+        <a href="{{ .Permalink }}">
+            <h4>{{ .Render "titles/masterListTitle" }}</h4>
+        </a>
+        Posted on <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+        <div class="row">
+            <div class="col-md-3">
+                <a href="{{ .Permalink }}">
+                    <img src="{{ .Site.BaseURL }}images/Generic-Podcast-Art.svg">
+                </a>
+            </div>
+            <div class="col-md-8">
+                <p>{{ .Description }}</p>
+                <div>
+                    <a href="{{ .RelPermalink }}" class="btn btn-outline-info">View Full Show Notes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

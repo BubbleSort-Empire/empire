@@ -2,11 +2,11 @@
 {{ partial "indexListHeader" . }}
 
 {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "episode") }}
-<ul>
-    {{ range $paginator.Pages }}
-        {{ .Render "listItems/masterListItem" }}
-    {{ end }}
-</ul>
+
+{{ range $paginator.Pages }}
+    {{ .Render "listItems/masterListItem" }}
+{{ end }}
+
 
 {{ partial "pagination.html" . }}
 {{ end }}
