@@ -1,4 +1,4 @@
-baseURL = "https://empireforhugothe.me"
+baseURL = "https://empireforhugothe.me/"
 languageCode = "en-us"
 title = "Empire Podcast Network"
 themesdir = "../.."
