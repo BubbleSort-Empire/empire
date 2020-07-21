@@ -19,27 +19,25 @@
     integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
 <link href="/css/all.css" rel="stylesheet">
 
-{{ if .Site.IsServer }}
-    {{ $cssOpts := (dict "targetPath" "css/empire.css" "outputStyle" "compressed" "enableSourceMap" true ) }}
-    {{ $styles := resources.Get "scss/empire.scss" | resources.ExecuteAsTemplate "style.empire.css" . | toCSS $cssOpts }}
+{{ if .Site.IsServer -}}
+    {{- $cssOpts := (dict "targetPath" "css/empire.css" "outputStyle" "compressed" "enableSourceMap" true ) -}}
+    {{- $styles := resources.Get "scss/empire.scss" | resources.ExecuteAsTemplate "style.empire.css" . | toCSS $cssOpts -}}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
-{{ else }}
-    {{ $cssOpts := (dict "targetPath" "css/empire.css" "outputStyle" "compressed") }}
-    {{ $styles := resources.Get "scss/empire.scss" | resources.ExecuteAsTemplate "style.empire.css" . | toCSS $cssOpts | minify | fingerprint }}
+{{ else -}}
+    {{- $cssOpts := (dict "targetPath" "css/empire.css" "outputStyle" "compressed") -}}
+    {{- $styles := resources.Get "scss/empire.scss" | resources.ExecuteAsTemplate "style.empire.css" . | toCSS $cssOpts | minify | fingerprint -}}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
-{{ end }}
+{{- end -}}
 
-{{ if  or (eq .Site.Params.colorscheme "auto") (eq .Site.Params.colorscheme "dark") }}
-    {{ if .Site.IsServer }}
-        {{ $cssOpts := (dict "targetPath" "css/empire-dark.css" "enableSourceMap" true ) }}
-        {{ $styles := resources.Get "scss/empire-dark.scss" | resources.ExecuteAsTemplate "style.empire-dark.css" . | toCSS $cssOpts }}
+{{- if  or (eq .Site.Params.colorscheme "auto") (eq .Site.Params.colorscheme "dark") -}}
+    {{ if .Site.IsServer -}}
+        {{ $cssOpts := (dict "targetPath" "css/empire-dark.css" "enableSourceMap" true ) -}}
+        {{ $styles := resources.Get "scss/empire-dark.scss" | resources.ExecuteAsTemplate "style.empire-dark.css" . | toCSS $cssOpts -}}
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
-    {{ else }}
-        {{ $cssOpts := (dict "targetPath" "css/empire-dark.css" ) }}
-        {{ $styles := resources.Get "scss/empire-dark.scss" | resources.ExecuteAsTemplate "style.empire-dark.css" . | toCSS $cssOpts | minify | fingerprint }}
+    {{ else -}}
+        {{ $cssOpts := (dict "targetPath" "css/empire-dark.css" ) -}}
+        {{ $styles := resources.Get "scss/empire-dark.scss" | resources.ExecuteAsTemplate "style.empire-dark.css" . | toCSS $cssOpts | minify | fingerprint -}}
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"
             crossorigin="anonymous" media="screen" />
-    {{ end }}
-{{ end }}
-
-<link href="/css/temp.css" rel="stylesheet">
+    {{- end -}}
+{{- end }}
