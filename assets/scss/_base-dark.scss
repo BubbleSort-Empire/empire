@@ -1,0 +1,29 @@
+@mixin base_dark {
+    background-color: $background-color-dark;
+}
+@mixin content_dark {
+    div.container-md {
+        color: $foreground-color-dark;
+        a {
+            color: $links-dark;
+            &:hover {
+                color: $links-hover-dark;
+            }
+            &:active {
+                color: $links-active-dark;
+            }
+        }
+    }
+}
+
+body.colorscheme-dark {
+  @include base_dark()
+  @include content_dark()
+}
+
+body.colorscheme-auto {
+  @media (prefers-color-scheme: dark) {
+    @include base_dark()
+    @include content_dark()
+  }
+}

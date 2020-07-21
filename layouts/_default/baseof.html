@@ -4,7 +4,13 @@
         {{ partial "head.html" . }}
     </head>
     
-    <body>
+    {{ $csClass := "colorscheme-light" }}
+    {{ if eq .Site.Params.colorscheme "dark" }}
+        {{ $csClass = "colorscheme-dark" }}
+    {{ else if eq .Site.Params.colorscheme "auto" }}
+        {{ $csClass = "colorscheme-auto" }}
+    {{ end }}
+    <body class="{{ $csClass }}">
         {{ partial "navigationHeader.html" . }}
         <div class="container-md">
         {{- block "main" . -}}{{- end -}}

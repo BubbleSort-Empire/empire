@@ -1,12 +1,10 @@
-@import 'colors';
-@import 'layout';
-@import 'functions';
 
 body {
 	background-color: $background-color;
 }
 
 div.container-md {
+	color: $foreground-color;
 	a {
 		color: $links;
 		&:hover {
