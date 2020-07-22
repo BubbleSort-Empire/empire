@@ -20,3 +20,10 @@ div.row.episode-row {
 	padding-bottom: 20px;
     padding-top: 20px;
 }
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+  .show-art-large {
+    padding: 40pt;
+  }
+}
