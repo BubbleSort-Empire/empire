@@ -3,22 +3,23 @@ body {
 	background-color: $background-color;
 }
 
-div.container-md {
-	color: $foreground-color;
-	a {
-		color: $links;
-		&:hover {
-			color: $links-hover;
-		}
-		&:active {
-			color: $links-active;
+div {
+	.container-md {
+		color: $foreground-color;
+		a {
+			color: $links;
+			&:hover {
+				color: $links-hover;
+			}
+			&:active {
+				color: $links-active;
+			}
 		}
 	}
-}
-
-div.row.episode-row {
-	padding-bottom: 20px;
-    padding-top: 20px;
+	.row.episode-row {
+		padding-bottom: 20px;
+    		padding-top: 20px;
+	}
 }
 
 /* Extra small devices (portrait phones, less than 576px)*/
