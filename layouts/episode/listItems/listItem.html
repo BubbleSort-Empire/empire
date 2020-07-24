@@ -1,4 +1,13 @@
-<li>
-    <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-    {{ .Render "listItems/baseListItem" }}
-</li>
+<div class="row episode-row">
+    <div class="col-md-12">
+        <a href="{{ .Permalink }}">
+            <h4>{{ .Title }}</h4>
+        </a>
+        {{ .Render "listItems/components/publishView" }}
+        <div class="row">
+            <div class="col">
+                {{ .Render "listItems/components/episodeDetails" }}
+            </div>
+        </div>
+    </div>
+</div>
