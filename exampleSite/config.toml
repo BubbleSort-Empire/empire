@@ -16,6 +16,8 @@ Paginate = 3
 
   copyright_notice = "Copyright 2020 [Vic Hudson](https://vichudson1.com) & [Scott Willsey](https://scottwillsey.com)"
 
+  description = "Serving all of The Empire's podcast listening needs."  
+
 [outputFormats]
   [outputFormats.jsonfeed]
     mediaType = "application/json"
