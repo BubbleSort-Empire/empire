@@ -1,3 +1,17 @@
-<div>
-    <h2>{{ .CurrentSection.Title }} Episode List</h2>
+<div class="row episode-row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-5 show-art-large">
+                <a href="{{ .Permalink }}">
+                    <img src="{{ .Site.BaseURL }}images/Generic-Podcast-Art.svg">
+                </a>
+            </div>            
+            <div class="col-md-6">
+                <a href="{{ .Permalink }}">
+                    <h2>{{ .CurrentSection.Title }} Episode List</h2>
+                </a>
+                <p>{{ .Description }}</p>
+            </div>
+        </div>
+    </div>
 </div>
