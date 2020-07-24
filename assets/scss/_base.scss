@@ -20,11 +20,17 @@ div {
 		padding-bottom: 20px;
     		padding-top: 20px;
 	}
+	.publishDate {
+		padding-bottom: 10pt;
+	}
 }
 
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
   .show-art-large {
-    padding: 40pt;
+	padding-left: 40pt;
+	padding-right: 40pt;
+	padding-top: 10pt;
+	padding-bottom: 10pt;
   }
 }
