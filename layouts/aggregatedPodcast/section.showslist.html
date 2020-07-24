@@ -1,8 +1,8 @@
 {{ define "main" }}
 <h2>{{ .CurrentSection.Title }} Sub Shows List</h2>
-<ul>
-    {{ range .Pages  }}
-        {{ partial "podcastViews/showsListItem" . }}
-    {{ end }}
-</ul>
+
+{{ range .Pages  }}
+    {{ partial "podcastViews/showsListItem" . }}
+{{ end }}
+
 {{ end }}
