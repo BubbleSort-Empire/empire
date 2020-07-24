@@ -1,10 +1,10 @@
 {{ define "main" }}
 {{ .Render "pageHeader" }}
 {{ $paginator := .Paginate .Pages.ByDate.Reverse }}
-<ul>
-    {{ range $paginator.Pages }}
+
+{{ range $paginator.Pages }}
     {{ .Render "listItems/listItem" }}
-    {{ end }}
-</ul>
+{{ end }}
+
 {{ partial "pagination.html" . }}
 {{ end }}
