@@ -1,11 +1,10 @@
 {{ define "main" }}
 {{- .Render "pageHeader" -}}
 {{- $paginator := .Paginate (where (where .Site.Pages.ByDate.Reverse "Section" .Section) "Type" "episode") -}}
-<ul>
-    {{- range $paginator.Pages -}}
-        {{- .Render "listItems/aggregatedListItem" -}}
-    {{- end -}}
-</ul>
+
+{{- range $paginator.Pages -}}
+    {{- .Render "listItems/aggregatedListItem" -}}
+{{- end -}}
 
 {{ partial "pagination.html" . }}
 {{ end }}
