@@ -27,6 +27,19 @@ div {
 		width: 100pt;
 		float: left;
 		padding: 10pt;
+		img {
+			border-radius: 25px;
+		}
+	}
+	.col-md-5.show-art-large {
+		img {
+			border-radius: 25px;
+		}
+	}
+	.col-md-3.show-art-large {
+		img {
+			border-radius: 25px;
+		}
 	}
 }
 
