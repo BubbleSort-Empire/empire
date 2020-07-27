@@ -1,0 +1,73 @@
+.download-link {
+  margin-left: 10px;
+  display: block;
+}
+
+div.audio-player {
+  position: relative;
+  width: 100%;
+  height: 70px;
+}
+
+.mejs__container {
+  background: #2a2b3f;
+  box-sizing: border-box;
+  font-family: 'Helvetica', Arial, serif;
+  position: relative;
+  text-align: left;
+  text-indent: 0;
+  vertical-align: top;
+}
+
+.mejs__controls:not([style*='display: none']) {
+  background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+  border-radius: 30px;
+}
+
+.mejs-controls .mejs-button button {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  text-indent: -9999px;
+}
+
+.mejs__play>button {
+  background: transparent url("../images/play.svg") no-repeat;
+  background-position: center;
+  background-size: initial;
+}
+
+.mejs__pause>button {
+  background: transparent url("../images/pause.svg") no-repeat;
+  background-position: center;
+  background-size: initial;
+}
+
+.mejs-skip-back-button>button, .mejs__skip-back-button>button {
+  background: transparent url("/audio-player/images/skipback.svg");
+  background-position: center;
+  background-size: initial;
+}
+
+.mejs-jump-forward-button>button, .mejs__jump-forward-button>button {
+  background: url("/audio-player/images/jumpforward.svg") no-repeat;
+  background-position: center;
+  background-size: initial;
+}
+
+.mejs__mute>button {
+  background: transparent url("../images/sound.svg") no-repeat;
+  background-position: center;
+  background-size: initial;
+}
+
+.mejs__unmute>button {
+  background: transparent url("../images/mute.svg") no-repeat;
+  background-position: center;
+  background-size: initial;
+}
+
+.mejs-controls .mejs-unmute button {
+  background-position: 0 -12px;
+}
