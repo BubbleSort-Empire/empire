@@ -3,43 +3,48 @@ body {
 	background-color: $background-color;
 }
 
-div {
-	.container-md {
-		color: $foreground-color;
-		a {
-			color: $links;
-			&:hover {
-				color: $links-hover;
-			}
-			&:active {
-				color: $links-active;
-			}
+.navbar-expand-sm, .bg-primary, .navbar-dark {
+	background-color: $nav-menu-background-color;
+	color: $foreground-color;
+	a {
+		color: $nav-menu-links;
+		&:hover {
+			color: $nav-menu-links-hover;
 		}
 	}
-	.row.episode-row {
-		padding-bottom: 20px;
-    		padding-top: 20px;
-	}
-	.publishDate {
-		padding-bottom: 10pt;
-	}
-	.art-square-list-item {
-		width: 100pt;
-		float: left;
-		padding: 10pt;
-		img {
-			border-radius: 25px;
+}
+
+.container-md, p.footer_copyright {
+	color: $foreground-color;
+	a {
+		color: $links;
+		&:hover {
+			color: $links-hover;
+		}
+		&:active {
+			color: $links-active;
 		}
 	}
-	.col-md-5.show-art-large {
-		img {
-			border-radius: 25px;
-		}
-	}
-	.col-md-3.show-art-large {
-		img {
-			border-radius: 25px;
-		}
+}
+
+.row.episode-row {
+	padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.publishDate {
+	padding-bottom: 10pt;
+}
+	
+.art-square-list-item {
+	width: 100pt;
+	float: left;
+	padding: 10pt;
+}
+	
+.show-art-large, .art-square-list-item {
+	img {
+		border-radius: 25px;
 	}
 }
 
