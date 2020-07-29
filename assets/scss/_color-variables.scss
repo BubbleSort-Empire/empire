@@ -1,20 +1,18 @@
 // light theme colors
+$links: rgb(0, 153, 255);
+$links-hover: rgb(51, 61, 214);
+$links-active: rgb(0, 153, 255);
 $nav-menu-background-color: rgb(0,153,255);
 $nav-menu-links: rgb(238, 235, 235);
 $nav-menu-links-hover: rgb(111, 197, 255);
 $background-color: rgb(255, 255, 255);
 $foreground-color: black;
-$links: rgb(0, 153, 255);
-$links-hover: rgb(51, 61, 214);
-$links-active: rgb(0, 153, 255);
 
 // dark theme colors
-$nav-menu-background-color-dark: rgb(16,27,36);
-$nav-menu-links-dark: orange;
-$nav-menu-links-hover-dark: rgb(111, 197, 255);
-$background-color-dark: rgb(26, 27, 36);
-$foreground-color-dark: rgb(238, 235, 235);
 $links-dark: rgb(111, 197, 255);
 $links-hover-dark: orange;
 $links-active-dark: rgb(111, 197, 255);
+$nav-menu-background-color-dark: rgb(16,27,36);
+$background-color-dark: rgb(26, 27, 36);
+$foreground-color-dark: rgb(238, 235, 235);
 $pagination-background-color-dark: orange;
