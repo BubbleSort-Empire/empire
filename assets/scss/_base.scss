@@ -48,6 +48,14 @@ body {
 	}
 }
 
+/* portrait mode smaller than iPhone 8 */
+@media (max-width: 374.98px) {
+	/* pagination class for hiding page numbers on small devices */
+	.tiny-be-gone {
+  		display: none;
+  	}
+}
+
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
   .show-art-large {

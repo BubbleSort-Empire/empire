@@ -19,15 +19,38 @@
 		}
 	}
 }
+@mixin pagination_dark {
+	a.page-link {
+		color: $links-dark;
+		background-color: $background-color-dark;
+		border: 1px solid #17a2b8;
+		&:hover {
+			color: orange;
+  			background-color: #17a2b8;
+  			border-color: #17a2b8;
+		}
+		&:active {
+			background-color: #17a2b8;
+		}
+	}
+	.page-item.active .page-link {
+  		z-index: 3;
+  		color:$foreground-color-dark;
+  		background-color: #17a2b8;
+  		border-color: #17a2b8;
+	}
+}
 
 body.colorscheme-dark {
-  @include base_dark()
-  @include content_dark()
+  @include base_dark;
+  @include content_dark;
+  @include pagination_dark;
 }
 
 body.colorscheme-auto {
   @media (prefers-color-scheme: dark) {
-    @include base_dark()
-    @include content_dark()
+    @include base_dark;
+	@include content_dark;
+	@include pagination_dark;
   }
 }
