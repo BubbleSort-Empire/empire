@@ -3,11 +3,8 @@ body {
 	background-color: $background-color;
 }
 
-.brand-image {
-	border: 0;
-	margin: 0px 10px 0px 5px;
-	height: 60px;
-	width: 60px;
+.navbar {
+	padding: 0.1rem 0 0.1rem 1.5rem;
 }
 
 .navbar-expand-sm, .bg-primary, .navbar-dark {
@@ -23,6 +20,13 @@ body {
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.brand-image {
+	border: 0;
+	margin-right: 1rem;
+	height: 60px;
+	width: 60px;
 }
 
 .container-md, p.footer_copyright {
@@ -65,9 +69,13 @@ body {
 	.pagination-numbers-tiny-be-gone {
   		display: none;
 	  }
+
+	  .navbar {
+		  padding-left: 0.5rem;
+	  }
 	  
 	.brand-image {
-		margin: 0px 5px 0px 0px;
+		margin-right: 0.5rem;
 		height: 30px;
 		width: 30px;
 	}
@@ -76,9 +84,12 @@ body {
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
 	.brand-image {
-		margin: 0px 7px 0px 0px;
+		margin-right: 0.5rem;
 		height: 40px;
 		width: 40px;
+	}
+	.navbar {
+		padding-left: 0.7rem;
 	}
 	.show-art-large {
 		padding-left: 40pt;
