@@ -3,6 +3,13 @@ body {
 	background-color: $background-color;
 }
 
+.brand-image {
+	border: 0;
+	padding: 1px 2px;
+	height: 60px;
+	width: 60px;
+}
+
 .navbar-expand-sm, .bg-primary, .navbar-dark {
 	background-color: $nav-menu-background-color;
 	color: $foreground-color;
@@ -57,20 +64,29 @@ body {
 	/* pagination class for hiding page numbers on small devices */
 	.pagination-numbers-tiny-be-gone {
   		display: none;
-  	}
+	  }
+	  
+	.brand-image {
+		height: 30px;
+		width: 30px;
+	}
 }
 
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
-  .show-art-large {
-	padding-left: 40pt;
-	padding-right: 40pt;
-	padding-top: 10pt;
-	padding-bottom: 10pt;
-  }
-  .show-art-small {
-	width: 100px;
-  }
+	.brand-image {
+		height: 40px;
+		width: 40px;
+	}
+	.show-art-large {
+		padding-left: 40pt;
+		padding-right: 40pt;
+		padding-top: 10pt;
+		padding-bottom: 10pt;
+	}
+	.show-art-small {
+		width: 100px;
+	}
 }
 
 /* Small devices (landscape phones, 576px and up) */
