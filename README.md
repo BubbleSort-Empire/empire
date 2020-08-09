@@ -1,6 +1,8 @@
 # Empire
 #### A Hugo theme suitable for running a podcast network with.
 
+View a demo of the current state of work in progress [here](https://empireforhugothe.me).
+
 This theme is currently a very early work in progress. The goals the Empire Hugo Theme hopes to achieve are as follows:
 
 * Builds websites for podcast networks based on directory structure and front matter parameters.
