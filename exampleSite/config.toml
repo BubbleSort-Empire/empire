@@ -30,7 +30,7 @@ Paginate = 3
     path = "shows"
 
 [outputs]
-  home = ["html", "rss", "showslist"]
+  home = ["html", "rss", "showslist", "json"]
   page = ["html"]
   section = ["html", "rss", "showslist"]
 
