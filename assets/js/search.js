@@ -25,13 +25,14 @@ window.onload = function () {
         this.field('title');
         this.field('excerpt');
         this.field('body');
+        this.field('ref')
 
         documents.forEach(function(doc) {
             this.add(doc);
             resultDetails[doc.ref] = {
               'title': doc.title,
               'excerpt': doc.excerpt,
-              'link': doc.ref,
+              'url': doc.ref
             };
         }, this);
       });

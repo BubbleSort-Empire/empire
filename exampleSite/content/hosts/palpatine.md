@@ -1,4 +1,5 @@
 +++
+title = "Darth Sidious (Emperor Palpatine)"
 firstName = "Darth"
 lastName = "Sidious"
 nickName = "Emperor Palpatine"
