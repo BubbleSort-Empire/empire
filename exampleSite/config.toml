@@ -55,3 +55,9 @@ Paginate = 3
   name = "About"
   weight = 6
   url = "about/"
+
+[[menu.main]]
+  pre = "<i class='fas fa-search'></i>"
+  name = "Search"
+  weight = 10
+  url = "search/"

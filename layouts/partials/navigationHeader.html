@@ -12,7 +12,7 @@
         <ul class="navbar-nav">
         {{- with .Site.Menus.main -}}
         {{- range sort . -}}
-        <li class="nav-item"><a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ .URL | absURL }}">{{ if .Pre }}{{ .Pre }}{{ else }}{{ .Name }}{{ end }}</a></li>
         {{- end -}}
         {{- end -}}
         </ul>
