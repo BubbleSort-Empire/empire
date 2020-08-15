@@ -2,7 +2,7 @@ var idx = null;
 var resultDetails = [];
 var $searchResults;
 var $searchInput;
-var $headerSearch;
+//var $headerSearch;
 
 window.onload = function () {
   var request = new XMLHttpRequest();
@@ -10,7 +10,7 @@ window.onload = function () {
 
   $searchResults = document.getElementById('search-results');
   $searchInput   = document.getElementById('search-input');
-  $headerSearch  = document.getElementById('header-search');
+//  $headerSearch  = document.getElementById('header-search');
   query          = (getParameterByName('q')) ? getParameterByName('q').trim() : '';
 
   request.overrideMimeType("application/json");
@@ -37,7 +37,7 @@ window.onload = function () {
 
       if (query != '') {
         $searchInput.value = query;
-        $headerSearch.value = query;
+  //      $headerSearch.value = query;
         renderSearchResults(search(query));
       }
     } else {
@@ -59,7 +59,7 @@ function registerSearchHandlers() {
     var query = event.target.value;
     var results = search(query);
 
-    $headerSearch.value = query;
+ //   $headerSearch.value = query;
 
     updateQueryParam(query);
     renderSearchResults(results);
@@ -69,14 +69,14 @@ function registerSearchHandlers() {
     }
   }
 
-  if ($searchInput) {
-    $headerSearch.oninput = function(event) {
+  /* if ($searchInput) {
+      $headerSearch.oninput = function(event) {
       var query = event.target.value;
       $searchInput.value = query;
       updateQueryParam(query);
       renderSearchResults(search(query));
     }
-  }
+  } */
 }
 
 function search(query) {
