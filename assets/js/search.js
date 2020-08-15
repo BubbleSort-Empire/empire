@@ -31,6 +31,7 @@ window.onload = function () {
             resultDetails[doc.ref] = {
               'title': doc.title,
               'excerpt': doc.excerpt,
+              'link': doc.ref,
             };
         }, this);
       });
