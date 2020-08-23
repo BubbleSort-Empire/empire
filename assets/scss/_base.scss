@@ -75,6 +75,10 @@ body {
 	}
 }
 
+div.hosted-shows-list {
+	padding-bottom: 20px;
+}
+
 /* portrait mode smaller than iPhone 8 */
 @media (max-width: 374.98px) {
 	/* pagination class for hiding page numbers on small devices */
