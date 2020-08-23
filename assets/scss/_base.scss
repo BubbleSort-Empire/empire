@@ -61,8 +61,15 @@ body {
 	float: left;
 	padding: 10pt;
 }
+
+.show-art-small {
+	width: 100pt;
+	float: left;
+	padding-left: 10pt;
+	padding-right: 10pt;
+}
 	
-.show-art-large, .art-square-list-item {
+.show-art-large, .art-square-list-item, .show-art-small {
 	img {
 		border-radius: 25px;
 	}
@@ -105,11 +112,22 @@ body {
 	.show-art-small {
 		width: 100px;
 	}
+
+	.host-list-upper-player {
+		display: none;
+	}
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
 	.show-art-small {
 	  max-width: 150px;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.host-list-lower-player {
+		display: none;
 	}
 }

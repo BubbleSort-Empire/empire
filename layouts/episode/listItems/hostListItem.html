@@ -2,13 +2,14 @@
     <div class="col-md-12">
         <div class="row">
             {{ .Render "listItems/components/smallArtView" }}
-            <div>
+            <div class="col-8">
                 <a href="{{ .Permalink }}">
                     <h6>{{ .Render "titles/masterListTitle" }}</h6>
                 </a>
                 {{ .Render "listItems/components/publishView" }}
-            </div>
+                <div class="host-list-upper-player">{{ .Render "audio/player" }}</div>
+            </div>           
         </div>
-        {{ .Render "audio/player" }}
+        <div class="host-list-lower-player">{{ .Render "audio/player" }}</div>
     </div>
 </div>
