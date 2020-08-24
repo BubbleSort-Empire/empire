@@ -6,6 +6,6 @@
 <script type="text/javascript" src="{{ $searchJS.RelPermalink }}" integrity="{{ $searchJS.Data.Integrity }}"></script>
 
 <div>
-  <input id="search-input" type="text" placeholder="Commander, tear this ship apart until you've found those plans! " name="search-input" class="form-control">
+  <input id="search-input" type="text" placeholder="{{ .Site.Params.SearchPlaceholderText }}" name="search-input" class="search-form">
 </div>
 <div id="search-results" class="container"></div>

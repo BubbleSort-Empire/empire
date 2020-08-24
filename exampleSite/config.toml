@@ -16,7 +16,10 @@ Paginate = 3
   brandImage = "DeathStar.png"
   copyright_notice = "Copyright 2020 [Vic Hudson](https://vichudson1.com) & [Scott Willsey](https://scottwillsey.com)"
 
-  description = "Serving all of The Empire's podcast listening needs."  
+  description = "Serving all of The Empire's podcast listening needs."
+
+  searchPageTitle = "Seach Your Feelings"
+  searchPlaceholderText = "Tear this ship apart and find me those plans"
 
 [outputFormats]
   [outputFormats.jsonfeed]

@@ -1,3 +1,9 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
 
 body {
 	background-color: $background-color;
@@ -77,6 +83,25 @@ body {
 
 div.hosted-shows-list {
 	padding-bottom: 20px;
+}
+
+.search-form {
+  @include placeholder {
+	  font-style: $search-form-text-style; 
+	  color: $search-form-text-color; 
+	  font-weight: $search-form-text-weight;
+  }
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  color: $search-form-text-color;
+  background-clip: padding-box;
+  background-color: $search-form-background-color;
+  border: $search-form-border;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 /* portrait mode smaller than iPhone 8 */
