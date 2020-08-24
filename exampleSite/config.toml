@@ -18,7 +18,7 @@ Paginate = 3
 
   description = "Serving all of The Empire's podcast listening needs."
 
-  searchPageTitle = "Seach Your Feelings"
+  searchPageTitle = "Search The Empire"
   searchPlaceholderText = "Tear this ship apart and find me those plans"
 
 [outputFormats]
@@ -31,9 +31,14 @@ Paginate = 3
     baseName = "index"
     isPlainText = false
     path = "shows"
+  [outputFormats.search]
+    mediaType = "text/html"
+    baseName = "index"
+    isPlainText = false
+    path = "search"
 
 [outputs]
-  home = ["html", "rss", "showslist", "json"]
+  home = ["html", "rss", "showslist", "json", "search"]
   page = ["html"]
   section = ["html", "rss", "showslist"]
 

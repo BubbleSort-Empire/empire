@@ -1,0 +1,17 @@
+{{ define "main" }}
+<h1>{{ .Site.Params.SearchPageTitle }}</h1>
+<div>
+    {{- $lunr := resources.Get "js/lunr.js" -}}
+    {{- $lunrJS := $lunr | resources.Minify | resources.Fingerprint -}}
+    <script type="text/javascript" src="{{ $lunrJS.RelPermalink }}" integrity="{{ $lunrJS.Data.Integrity }}"></script>
+    {{- $search := resources.Get "js/search.js" -}}
+    {{- $searchJS := $search | resources.Minify | resources.Fingerprint -}}
+    <script type="text/javascript" src="{{ $searchJS.RelPermalink }}" integrity="{{ $searchJS.Data.Integrity }}"></script>
+    
+    <div>
+        <input id="search-input" type="text" placeholder="{{ .Site.Params.SearchPlaceholderText }}" name="search-input"
+            class="search-form">
+    </div>
+    <div id="search-results" class="search-results"></div>
+</div>
+{{ end }}

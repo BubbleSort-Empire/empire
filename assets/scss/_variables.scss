@@ -11,10 +11,11 @@ $nav-menu-links-hover: rgb(111, 197, 255);
 $background-color: rgb(255, 255, 255);
 $foreground-color: black;
 $search-form-text-style: italic;
-$search-form-text-color: $nav-menu-links;
+$search-form-text-color: rgb(255, 255, 255);
 $search-form-text-weight: 400;
 $search-form-background-color: $nav-menu-background-color;
 $search-form-border: 1px solid $foreground-color;
+$search-results-background-color: $background-color;
 
 // dark theme colors
 $links-dark: rgb(111, 197, 255);
@@ -24,3 +25,4 @@ $nav-menu-background-color-dark: rgb(16,27,36);
 $background-color-dark: rgb(26, 27, 36);
 $foreground-color-dark: rgb(238, 235, 235);
 $pagination-background-color-dark: orange;
+$search-results-background-color-dark: $background-color-dark;

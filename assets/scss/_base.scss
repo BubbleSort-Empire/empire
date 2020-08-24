@@ -96,12 +96,20 @@ div.hosted-shows-list {
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
+  font-weight: $search-form-text-weight;
   color: $search-form-text-color;
   background-clip: padding-box;
   background-color: $search-form-background-color;
   border: $search-form-border;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+div.search-results {
+	width: 100%;
+	margin: 2rem 0.5rem 2rem 0;
+	padding: 0 0 0 0;
+	background-color: $search-results-background-color;
 }
 
 /* portrait mode smaller than iPhone 8 */
