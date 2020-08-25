@@ -23,6 +23,7 @@ window.onload = function () {
       idx = lunr(function () {
         this.ref('ref');
         this.field('title');
+        this.field('description');
         this.field('excerpt');
         this.field('body');
         this.field('ref')
@@ -32,6 +33,7 @@ window.onload = function () {
             resultDetails[doc.ref] = {
               'title': doc.title,
               'excerpt': doc.excerpt,
+              'description': doc.description,
               'url': doc.ref
             };
         }, this);
@@ -93,7 +95,8 @@ function renderSearchResults(results) {
       // Create result item
       var li = document.createElement('li');
       li.classList.add('card');
-      li.innerHTML = '<div class="card-header"><a href="' + result.ref + '">' + resultDetails[result.ref].title + '</a></div><div class="card-body"><p class="card-text text-muted search-result-excerpt">' + resultDetails[result.ref].excerpt + '</p></div>';
+      var details = (resultDetails[result.ref].excerpt) ? resultDetails[result.ref].excerpt : resultDetails[result.ref].description;
+      li.innerHTML = '<div class="card-header"><a href="' + result.ref + '">' + resultDetails[result.ref].title + '</a></div><div class="card-body"><p class="card-text text-muted search-result-excerpt">' + details + '</p></div>';
       ul.appendChild(li);
     });
 
