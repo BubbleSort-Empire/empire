@@ -106,9 +106,22 @@ div.hosted-shows-list {
 }
 
 div.search-results {
+	padding-top: 2rem;
+	ul {
+		list-style-type: none;
+	}
+}
+
+div.search-results-link {
 	width: 100%;
-	margin: 2rem 0.5rem 2rem 0;
-	padding: 0 0 0 0;
+	padding: 0.4rem 0 0.1rem 0;
+	font-size: 1.5rem;
+	font-weight: 800;
+}
+div.search-results-details {
+	width: 100%;
+	padding: 0.2rem 0 0.8rem 0;
+	font-size: 1.2rem;
 }
 
 /* portrait mode smaller than iPhone 8 */

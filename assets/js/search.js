@@ -94,9 +94,8 @@ function renderSearchResults(results) {
     results.forEach(function(result) {
       // Create result item
       var li = document.createElement('li');
-      li.classList.add('card');
       var details = (resultDetails[result.ref].excerpt) ? resultDetails[result.ref].excerpt : resultDetails[result.ref].description;
-      li.innerHTML = '<div class="card-header"><a href="' + result.ref + '">' + resultDetails[result.ref].title + '</a></div><div class="card-body"><p class="card-text text-muted search-result-excerpt">' + details + '</p></div>';
+      li.innerHTML = '<div class="search-results-link"><a href="' + result.ref + '">' + resultDetails[result.ref].title + '</a></div><div class="search-results-details"><p class="card-text text-muted search-result-excerpt">' + details + '</p></div>';
       ul.appendChild(li);
     });
 
