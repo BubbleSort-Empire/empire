@@ -5,4 +5,3 @@
 
 # exclude build output
 /exampleSite/public
-/exampleSite/resources/_gen
