@@ -1,0 +1,13 @@
+/* color variables */
+/* padding and spacing variables */
+body {
+  background-color: #fff; }
+
+div#content {
+  padding: 0.5rem 1rem; }
+  div#content a {
+    color: #0099ff; }
+    div#content a:hover {
+      color: #333dd6; }
+    div#content a:active {
+      color: #0099ff; }
