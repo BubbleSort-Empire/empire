@@ -5,3 +5,5 @@
 
 # exclude build output
 /exampleSite/public
+
+.nova/
