@@ -1,7 +1,8 @@
 {{ define "main" }}
 {{ .Render "pageHeader" }}
 <div>
+    <p>{{ .Description }}</p>
     {{ .Content }}
 </div>
-{{ partial "player-includes"}}
+{{ partial "player-includes-single" . }}
 {{ end }}

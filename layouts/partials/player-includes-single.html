@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/audio-player/css/mediaelementplayer.css">
+<link rel="stylesheet" href="/audio-player/css/jump-forward.min.css">
+<link rel="stylesheet" href="/audio-player/css/skip-back.min.css">
+<link rel="stylesheet" href="/audio-player/css/speed.min.css">
+
+
+{{ if .Site.IsServer -}}
+    {{- $cssOpts := (dict "targetPath" "css/player.css" "outputStyle" "compressed" "enableSourceMap" true ) -}}
+    {{- $styles := resources.Get "scss/player.scss" | resources.ExecuteAsTemplate "style.player.css" . | toCSS $cssOpts -}}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+{{ else -}}
+    {{- $cssOpts := (dict "targetPath" "css/player.css" "outputStyle" "compressed") -}}
+    {{- $styles := resources.Get "scss/player.scss" | resources.ExecuteAsTemplate "style.player.css" . | toCSS $cssOpts | minify | fingerprint -}}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+{{- end }}
+
+<!--<script src="/audio-player/scripts/jquery-3.5.1.min.js"></script>-->
+<script src="/audio-player/scripts/mediaelement-and-player.min.js"></script>
+<script src="/audio-player/scripts/change-speed.js"></script>
+<script src="/audio-player/scripts/jump-forward.min.js"></script>
+<script src="/audio-player/scripts/skip-back.min.js"></script>
+<script src="/audio-player/scripts/audio-player-single.js"></script>
