@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 897 1025" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1897,-4367)">
+        <g transform="matrix(1,0,0,0.605618,0,2976.94)">
+            <g id="Light-Play" transform="matrix(2,0,0,3.30241,2345.96,3142.18)">
+                <g transform="matrix(1,0,0,1,-224,-256)">
+                    <clipPath id="_clip1">
+                        <rect x="0" y="0" width="448" height="512"/>
+                    </clipPath>
+                    <g clip-path="url(#_clip1)">
+                        <path d="M424.4,214.7L72.4,6.6C43.8,-10.3 0,6.1 0,47.9L0,464C0,501.5 40.7,524.1 72.4,505.3L424.4,297.3C455.8,278.8 455.9,233.2 424.4,214.7Z" style="fill:rgb(242,242,242);fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
