@@ -1,7 +1,7 @@
 # Empire
 #### A Hugo theme suitable for running a podcast network with.
 
-View a demo of the current state of work in progress [here](https://empireforhugothe.me).
+View a demo of the current state of work in progress [here](https://empireforhugotheme.site).
 
 This theme is currently a very early work in progress. The goals the Empire Hugo Theme hopes to achieve are as follows:
 
