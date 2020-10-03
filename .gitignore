@@ -7,3 +7,6 @@
 /exampleSite/public
 
 .nova/
+
+# ignore pipeline resources during development in favor of manually adding them to theme for release.
+/exampleSite/resources/_gen
