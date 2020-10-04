@@ -1,0 +1,16 @@
+{{- $episodeHosts := .Params.hosts -}}
+{{- $allHosts := (where .Site.RegularPages "Type" "hosts") -}}
+
+
+{{ with $episodeHosts }}
+<div class="header-host-list">
+	{{ range $allHosts }}
+		{{ if in $episodeHosts .File.BaseFileName }}
+			{{ .Render "views/smallCircleListView" }}
+		{{ end }}
+	{{ end }}
+</div>	
+{{ end }}
+
+
+
