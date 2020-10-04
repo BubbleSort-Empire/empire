@@ -85,6 +85,23 @@ div.hosted-shows-list {
 	padding-bottom: 20px;
 }
 
+.header-host-list {
+	padding-top: 10px;
+	text-align: right;
+}
+
+.small-circle-host-list-item {
+	img {
+		border-radius: 50%;
+		width: 50pt;
+	}
+	
+	float: right;
+	padding-top: 20pt;
+	padding-left: 10pt;
+}
+
+
 input.search-form {
   @include placeholder {
 	  font-style: $search-form-text-style; 

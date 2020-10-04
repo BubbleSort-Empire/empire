@@ -1,0 +1,7 @@
+<div class="small-circle-host-list-item">
+	<div>
+		<a href="{{ .Permalink }}">
+			<img {{ .Render "listItems/displayName" }} title="{{ .Render "listItems/displayName" }}" src="{{ .Site.BaseURL }}images/hosts/{{ .Params.image }}" >
+		</a>
+	</div>
+</div>
