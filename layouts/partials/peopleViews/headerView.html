@@ -3,12 +3,12 @@
         <div class="row">
             <div class="col-md-5 show-art-large">
                 <a href="{{ .Permalink }}">
-                    <img alt="{{ .Render "listItems/displayName" }}" src="{{ .Site.BaseURL }}/images/hosts/{{ .Params.image }}" class="img-fluid">
+                    <img alt="{{ partial "peopleViews/listItems/displayName" . }}" src="{{ .Site.BaseURL }}/images/people/{{ .Params.image }}" class="img-fluid">
                 </a>
             </div>            
             <div class="col-md-6">
                 <a href="{{ .Permalink }}">
-                    <h2>{{ .Render "listItems/displayName" }}</h2>
+                    <h2>{{ partial "peopleViews/listItems/displayName" . }}</h2>
                 </a>
                 <p>{{ .Content }}</p>
             </div>

@@ -58,6 +58,11 @@ Paginate = 3
   name = "Hosts"
   weight = 4
   url = "hosts/"
+  
+[[menu.main]]
+  name = "Guests"
+  weight = 5
+  url = "guests/"
 
 [[menu.main]]
   name = "About"

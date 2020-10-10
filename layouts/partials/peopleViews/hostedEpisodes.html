@@ -1,5 +1,5 @@
 {{- $episodes := where $.Site.Pages "Type" "episode" -}}
-{{- $hostedEpisodes := where $episodes "Params.hosts" "intersect" (slice .File.BaseFileName) -}}
+{{- $hostedEpisodes := where $episodes "Params.guests" "intersect" (slice .File.BaseFileName) -}}
 
 {{- if gt (len $hostedEpisodes) 0 -}}
 <h3>All Episode Appearances</h3> 
