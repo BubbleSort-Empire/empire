@@ -1,16 +1,11 @@
-{{- $episodeHosts := .Params.hosts -}}
-{{- $allHosts := (where .Site.RegularPages "Type" "hosts") -}}
+{{- $hostPages := (where .Site.RegularPages ".File.BaseFileName" "in" .Params.hosts) -}}
+{{- $guestPages := (where .Site.RegularPages ".File.BaseFileName" "in" .Params.guests) -}}
+{{- $peoplePages := union $guestPages $hostPages -}}
 
-
-{{ with $episodeHosts }}
+{{- with $peoplePages -}}
 <div class="header-host-list">
-	{{ range $allHosts }}
-		{{ if in $episodeHosts .File.BaseFileName }}
-			{{ .Render "views/smallCircleListView" }}
-		{{ end }}
-	{{ end }}
-</div>	
-{{ end }}
-
-
-
+{{- range $peoplePages -}} 
+	{{- partial "peopleViews/listItems/smallCircleListView" . -}} 
+{{- end -}}
+</div>
+{{- end -}}
