@@ -1,17 +1,17 @@
 <div class="row episode-row">
-    <div class="col-md-12">
-        <div class="row">
-            <div class="col-md-3 show-art-large">
-                <a href="{{ .Permalink }}">
-                    <img src="{{ .Site.BaseURL }}images/people/{{ .Params.image }}" class="img-fluid">
-                </a>
-            </div>            
-            <div class="col-md-8">
-                <a href="{{ .Permalink }}">
-                    <h4>{{ partial "peopleViews/listItems/displayName" . }}</h4>
-                </a>
-                <p>{{ .Description }}</p>
-            </div>
-        </div>
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-3 show-art-large">
+        <a href="{{ .Permalink }}">
+          <img src="{{ partial "peopleViews/imageURL" . }}" class="img-fluid">
+        </a>
+      </div>
+      <div class="col-md-8">
+        <a href="{{ .Permalink }}">
+          <h4>{{ partial "peopleViews/listItems/displayName" . }}</h4>
+        </a>
+        <p>{{ .Description }}</p>
+      </div>
     </div>
+  </div>
 </div>
