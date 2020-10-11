@@ -111,8 +111,15 @@ div.hosted-shows-list {
     border-radius: 25%;
     width: 50pt;
   }
+  
+  p {
+    text-align: center;
+    font-size: small;
+    font-weight: lighter;
+  }
 
   float: right;
+  width: 60pt;
   padding-top: 20pt;
   padding-left: 10pt;
 }
