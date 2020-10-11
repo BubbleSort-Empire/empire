@@ -30,7 +30,7 @@ An aggregated podcast represents a show that is composed of smaller shows. Examp
 
 Use this archetype to create a new aggregated podcast for your network. It generates a directory in content and index.md file for your new aggregated podcast. The archetype will also fill in the podcast title and description with the file name using Title Case and stripping hyphens.
 
-command:`hugo new --kind podcast aggregated-podcast-name`
+command:`hugo new --kind aggregatedPodcast aggregated-podcast-name`
 
 output files: 
 ```
