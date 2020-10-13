@@ -1,0 +1,43 @@
+// base variables
+$font-family: "Helvetica", Arial, serif;
+$download-link-margin: 0 0 0 10px;
+$download-link-display: block;
+
+// div.audio-player variables
+$div-audio-player-position: relative;
+$div-audio-player-width: 80%;
+$div-audio-player-width-xl: 60%;
+$div-audio-player-width-smaller: 90%;
+$div-audio-player-width-mobile: 100%;
+$div-audio-player-height: 70px;
+$div-audio-player-padding: 15px 0 0 0;
+
+// me-js__container variables
+$me-js-container-background: gray;
+$me-js-container-box-sizing: border-box;
+$me-js-container-font-family: $font-family;
+$me-js-container-position: relative;
+$me-js-container-text-align: left;
+$me-js-container-text-indent: 0;
+$me-js-container-vertical-align: top;
+$me-js-container-border-radius: 30px;
+
+// me-js__controls variables
+$me-js-controls-background-webkit: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+$me-js-controls-background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+$me-js-controls-border-radius: 30px;
+
+// player header variables
+$header-background-color: rgb(77, 77, 77);
+$header-background-webkit: -webkit-linear-gradient(rgba(0, 0, 0, 0.35), transparent);
+$header-background: linear-gradient(rgba(0, 0, 0, 0.35), transparent);
+$header-margin-bottom: 15px;
+$header-display: flex;
+$header-webkit-box: justify;
+$header-justify-content: space-between;
+
+// player button variables light mode
+$button-text-label-color: rgb(17, 16, 16);
+
+// player button variables dark mode
+$play-button-background: transparent url("/audio-player/images/Dark-Play.svg") no-repeat;
