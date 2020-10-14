@@ -51,23 +51,6 @@ div.audio-player {
 	border-radius: $controls-border-radius;
 }
 
-.mejs-controls {
-	.mejs-button {
-		button {
-			cursor: pointer;
-			display: block;
-			position: absolute;
-			text-indent: -9999px;
-		}	
-	}
-	
-	.mejs-unmute {
-		button {
-			background-position: 0 -12px;
-		}
-	}
-}
-
 .mejs__play > {
 	button {
 		background: $button-background-play-light;
