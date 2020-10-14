@@ -8,23 +8,47 @@ div.audio-player {
 	width: $div-audio-player-width;
 	height: $div-audio-player-height;
 	padding: $div-audio-player-padding;
+	
+	@media (max-width: 575.98px) {
+		width: $div-audio-player-width-mobile;
+	}
+	
+	/* Small devices (landscape phones, 576px and up) */
+	@media (min-width: 576px) and (max-width: 767.98px) {
+		width: $div-audio-player-width-mobile;
+	}
+	
+	/* Medium devices (tablets, 768px and up) */
+	@media (min-width: 768px) and (max-width: 991.98px) {
+		width: $div-audio-player-width-smaller;
+	}
+	
+	/* Large devices (desktops, 992px and up) */
+	@media (min-width: 992px) and (max-width: 1199.98px) {
+		width: $div-audio-player-width;
+	}
+	
+	/* Extra large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {
+		width: $div-audio-player-width;
+	}
 }
 
 .mejs__container {
-	background: $me-js-container-background;
-	box-sizing: $me-js-container-box-sizing;
-	font-family: $me-js-container-font-family;
-	position: $me-js-container-position;
-	text-align: $me-js-container-text-align;
-	text-indent: $me-js-container-text-indent;
-	vertical-align: $me-js-container-vertical-align;
-	border-radius: $me-js-container-border-radius;
+	background: $container-background;
+	box-sizing: $container-box-sizing;
+	font-family: $container-font-family;
+	position: $container-position;
+	text-align: $container-text-align;
+	text-indent: $container-text-indent;
+	vertical-align: $container-vertical-align;
+	border-radius: $container-border-radius;
 }
 
 .mejs__controls:not([style*="display: none"]) {
-	background: $me-js-controls-background-webkit;
-	background: $me-js-controls-background;
-	border-radius: $me-js-controls-border-radius;
+	background: $controls-background-webkit;
+	background: $controls-background;
+	border-radius: $controls-border-radius;
 }
 
 .mejs-controls {
@@ -183,71 +207,37 @@ div.audio-player {
 		}
 		
 		.mejs__play > button {
-			background: $play-button-background;
+			background: $button-background-play;
 		}
 		
 		.mejs__pause > button {
-			background: transparent url("/audio-player/images/Dark-Pause.svg") no-repeat;
+			background: $button-background-pause;
 		}
 		
 		.mejs-skip-back-button >,
 		.mejs__skip-back-button > {
 			button {
-				background: transparent url("/audio-player/images/Dark-Backward.svg");
+				background: $button-background-skip-back;
 			}
 		}
 		
 		.mejs-jump-forward-button >,
 		.mejs__jump-forward-button > {
 			button {
-				background: url("/audio-player/images/Dark-Forward.svg") no-repeat;
+				background: $button-background-jump-forward;
 			}
 		}
 	
 		.mejs__mute > {
 			button {
-				background: transparent url("/audio-player/images/Dark-Sound.svg") no-repeat;
+				background: $button-background-mute;
 			}
 		}
 	
 		.mejs__unmute > {
 			button {
-				background: transparent url("/audio-player/images/Dark-Mute.svg") no-repeat;
+				background: $button-background-unmute;
 			}
 		}
-	}
-}
-
-@media (max-width: 575.98px) {
-	div.audio-player {
-	  width: $div-audio-player-width-mobile;
-	}
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-	div.audio-player {
-	  width: $div-audio-player-width-mobile;
-	}
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-	div.audio-player {
-	  width: $div-audio-player-width-smaller;
-	}
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-	div.audio-player {
-		width: $div-audio-player-width;
-	}
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-	div.audio-player {
-		width: $div-audio-player-width-xl;
 	}
 }

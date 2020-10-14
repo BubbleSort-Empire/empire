@@ -12,20 +12,20 @@ $div-audio-player-width-mobile: 100%;
 $div-audio-player-height: 70px;
 $div-audio-player-padding: 15px 0 0 0;
 
-// me-js__container variables
-$me-js-container-background: gray;
-$me-js-container-box-sizing: border-box;
-$me-js-container-font-family: $font-family;
-$me-js-container-position: relative;
-$me-js-container-text-align: left;
-$me-js-container-text-indent: 0;
-$me-js-container-vertical-align: top;
-$me-js-container-border-radius: 30px;
+// container variables
+$container-background: gray;
+$container-box-sizing: border-box;
+$container-font-family: $font-family;
+$container-position: relative;
+$container-text-align: left;
+$container-text-indent: 0;
+$container-vertical-align: top;
+$container-border-radius: 30px;
 
 // me-js__controls variables
-$me-js-controls-background-webkit: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.35));
-$me-js-controls-background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
-$me-js-controls-border-radius: 30px;
+$controls-background-webkit: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+$controls-background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+$controls-border-radius: 30px;
 
 // player header variables
 $header-background-color: rgb(77, 77, 77);
@@ -40,4 +40,9 @@ $header-justify-content: space-between;
 $button-text-label-color: rgb(17, 16, 16);
 
 // player button variables dark mode
-$play-button-background: transparent url("/audio-player/images/Dark-Play.svg") no-repeat;
+$button-background-play: transparent url("/audio-player/images/Dark-Play.svg") no-repeat;
+$button-background-pause: transparent url("/audio-player/images/Dark-Pause.svg") no-repeat;
+$button-background-skip-back: transparent url("/audio-player/images/Dark-Backward.svg") no-repeat;
+$button-background-jump-forward: transparent url("/audio-player/images/Dark-Forward.svg") no-repeat;
+$button-background-mute: transparent url("/audio-player/images/Dark-Sound.svg") no-repeat;
+$button-background-unmute: transparent url("/audio-player/images/Dark-Mute.svg") no-repeat;
