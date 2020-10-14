@@ -3,6 +3,8 @@ $font-family: "Helvetica", Arial, serif;
 $download-link-margin: 0 0 0 10px;
 $download-link-display: block;
 
+$podcast-margin: 30px auto;
+
 // div.audio-player variables
 $div-audio-player-position: relative;
 $div-audio-player-width: 80%;
@@ -26,6 +28,9 @@ $container-border-radius: 30px;
 $controls-background-webkit: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.35));
 $controls-background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
 $controls-border-radius: 30px;
+$controls-time-color: rgb(255, 255, 255);
+$controls-font-weight: normal;
+$controls-display: block;
 
 // player header variables
 $header-background-color: rgb(77, 77, 77);
@@ -36,13 +41,26 @@ $header-display: flex;
 $header-webkit-box: justify;
 $header-justify-content: space-between;
 
-// player button variables light mode
-$button-text-label-color: rgb(17, 16, 16);
+$single-player-display-webkit: -webkit-box;
+$single-player-display: flex;
+$single-player-justify-content: space-evenly;
 
-// player button variables dark mode
+// player button variables
+$button-text-label-color: rgb(17, 16, 16);
+$button-width: 30px;
+$button-height: 30px;
+$button-font-size: 10px;
+$button-background-position: center;
+$button-background-size: initial;
 $button-background-play: transparent url("/audio-player/images/Dark-Play.svg") no-repeat;
+$button-background-play-light: transparent url("/audio-player/images/Light-Play.svg") no-repeat;
 $button-background-pause: transparent url("/audio-player/images/Dark-Pause.svg") no-repeat;
+$button-background-pause-light: transparent url("/audio-player/images/Light-Pause.svg") no-repeat;
 $button-background-skip-back: transparent url("/audio-player/images/Dark-Backward.svg") no-repeat;
+$button-background-skip-back-light: transparent url("/audio-player/images/Light-Backward.svg") no-repeat;
 $button-background-jump-forward: transparent url("/audio-player/images/Dark-Forward.svg") no-repeat;
+$button-background-jump-forward-light: transparent url("/audio-player/images/Light-Forward.svg") no-repeat;
 $button-background-mute: transparent url("/audio-player/images/Dark-Sound.svg") no-repeat;
+$button-background-mute-light: transparent url("/audio-player/images/Light-Sound.svg") no-repeat;
 $button-background-unmute: transparent url("/audio-player/images/Dark-Mute.svg") no-repeat;
+$button-background-unmute-light: transparent url("/audio-player/images/Light-Mute.svg") no-repeat;

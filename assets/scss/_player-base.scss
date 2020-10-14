@@ -59,67 +59,65 @@ div.audio-player {
 			position: absolute;
 			text-indent: -9999px;
 		}	
-	} 
+	}
+	
+	.mejs-unmute {
+		button {
+			background-position: 0 -12px;
+		}
+	}
 }
 
 .mejs__play > {
 	button {
-		background: transparent url("/audio-player/images/Light-Play.svg") no-repeat;
-		background-position: center;
-		background-size: initial;
+		background: $button-background-play-light;
+		background-position: $button-background-position;
+		background-size: $button-background-size;
 	}
 }
 
 .mejs__pause > {
 	button {
-		background: transparent url("/audio-player/images/Light-Pause.svg") no-repeat;
-		background-position: center;
-		background-size: initial;
+		background: $button-background-pause-light;
+		background-position: $button-background-position;
+		background-size: $button-background-size;
 	}
 }
 
 .mejs-skip-back-button >, .mejs__skip-back-button > {
 	button {
-		background: transparent url("/audio-player/images/Light-Backward.svg");
-		background-position: center;
-		background-size: initial;
+		background: $button-background-skip-back-light;
+		background-position: $button-background-position;
+		background-size: $button-background-size;
 	}
 }
 
 .mejs-jump-forward-button > button,
 .mejs__jump-forward-button > button {
-	background: url("/audio-player/images/Light-Forward.svg") no-repeat;
-	background-position: center;
-	background-size: initial;
+	background: $button-background-jump-forward-light;
+	background-position: $button-background-position;
+	background-size: $button-background-size;
 }
 
 .mejs__mute > {
 	button {
-		background: transparent url("/audio-player/images/Light-Sound.svg") no-repeat;
-		background-position: center;
-		background-size: initial;	
+		background: $button-background-mute-light;
+		background-position: $button-background-position;
+		background-size: $button-background-size;	
 	}
 }
 
 .mejs__unmute > {
 	button {
-		background: transparent url("/audio-player/images/Light-Mute.svg") no-repeat;
-		background-position: center;
-		background-size: initial;
+		background: $button-background-unmute-light;
+		background-position: $button-background-position;
+		background-size: $button-background-size;
 	}
 }
 
-.mejs-controls {
-	.mejs-unmute {
-		button {
-			background-position: 0 -12px;
-		}
-	}	
-}
-
 .mejs__time {
-	color: rgb(255, 255, 255);
-	font-weight: normal;
+	color: $controls-time-color;
+	font-weight: $controls-font-weight;
 }
 
 .player-header {
@@ -135,22 +133,22 @@ div.audio-player {
 
 .single-player {
 	.mejs-prepended-buttons {
-		display: -webkit-box;
-		display: flex;
+		display: $single-player-display-webkit;
+		display: $single-player-display;
 	}
 
 	.mejs-appended-buttons {
-		display: -webkit-box;
-		display: flex;
-		-webkit-box-pack: space-evenly;
-		justify-content: space-evenly;
+		display: $single-player-display-webkit;
+		display: $single-player-display;
+		-webkit-box-pack: $single-player-justify-content;
+		justify-content: $single-player-justify-content;
 	}
   
 	.mejs__button > {
 		button {
-			width: 30px;
-			height:30px;
-			font-size: 10px;
+			width: $button-width;
+			height: $button-height;
+			font-size: $button-font-size;
 		}
 	}
   
@@ -166,7 +164,7 @@ div.audio-player {
 	}
 
 	.mejs__controls {
-		display: block;
+		display: $controls-display;
 	}
 
 	.mejs__controls,
@@ -175,7 +173,7 @@ div.audio-player {
 	}
 
 	.podcast {
-		margin: 30px auto;
+		margin: $podcast-margin;
 	}
 
 	.mejs__horizontal-volume-slider {
@@ -193,7 +191,7 @@ div.audio-player {
 		
 		.mejs__time {
 			color: $button-text-label-color;
-			font-weight: normal;
+			font-weight: $controls-font-weight;
 		}
 		
 		.mejs__time-total {
