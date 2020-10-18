@@ -8,26 +8,26 @@ div.audio-player {
 	width: $div-audio-player-width;
 	height: $div-audio-player-height;
 	padding: $div-audio-player-padding;
-	
+
 	@media (max-width: 575.98px) {
 		width: $div-audio-player-width-mobile;
 	}
-	
+
 	/* Small devices (landscape phones, 576px and up) */
 	@media (min-width: 576px) and (max-width: 767.98px) {
 		width: $div-audio-player-width-mobile;
 	}
-	
+
 	/* Medium devices (tablets, 768px and up) */
 	@media (min-width: 768px) and (max-width: 991.98px) {
 		width: $div-audio-player-width-smaller;
 	}
-	
+
 	/* Large devices (desktops, 992px and up) */
 	@media (min-width: 992px) and (max-width: 1199.98px) {
 		width: $div-audio-player-width;
 	}
-	
+
 	/* Extra large devices (large desktops, 1200px and up) */
 	@media (min-width: 1200px) {
 		width: $div-audio-player-width;
@@ -67,7 +67,8 @@ div.audio-player {
 	}
 }
 
-.mejs-skip-back-button >, .mejs__skip-back-button > {
+.mejs-skip-back-button >,
+.mejs__skip-back-button > {
 	button {
 		background: $button-background-skip-back-light;
 		background-position: $button-background-position;
@@ -86,7 +87,7 @@ div.audio-player {
 	button {
 		background: $button-background-mute-light;
 		background-position: $button-background-position;
-		background-size: $button-background-size;	
+		background-size: $button-background-size;
 	}
 }
 
@@ -135,7 +136,7 @@ div.audio-player {
 	.mejs__horizontal-volume-slider {
 		display: none !important;
 	}
-	
+
 	.mejs-prepended-buttons {
 		display: $single-player-display-webkit;
 		display: $single-player-display;
@@ -147,14 +148,14 @@ div.audio-player {
 		-webkit-box-pack: $single-player-justify-content;
 		justify-content: $single-player-justify-content;
 	}
-	
+
 	.mejs__time {
 		@media (prefers-color-scheme: light) {
 			color: $button-text-label-color;
 			font-weight: $controls-font-weight;
-		}	
+		}
 	}
-	
+
 	.mejs__time-total {
 		@media (prefers-color-scheme: light) {
 			background: $time-total-background;
@@ -162,32 +163,32 @@ div.audio-player {
 			width: $time-total-width;
 		}
 	}
-	
+
 	.mejs__time-current {
 		@media (prefers-color-scheme: light) {
 			background: $time-current-background;
 		}
 	}
-  
+
 	.mejs__button > {
 		button {
 			width: $button-width;
 			height: $button-height;
 			font-size: $button-font-size;
-			
+
 			@media (prefers-color-scheme: light) {
 				color: $button-text-label-color;
 			}
 		}
 	}
-  
+
 	.mejs__speed-button > {
 		button {
 			width: 40px;
 			font-size: 14px;
 		}
 	}
-	
+
 	.mejs__play > {
 		button {
 			@media (prefers-color-scheme: light) {
@@ -195,7 +196,7 @@ div.audio-player {
 			}
 		}
 	}
-	
+
 	.mejs__pause > {
 		button {
 			@media (prefers-color-scheme: light) {
@@ -203,7 +204,7 @@ div.audio-player {
 			}
 		}
 	}
-	
+
 	.mejs-skip-back-button >,
 	.mejs__skip-back-button > {
 		button {
@@ -212,16 +213,16 @@ div.audio-player {
 			}
 		}
 	}
-	
+
 	.mejs-jump-forward-button >,
 	.mejs__jump-forward-button > {
 		button {
 			@media (prefers-color-scheme: light) {
-				background: $button-background-jump-forward;	
+				background: $button-background-jump-forward;
 			}
 		}
 	}
-	
+
 	.mejs__mute > {
 		button {
 			@media (prefers-color-scheme: light) {
@@ -229,7 +230,7 @@ div.audio-player {
 			}
 		}
 	}
-	
+
 	.mejs__unmute > {
 		button {
 			@media (prefers-color-scheme: light) {
