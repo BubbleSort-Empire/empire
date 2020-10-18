@@ -1,13 +1,12 @@
 {{ define "main" }}
-{{ partial "indexListHeader" . }}
+	{{ partial "indexListHeader" . }}
 
-{{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "episode") }}
+	{{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "episode") }}
 
-{{ range $paginator.Pages }}
-    {{ .Render "listItems/masterListItem" }}
-{{ end }}
+	{{ range $paginator.Pages }}
+		{{ .Render "listItems/masterListItem" }}
+	{{ end }}
 
-
-{{ partial "pagination.html" . }}
-{{ partial "player-includes"}}
+	{{ partial "pagination.html" . }}
+	{{ partial "player-includes" }}
 {{ end }}
