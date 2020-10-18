@@ -21,6 +21,14 @@ image = ""
 # Ex: image = "weekly-wrap/show-art-large.png" for an image located at static/images/weekly-wrap/show-art-large.png
 feedImage = ""
 
+# Numeric iTunes Feed ID 
+# EX: for this iTunes link https://podcasts.apple.com/podcast/id1448327383
+# The ID would be 1448327383
+iTunesFeedID = ""
+
+
 # These values should not be changed
-type = "aggregatedPodcast"
+type = "podcast"
+
+
 +++
