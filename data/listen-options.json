@@ -1,0 +1,22 @@
+{
+	"Podcasts": {
+		"name": "Podcasts",
+		"image": "Podcasts.svg",
+		"description": "Listen on Apple Podcasts."
+	},
+	"Overcast": {
+		"name": "Overcast",
+		"image": "Overcast.svg",
+		"description": "Listen on Overcast."
+	},
+	"Pocket Casts": {
+		"name": "Pocket Casts",
+		"image": "Pocketcasts.svg",
+		"description": "Listen on Pocket Casts."
+	},
+	"Castro": {
+		"name": "Castro",
+		"image": "Castro.svg",
+		"description": "Listen on Castro."
+	}
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 201 201" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-39,-261)">
+        <g transform="matrix(0.525965,0,0,0.305066,0,0)">
+            <g transform="matrix(3.80253,0,0,6.55596,-12.1383,784.211)">
+                <g id="Castro">
+                    <g id="castroButton-castroButtonc2iconcopy">
+                        <path id="castroButton-castroButtonpath1" d="M57.85,10.99L88.13,10.99C98.16,10.99 103.18,10.99 108.59,12.7C114.49,14.85 119.13,19.49 121.28,25.39C122.99,30.8 122.99,35.82 122.99,45.85L122.99,76.13C122.99,86.16 122.99,91.18 121.28,96.59C119.13,102.49 114.49,107.13 108.59,109.28C103.18,110.99 98.16,110.99 88.13,110.99L57.85,110.99C47.82,110.99 42.8,110.99 37.39,109.28C31.49,107.13 26.85,102.49 24.7,96.59C22.99,91.18 22.99,86.16 22.99,76.13L22.99,45.85C22.99,35.82 22.99,30.8 24.7,25.39C26.85,19.49 31.49,14.85 37.39,12.7C42.8,10.99 47.82,10.99 57.85,10.99Z" style="fill:url(#_Linear1);"/>
+                        <circle id="castroButton-castroButtonpath2" cx="72.99" cy="61.04" r="43.8" style="fill:url(#_Linear2);"/>
+                        <path id="castroButton-castroButtonpath3" d="M91.14,85.78L83.85,75.67C88.43,72.32 91.4,66.91 91.4,60.81C91.4,50.64 83.15,42.39 72.97,42.39C62.79,42.39 54.54,50.64 54.54,60.81C54.54,66.94 57.54,72.37 62.16,75.72L54.86,85.83C47.1,80.22 42.05,71.1 42.05,60.8C42.05,43.74 55.89,29.92 72.96,29.92C90.04,29.92 103.88,43.74 103.88,60.8C103.88,71.07 98.86,80.17 91.14,85.78ZM73.03,53.35C77.14,53.35 80.47,56.67 80.47,60.78C80.47,64.88 77.14,68.21 73.03,68.21C68.92,68.21 65.59,64.88 65.59,60.78C65.59,56.67 68.92,53.35 73.03,53.35Z" style="fill:white;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(6.12323e-15,100,-100,6.12323e-15,22.99,10.99)"><stop offset="0" style="stop-color:rgb(0,204,191);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(0,178,101);stop-opacity:1"/></linearGradient>
+        <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(5.35599e-15,87.47,-87.47,5.35599e-15,29.26,17.17)"><stop offset="0" style="stop-color:rgb(21,21,21);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(53,53,53);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>
