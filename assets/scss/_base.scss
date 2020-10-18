@@ -124,6 +124,58 @@ div.hosted-shows-list {
   padding-left: 10pt;
 }
 
+.connect-list {
+  text-align: right;
+  float: right;
+  clear: right;
+}
+
+.listen-list {
+  small {
+    text-align: left;
+    float: left;
+    clear: left;
+  }
+
+  
+  .listen-option {
+      p {
+        text-align: center;
+        font-size: small;
+        font-weight: lighter;
+      }
+      
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30pt;
+      }
+      
+      float: left;
+      padding-right: 10pt;
+      width: 50pt;
+      
+      @media (max-width: 575.98px) {
+        
+        img {
+          width: 20pt;
+        }
+        width: 30pt;
+      }
+      
+  }
+    
+    padding-top: 10pt;
+    padding-left: 10pt;
+    text-align: left;
+
+}
+
+
+
+
+
 input.search-form {
   @include placeholder {
     font-style: $search-form-text-style;
