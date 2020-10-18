@@ -1,0 +1,30 @@
+<small>Other Ways To Listen:</small>
+<div class="listen-list">
+
+	{{- $baseURL := .Site.BaseURL -}}
+	<div>
+		<a title="Download Audio">
+			<div class="listen-option">
+				<img src="{{ .Site.BaseURL }}images/listen-buttons/Download.svg" />
+				<p>Download</p>
+			</div>
+		</a>
+		<a title="Audio RSS Feed">
+			<div class="listen-option">
+				<img src="{{ .Site.BaseURL }}images/listen-buttons/RSS.svg" />
+				<p>RSS Feed</p>
+			</div>
+		</a>
+		{{ range .Site.Data.listenOptions }}
+			<a title="{{ .description }}">
+				<div class="listen-option">
+					<img src="{{ $baseURL }}images/listen-buttons/{{ .image }}" />
+					<p>{{ .name }}</p>
+				</div>
+			</a>
+		{{ end }}
+		
+		
+	</div>
+	
+</div>
