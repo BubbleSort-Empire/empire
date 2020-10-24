@@ -20,6 +20,13 @@ Paginate = 3
 
   searchPageTitle = "Search The Empire"
   searchPlaceholderText = "Tear this ship apart and find me those plans"
+  
+  # Audio prefixes are used to build audio urls for episodes. This allows episode front matter 
+  # to only have a need to specify the actual filename of the audio and also allows
+  # for easily prepending stats tracking URLS like BluBrry to audio files.
+  # These prefixes can be defines in front matter to Podcasts and Aggregated Podcasts
+  # When they are not defined there the default prefix specified below will be used. 
+  defaultAudioURLPrefix = "https://empireforhugotheme.site/audio/"
 
 [outputFormats]
   [outputFormats.jsonfeed]
