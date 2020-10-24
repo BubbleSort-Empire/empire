@@ -26,6 +26,13 @@ feedImage = ""
 # The ID would be 1448327383
 iTunesFeedID = ""
 
+# Audio prefixes are used to build audio urls for episodes. This allows episode front matter 
+# to only have a need to specify the actual filename of the audio and also allows
+# for easily prepending stats tracking URLS like BluBrry to audio files.
+# URL prefixes at this level are optional. If omitted here the default prefix
+# from the site configuration will be used.
+audioURLPrefix = ""
+
 
 # These values should not be changed
 type = "podcast"
