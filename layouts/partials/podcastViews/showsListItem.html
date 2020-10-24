@@ -11,6 +11,9 @@
                     <h4>{{ .Title }}</h4>
                 </a>
                 <p>{{ .Description }}</p>
+				<div class="listen-list row">
+					{{ partial "listen-on" . }}
+				</div>
 				<div class="connect-list">
 					<small>Hosts & Feedback:</small>
 					{{ partial "peopleViews/smallPeopleList" . }}
