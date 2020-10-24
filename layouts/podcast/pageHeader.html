@@ -11,7 +11,14 @@
 					<h2>{{ .CurrentSection.Title }}</h2>
 				</a>
 				<p>{{ .Description }}</p>
-				{{ partial "peopleViews/smallPeopleList" . }}
+				<div class="listen-list row">
+					{{ partial "listen-on" . }}
+				</div>
+				<div class="connect-list">
+					<small>Hosts & Feedback:</small>
+					{{ partial "peopleViews/smallPeopleList" . }}
+					{{ partial "connect" . }}
+				</div>
 			</div>
 		</div>
 	</div>
