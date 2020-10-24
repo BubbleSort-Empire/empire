@@ -23,10 +23,16 @@
 				</a>
 				{{ .Render "listItems/components/publishView" }}
 				{{ .Render "audio/player-single" }}
-				{{ partial "peopleViews/smallPeopleList" . }}
-				<div>{{ partial "connect" . }}</div>
+				<div class="player-extra-options">
+					<small>Other Ways To Listen:</small>
+					{{ partial "listen-on" . }}
+				</div>
 			</div>
 		</div>
-		{{ partial "listen-on" . }}
+		<div class="connect-list">
+			<small>Hosts & Feedback:</small>
+			{{ partial "peopleViews/smallPeopleList" . }}
+			{{ partial "connect" . }}
+		</div>
 	</div>
 </div>
