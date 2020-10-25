@@ -23,6 +23,9 @@ guests = []
 image = ""
 
 # Audio File Details
+# If you haven't configured any audio url prefixes at any level,
+# you should include the full url to your audio file in the audioFile parameter.
+# If you are using url prefixes, only use the actual audio file name.
 audioDuration = "##:##"
 audioFile = ""
 audioBytes = "#########" # No Commas

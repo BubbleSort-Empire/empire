@@ -24,8 +24,10 @@ Paginate = 3
   # Audio prefixes are used to build audio urls for episodes. This allows episode front matter 
   # to only have a need to specify the actual filename of the audio and also allows
   # for easily prepending stats tracking URLS like BluBrry to audio files.
-  # These prefixes can be defines in front matter to Podcasts and Aggregated Podcasts
-  # When they are not defined there the default prefix specified below will be used. 
+  # These prefixes can be defined in front matter to Podcasts and Aggregated Podcasts.
+  # When they are not defined there, the default prefix specified below will be used. 
+  # If there is no audio url prefix at any level you should include the full url to your 
+  # audio file in the episode's audioFile parameter.
   defaultAudioURLPrefix = "https://empireforhugotheme.site/audio/"
 
 [outputFormats]
