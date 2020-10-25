@@ -18,7 +18,7 @@
 				</div>
 			</a>
 		{{- end -}}
-		{{ range .Site.Data.listenOptions }}
+		{{ range sort .Site.Data.listenOptions "sortOrder" "asc" }}
 			<a title="{{ .description }}">
 				<div class="listen-option iconic-list-item">
 					<img src="{{ $baseURL }}images/listen-buttons/{{ .image }}" />

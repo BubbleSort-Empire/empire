@@ -2,31 +2,37 @@
 	"Podcasts": {
 		"name": "Podcasts",
 		"image": "Podcasts.svg",
-		"description": "Listen in Apple Podcasts."
+		"description": "Listen in Apple Podcasts.",
+		"sortOrder": "0"
 	},
 	"Overcast": {
 		"name": "Overcast",
 		"image": "Overcast.svg",
-		"description": "Listen in Overcast."
-	},
-	"Pocket Casts": {
-		"name": "Pocket Casts",
-		"image": "Pocketcasts.svg",
-		"description": "Listen in Pocket Casts."
+		"description": "Listen in Overcast.",
+		"sortOrder": "1"
 	},
 	"Castro": {
 		"name": "Castro",
 		"image": "Castro.svg",
-		"description": "Listen in Castro."
+		"description": "Listen in Castro.",
+		"sortOrder": "2"
 	},
 	"Google": {
 		"name": "Google",
 		"image": "Google.svg",
-		"description": "Listen on Google."
+		"description": "Listen on Google.",
+		"sortOrder": "3"
 	},
 	"Spotify": {
 		"name": "Spotify",
 		"image": "Spotify.svg",
-		"description": "Listen on Spotify."
+		"description": "Listen on Spotify.",
+		"sortOrder": "4"
+	},
+	"Pocket Casts": {
+		"name": "Pocket Casts",
+		"image": "Pocketcasts.svg",
+		"description": "Listen in Pocket Casts.",
+		"sortOrder": "5"
 	}
 }
