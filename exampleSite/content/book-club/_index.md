@@ -24,7 +24,7 @@ feedImage = ""
 # Numeric iTunes Feed ID 
 # EX: for this iTunes link https://podcasts.apple.com/podcast/id1448327383
 # The ID would be 1448327383
-iTunesFeedID = ""
+iTunesFeedID = "1430709351"
 
 # Audio prefixes are used to build audio urls for episodes. This allows episode front matter 
 # to only have a need to specify the actual filename of the audio and also allows

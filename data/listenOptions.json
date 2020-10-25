@@ -3,36 +3,48 @@
 		"name": "Podcasts",
 		"image": "Podcasts.svg",
 		"description": "Listen in Apple Podcasts.",
-		"sortOrder": "0"
+		"sortOrder": "0",
+		"urlPrefix": "https://podcasts.apple.com/podcast/id",
+		"urlStyle": "iTunes"
 	},
 	"Overcast": {
 		"name": "Overcast",
 		"image": "Overcast.svg",
 		"description": "Listen in Overcast.",
-		"sortOrder": "1"
+		"sortOrder": "1",
+		"urlPrefix": "https://overcast.fm/itunes",
+		"urlStyle": "iTunes"	
 	},
 	"Castro": {
 		"name": "Castro",
 		"image": "Castro.svg",
 		"description": "Listen in Castro.",
-		"sortOrder": "2"
+		"sortOrder": "2",
+		"urlPrefix": "https://castro.fm/itunes/",
+		"urlStyle": "iTunes"
 	},
 	"Google": {
 		"name": "Google",
 		"image": "Google.svg",
 		"description": "Listen on Google.",
-		"sortOrder": "3"
+		"sortOrder": "3",
+		"urlPrefix": "https://podcasts.google.com/?feed=",
+		"urlStyle": "custom"
 	},
 	"Spotify": {
 		"name": "Spotify",
 		"image": "Spotify.svg",
 		"description": "Listen on Spotify.",
-		"sortOrder": "4"
+		"sortOrder": "4",
+		"urlPrefix": "https://open.spotify.com/show/",
+		"urlStyle": "custom"
 	},
 	"Pocket Casts": {
 		"name": "Pocket Casts",
 		"image": "Pocketcasts.svg",
 		"description": "Listen in Pocket Casts.",
-		"sortOrder": "5"
+		"sortOrder": "5",
+		"urlPrefix": "https://pca.st/",
+		"urlStyle": "hybrid"
 	}
 }
