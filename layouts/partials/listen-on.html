@@ -1,12 +1,14 @@
 <div class="listen-list">
 	{{- $baseURL := .Site.BaseURL -}}
 	<div>
-		<a title="Download Audio">
-			<div class="listen-option iconic-list-item">
-				<img src="{{ .Site.BaseURL }}images/listen-buttons/Download.svg" />
-				<p>Download</p>
-			</div>
-		</a>
+		{{ with .Params.audioFile }}
+			<a title="Download Audio" href="">
+				<div class="listen-option iconic-list-item">
+					<img src="{{ $baseURL }}images/listen-buttons/Download.svg" />
+					<p>Download</p>
+				</div>
+			</a>
+		{{ end }}
 		<a title="Audio RSS Feed">
 			<div class="listen-option iconic-list-item">
 				<img src="{{ .Site.BaseURL }}images/listen-buttons/RSS.svg" />
