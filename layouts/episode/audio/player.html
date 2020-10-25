@@ -2,10 +2,10 @@
   <div class="col">
     <div class="audio-player">
         <audio width="100%" preload="none">
-          <source src="{{ .Site.BaseURL }}audio/BS-TV-Intro.mp3" /> 
+          <source src="{{ .Render "audio/audioURL" }}" /> 
           Your browser does not support the audio tag.
         </audio>
-        <div class="download-link"><a href="{{ .Site.BaseURL }}audio/BS-TV-Intro.mp3">Download Episode</a></div>
+        <div class="download-link"><a href="{{ .Render "audio/audioURL" }}">Download Episode</a></div>
     </div>
   </div>
 </div>

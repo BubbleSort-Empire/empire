@@ -1,8 +1,9 @@
 <div class="listen-list">
 	{{- $baseURL := .Site.BaseURL -}}
+	{{- $this := . -}}
 	<div>
 		{{ with .Params.audioFile }}
-			<a title="Download Audio" href="">
+			<a title="Download Audio" href="{{ $this.Render "audio/audioURL" }}">
 				<div class="listen-option iconic-list-item">
 					<img src="{{ $baseURL }}images/listen-buttons/Download.svg" />
 					<p>Download</p>
