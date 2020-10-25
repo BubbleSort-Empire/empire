@@ -1,1 +1,9 @@
-<!--{{ .Site.Params.mediaPrefix }}{{ .Params.podcast_file }}->>
+{{- if and (isset .CurrentSection.Params "audiourlprefix") (ne .CurrentSection.Params.audioURLPrefix "") -}}
+	{{- .CurrentSection.Params.audioURLPrefix -}}{{- .Params.audioFile -}}
+{{- else if and (isset .CurrentSection.Parent.Params "audiourlprefix") (ne .CurrentSection.Parent.Params.audioURLPrefix "") -}}
+	{{- .CurrentSection.Parent.Params.audioURLPrefix -}}{{- .Params.audioFile -}}
+{{- else if and (isset .Site.Params "defaultaudiourlprefix" ) (ne .Site.Params.defaultAudioURLPrefix "") -}}
+	{{- .Site.Params.defaultAudioURLPrefix -}}{{- .Params.audioFile -}}
+{{- else -}}
+	{{- .Params.audioFile -}}
+{{- end -}}
