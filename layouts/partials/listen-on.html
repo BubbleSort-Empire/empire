@@ -2,20 +2,22 @@
 	{{- $baseURL := .Site.BaseURL -}}
 	{{- $this := . -}}
 	<div>
-		{{ with .Params.audioFile }}
+		{{- with .Params.audioFile -}}
 			<a title="Download Audio" href="{{ $this.Render "audio/audioURL" }}">
 				<div class="listen-option iconic-list-item">
 					<img src="{{ $baseURL }}images/listen-buttons/Download.svg" />
 					<p>Download</p>
 				</div>
 			</a>
-		{{ end }}
-		<a title="Audio RSS Feed">
-			<div class="listen-option iconic-list-item">
-				<img src="{{ .Site.BaseURL }}images/listen-buttons/RSS.svg" />
-				<p>RSS</p>
-			</div>
-		</a>
+		{{- end -}}
+		{{- with .CurrentSection.OutputFormats.Get "RSS" -}}
+			<a title="Audio RSS Feed" href="{{ .RelPermalink }}">
+				<div class="listen-option iconic-list-item">
+					<img src="{{ $baseURL }}images/listen-buttons/RSS.svg" />
+					<p>RSS</p>
+				</div>
+			</a>
+		{{- end -}}
 		{{ range .Site.Data.listenOptions }}
 			<a title="{{ .description }}">
 				<div class="listen-option iconic-list-item">
