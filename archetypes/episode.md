@@ -23,9 +23,9 @@ guests = []
 image = ""
 
 # Audio File Details
-duration = "##:##"
-file = ""
-bytes = "#########" # No Commas
+audioDuration = "##:##"
+audioFile = ""
+audioBytes = "#########" # No Commas
 
 
 # These values should not be changed
