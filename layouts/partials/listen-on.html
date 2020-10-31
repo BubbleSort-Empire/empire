@@ -19,28 +19,20 @@
 			</a>
 		{{- end -}}
 		{{ range sort .Site.Data.listenOptions "sortOrder" "asc" }}
-			{{ if eq .urlStyle "iTunes" }}
-				{{- if and (isset $this.CurrentSection.Params "itunesfeedid") (ne $this.CurrentSection.Params.iTunesFeedID "") -}}
-					<a title="{{ .description }}" href="{{ .urlPrefix }}{{ $this.CurrentSection.Params.iTunesFeedID }}">
-						<div class="listen-option iconic-list-item">
-							<img src="{{ $baseURL }}images/listen-buttons/{{ .image }}" />
-							<p>{{ .name }}</p>
-						</div>
-					</a>
-				{{- else if and (isset $this.CurrentSection.Parent.Params "itunesfeedid") (ne $this.CurrentSection.Parent.Params.iTunesFeedID "") -}}
-					<a title="{{ .description }}" href="{{ .urlPrefix }}{{ $this.CurrentSection.Parent.Params.iTunesFeedID }}">
-						<div class="listen-option iconic-list-item">
-							<img src="{{ $baseURL }}images/listen-buttons/{{ .image }}" />
-							<p>{{ .name }}</p>
-						</div>
-					</a>
-				{{- end -}}
-			{{- else if eq .urlStyle "custom" -}}
-				{{ .name }} - custom<br  />
-			{{- else if eq .urlStyle "hybrid" -}}
-				{{ .name }} - hybrid<br  />
+			{{- $feedID := "" -}}
+			{{- if and (isset $this.CurrentSection.Params .feedIDParameter) (ne $this.CurrentSection.Params .feedIDParameter "") -}}
+				{{- $feedID = $this.CurrentSection.Param  .feedIDParameter -}}
+			{{- else if and (isset $this.CurrentSection.Parent.Params .feedIDParameter) (ne $this.CurrentSection.Parent.Params .feedIDParameter "") -}}
+				{{- $feedID = $this.CurrentSection.Parent.Param .feedIDParameter -}}		
 			{{- end -}}
-			
+			{{- if ne $feedID "" -}}
+				<a title="{{ .description }}" href="{{ .urlPrefix }}{{ $feedID }}">
+					<div class="listen-option iconic-list-item">
+						<img src="{{ $baseURL }}images/listen-buttons/{{ .image }}" />
+						<p>{{ .name }}</p>
+					</div>
+				</a>
+			{{- end -}}
 		{{ end }}
 	</div>
 </div>

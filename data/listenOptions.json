@@ -5,7 +5,7 @@
 		"description": "Listen in Apple Podcasts.",
 		"sortOrder": "0",
 		"urlPrefix": "https://podcasts.apple.com/podcast/id",
-		"urlStyle": "iTunes"
+		"feedIDParameter": "itunesfeedid"
 	},
 	"Overcast": {
 		"name": "Overcast",
@@ -13,7 +13,7 @@
 		"description": "Listen in Overcast.",
 		"sortOrder": "1",
 		"urlPrefix": "https://overcast.fm/itunes",
-		"urlStyle": "iTunes"	
+		"feedIDParameter": "itunesfeedid"
 	},
 	"Castro": {
 		"name": "Castro",
@@ -21,7 +21,7 @@
 		"description": "Listen in Castro.",
 		"sortOrder": "2",
 		"urlPrefix": "https://castro.fm/itunes/",
-		"urlStyle": "iTunes"
+		"feedIDParameter": "itunesfeedid"
 	},
 	"Google": {
 		"name": "Google",
@@ -29,7 +29,7 @@
 		"description": "Listen on Google.",
 		"sortOrder": "3",
 		"urlPrefix": "https://podcasts.google.com/?feed=",
-		"urlStyle": "custom"
+		"feedIDParameter": "googlefeedid"
 	},
 	"Spotify": {
 		"name": "Spotify",
@@ -37,7 +37,7 @@
 		"description": "Listen on Spotify.",
 		"sortOrder": "4",
 		"urlPrefix": "https://open.spotify.com/show/",
-		"urlStyle": "custom"
+		"feedIDParameter": "spotifyfeedid"
 	},
 	"Pocket Casts": {
 		"name": "Pocket Casts",
@@ -45,6 +45,6 @@
 		"description": "Listen in Pocket Casts.",
 		"sortOrder": "5",
 		"urlPrefix": "https://pca.st/",
-		"urlStyle": "hybrid"
+		"feedIDParameter": "pocketcastsfeedid"
 	}
 }
