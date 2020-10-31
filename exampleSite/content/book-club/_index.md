@@ -26,6 +26,21 @@ feedImage = ""
 # The ID would be 1448327383
 iTunesFeedID = "1430709351"
 
+# Pocket Casts Feed ID 
+# EX: for this Pocket Casts link https://pca.st/7ilyfbc6
+# The ID would be 7ilyfbc6
+pocketCastsFeedID = "7ilyfbc6"
+
+# Spotify Feed ID 
+# EX: for this Spotify link https://open.spotify.com/show/52Xo86cea1ZUg6BGv4azGN
+# The ID would be 52Xo86cea1ZUg6BGv4azGN
+spotifyFeedID = "52Xo86cea1ZUg6BGv4azGN"
+
+# Google Feed ID 
+# EX: for this Google link https://podcasts.google.com/?feed=aHR0cHM6Ly90aGVsaW5lcnByb2plY3QuY29tL2luZGV4LnhtbA==
+# The ID would be aHR0cHM6Ly90aGVsaW5lcnByb2plY3QuY29tL2luZGV4LnhtbA==
+googleFeedID = "aHR0cHM6Ly90aGVsaW5lcnByb2plY3QuY29tL2luZGV4LnhtbA=="
+
 # Audio prefixes are used to build audio urls for episodes. This allows episode front matter 
 # to only have a need to specify the actual filename of the audio and also allows
 # for easily prepending stats tracking URLS like BluBrry to audio files.
