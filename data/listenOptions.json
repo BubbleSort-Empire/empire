@@ -43,7 +43,7 @@
 		"name": "Pocket Casts",
 		"image": "Pocketcasts.svg",
 		"description": "Listen in Pocket Casts.",
-		"sortOrder": "5",
+		"sortOrder": "100",
 		"urlPrefix": "https://pca.st/",
 		"feedIDParameter": "pocketcastsfeedid"
 	}
