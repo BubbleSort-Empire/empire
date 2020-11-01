@@ -39,6 +39,14 @@
 		"urlPrefix": "https://open.spotify.com/show/",
 		"feedIDParameter": "spotifyfeedid"
 	},
+	"Breaker": {
+		"name": "Breaker",
+		"image": "Breaker.svg",
+		"description": "Listen on Breaker.",
+		"sortOrder": "5",
+		"urlPrefix": "https://www.breaker.audio/",
+		"feedIDParameter": "breakerfeedid"
+	},
 	"Pocket Casts": {
 		"name": "Pocket Casts",
 		"image": "Pocketcasts.svg",

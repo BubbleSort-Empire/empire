@@ -41,6 +41,10 @@ spotifyFeedID = ""
 # The ID would be aHR0cHM6Ly90aGVsaW5lcnByb2plY3QuY29tL2luZGV4LnhtbA==
 googleFeedID = ""
 
+# Breaker Feed ID 
+# EX: for this Breaker link https://www.breaker.audio/rabbit-hole-2
+# The ID would be rabbit-hole-2
+breakerFeedID = ""
 
 # Audio prefixes are used to build audio urls for episodes. This allows episode front matter 
 # to only have a need to specify the actual filename of the audio and also allows
