@@ -134,20 +134,18 @@ div.hosted-shows-list {
 .listen-list {
 	.listen-option {
 		float: left;
-		padding-right: 10pt;
-		width: 40pt;
-
-		@media (max-width: 575.98px) {
-			img {
+		width: 42pt;
+		img {
+			width: 30pt;
+			
+			@media (max-width: 575.98px) {
 				width: 20pt;
 			}
-			width: 30pt;
 		}
 	}
 
 	padding-top: 10pt;
 	padding-left: 10pt;
-	text-align: left;
 }
 
 .iconic-list-item {
@@ -156,22 +154,22 @@ div.hosted-shows-list {
 		font-size: xx-small;
 		font-weight: lighter;
 	}
-
+	
 	img {
 		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		width: 80%;
+		margin: auto;
 	}
-
-	overflow: auto;
-	padding-right: 10pt;
 }
 
 .connect-list {
 	.iconic-list-item {
 		height: 65pt;
 	}
+}
+
+.connect-icon {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
 }
 
 input.search-form {
