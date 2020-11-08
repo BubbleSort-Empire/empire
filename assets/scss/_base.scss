@@ -105,17 +105,33 @@ div.hosted-shows-list {
 }
 
 .small-host-list-item {
+	text-align: center;
 	img {
 		border-radius: 25%;
+		width: 80%;
+		
+		@media (max-width: 575.98px) {
+			width: 60%;
+		}
+	}
+	
+	p {
+		text-align: center;
+		font-size: xx-small;
+		font-weight: bold;
+		color: $foreground-color;
 	}
 
 	float: left;
 	width: 50pt;
-	padding-top: 5pt;
 }
 
-.connect-list {
-	text-align: left;
+.connect-list > {
+	p {
+		font-size: small;
+		margin-left: 1em;
+		margin-bottom: 0.5em;
+	}
 }
 
 .connect-list-item {
@@ -125,6 +141,16 @@ div.hosted-shows-list {
 	p {
 	//	color: $foreground-color;
 		font-weight: bold;
+	}
+	
+	@media (max-width: 575.98px) {
+		a {
+			i {
+				&.fa-2x {
+					font-size: 1.35em;
+				}
+			}
+		}
 	}
 }
 
@@ -161,19 +187,11 @@ div.hosted-shows-list {
 		text-align: center;
 		font-size: xx-small;
 		font-weight: bold;
-	//	color: $foreground-color;
 	}
 	
 	img {
 		display: block;
 		margin: auto;
-		width: 80%;
-	}
-}
-
-.connect-list {
-	.iconic-list-item {
-		height: 65pt;
 	}
 }
 

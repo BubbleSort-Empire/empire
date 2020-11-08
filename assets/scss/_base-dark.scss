@@ -39,6 +39,12 @@
 			}
 		}
 	}
+	
+	.small-host-list-item {
+		p {
+			color: $foreground-color-dark;
+		}
+	}
 }
 
 @mixin pagination_dark {
