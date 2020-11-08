@@ -116,12 +116,16 @@ div.hosted-shows-list {
 
 .connect-list {
 	text-align: left;
-
 }
 
 .connect-list-item {
 	float: left;
 	font-size: x-large;
+	
+	p {
+	//	color: $foreground-color;
+		font-weight: bold;
+	}
 }
 
 .connect-icon {
@@ -142,21 +146,28 @@ div.hosted-shows-list {
 				width: 20pt;
 			}
 		}
+		p {
+			color: $foreground-color;
+			font-weight: bold;
+		}
 	}
 
 	padding-top: 10pt;
+	margin-left: 0.05rem;
 }
 
 .iconic-list-item {
 	p {
 		text-align: center;
 		font-size: xx-small;
-		font-weight: lighter;
+		font-weight: bold;
+	//	color: $foreground-color;
 	}
 	
 	img {
 		display: block;
 		margin: auto;
+		width: 80%;
 	}
 }
 
