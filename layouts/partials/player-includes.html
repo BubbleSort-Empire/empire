@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/audio-player/css/speed.min.css">
 
 
-{{ if .Site.IsServer -}}
+{{ if $.Site.IsServer -}}
     {{- $cssOpts := (dict "targetPath" "css/player.css" "outputStyle" "compressed" "enableSourceMap" true ) -}}
     {{- $styles := resources.Get "scss/player.scss" | resources.ExecuteAsTemplate "style.player.css" . | toCSS $cssOpts -}}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
@@ -13,6 +13,18 @@
     {{- $styles := resources.Get "scss/player.scss" | resources.ExecuteAsTemplate "style.player.css" . | toCSS $cssOpts | minify | fingerprint -}}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
 {{- end }}
+
+{{- $script1 := resources.Get "js/player/audio-player.js" -}}
+{{- $script2 := resources.Get "js/player/audio-player-2.js" -}}
+{{- $scripts := slice $script1 $script2 -}}
+
+{{ if $.Site.IsServer -}}
+	{{- $js := $scripts | resources.Concat "js/empire-player-script.js" -}}
+	<script src="{{ $js.RelPermalink }}"></script>
+{{- else -}}
+	{{- $js := $scripts | resources.Concat "js/empire-player-script.js" | minify | fingerprint -}}
+	<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{- end -}}
 
 <!--<script src="/audio-player/scripts/jquery-3.5.1.min.js"></script>-->
 <script src="/audio-player/scripts/mediaelement-and-player.min.js"></script>
