@@ -1,8 +1,10 @@
 {{- $styles := slice -}}
+{{- $cssOpts := (dict "targetPath" "css/player.css" "outputStyle" "compressed" "enableSourceMap" true ) -}}
 {{- $styles = $styles | append (resources.Get "css/player/mediaelementplayer.css") -}}
 {{- $styles = $styles | append (resources.Get "css/player/jump-forward.css") -}}
 {{- $styles = $styles | append (resources.Get "css/player/skip-back.css") -}}
 {{- $styles = $styles | append (resources.Get "css/player/speed.css") -}}
+{{- $styles = $styles | append (resources.Get "scss/player.scss" | resources.ExecuteAsTemplate "style.player.css" . | toCSS $cssOpts) -}}
 
 {{ if .Site.IsServer -}}
     {{- $style := $styles | resources.Concat "css/empire-player-styles.css" -}}
@@ -11,16 +13,6 @@
     {{- $style := $styles | resources.Concat "css/empire-player-styles.css" | minify | fingerprint -}}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" media="screen" />
 {{- end -}}
-
-{{ if .Site.IsServer -}}
-    {{- $cssOpts := (dict "targetPath" "css/player.css" "outputStyle" "compressed" "enableSourceMap" true ) -}}
-    {{- $styles := resources.Get "scss/player.scss" | resources.ExecuteAsTemplate "style.player.css" . | toCSS $cssOpts -}}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
-{{ else -}}
-    {{- $cssOpts := (dict "targetPath" "css/player.css" "outputStyle" "compressed") -}}
-    {{- $styles := resources.Get "scss/player.scss" | resources.ExecuteAsTemplate "style.player.css" . | toCSS $cssOpts | minify | fingerprint -}}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
-{{- end }}
 
 {{- $scripts := slice -}}
 {{- $scripts = $scripts | append (resources.Get "js/player/mediaelement-and-player.js") -}}
