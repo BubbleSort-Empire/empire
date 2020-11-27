@@ -1,0 +1,97 @@
+{
+	"Discord": {
+		"image": "discord.svg",
+		"sortOrder": "3",
+		"url": "https://discord.com/"
+	},
+	"Email": {
+		"image": "envelope.svg",
+		"sortOrder": "100",
+		"url": "mailto:podcast@gmail.com"
+	},
+	"Facebook": {
+		"image": "faceook-square.svg",
+		"sortOrder": "20",
+		"url": "https://facebook.com/"
+	},
+	"GitHub": {
+		"image": "github.svg",
+		"sortOrder": "4",
+		"url": "https://github.com/"
+	},
+	"Instagram": {
+		"image": "instagram.svg",
+		"sortOrder": "5",
+		"url": "https://instagram.com/"
+	},
+	"LinkedIn": {
+		"image": "linkedin.svg",
+		"sortOrder": "6",
+		"url": "https://linkedin.com/"
+	},
+	"Mastodon": {
+		"image": "mastodon.svg",
+		"sortOrder": "7",
+		"url": "https://joinmastodon.org/"
+	},
+	"Microblog": {
+		"image": "microblog.svg",
+		"sortOrder": "8",
+		"url": "https://micro.blog"
+	},
+	"Pinterest": {
+		"image": "pinterest.svg",
+		"sortOrder": "9",
+		"url": "https://pinterest.com"
+	},
+	"Quora": {
+		"image": "quora.svg",
+		"sortOrder": "10",
+		"url": "https://quora.com"
+	},
+	"Reddit": {
+		"image": "reddit.svg",
+		"sortOrder": "11",
+		"url": "https://reddit.com"
+	},
+	"Slack": {
+		"image": "slack.svg",
+		"sortOrder": "12",
+		"url": "https://slack.com"
+	},
+	"Snapchat": {
+		"image": "snapchat.svg",
+		"sortOrder": "13",
+		"url": "https://snapchat.com"
+	},
+	"Telegram": {
+		"image": "telegram.svg",
+		"sortOrder": "14",
+		"url": "https://telegram.org"
+	},
+	"Twitch": {
+		"image": "twitch.svg",
+		"sortOrder": "15",
+		"url": "https://twitch.tv"
+	},
+	"Twitter": {
+		"image": "twitter.svg",
+		"sortOrder": "1",
+		"url": "https://twitter.com/"
+	},
+	"Vimeo": {
+		"image": "vimeo.svg",
+		"sortOrder": "17",
+		"url": "https://vimeo.com/"
+	},
+	"WhatsApp": {
+		"image": "whatsapp.svg",
+		"sortOrder": "18",
+		"url": "https://whatsapp.com/"
+	},
+	"YouTube": {
+		"image": "youtube.svg",
+		"sortOrder": "2",
+		"url": "https://youtube.com/"
+	}
+}

@@ -200,6 +200,7 @@ div.hosted-shows-list {
 }
 
 input.search-form {
+	// I can't for the life of me remember why I did this, but it had something to do with styling text inside text boxes
 	@include placeholder {
 		font-style: $search-form-text-style;
 		color: $search-form-text-color;
@@ -210,7 +211,7 @@ input.search-form {
 	width: 85%;
 	height: calc(1.5em + 0.75rem + 2px);
 	padding: 0.375rem 0.75rem;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: $search-form-text-weight;
 	color: $search-form-text-color;
 	background-clip: padding-box;
