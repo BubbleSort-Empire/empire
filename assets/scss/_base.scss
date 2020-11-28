@@ -133,29 +133,6 @@ div.hosted-shows-list {
 	}
 }
 
-.connect-list-item {
-	float: left;
-	font-size: x-large;
-	
-	p {
-	//	color: $foreground-color;
-		font-weight: bold;
-	}
-	
-	@media (max-width: 575.98px) {
-		a {
-			i {
-				&.fa-2x {
-					font-size: 1.35em;
-				}
-			}
-		}
-	}
-}
-
-.connect-icon {
-}
-
 .player-extra-options {
 	padding-top: 20pt;
 }
@@ -166,13 +143,18 @@ div.hosted-shows-list {
 		width: 42pt;
 		img {
 			width: 30pt;
-			
-			@media (max-width: 575.98px) {
-				width: 20pt;
-			}
+			display: block;
+			margin: auto;
 		}
+		
+		a {
+			display: inline-block;
+		}
+		
 		p {
 			color: $foreground-color;
+			text-align: center;
+			font-size: xx-small;
 			font-weight: bold;
 		}
 	}
@@ -181,22 +163,27 @@ div.hosted-shows-list {
 	margin-left: 0.05rem;
 }
 
-.iconic-list-item {
+.connect-options {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.connect-option {
+	display: flex;
+	
+	a {
+		display: inline-block;
+		
+		i {
+			margin: 0.5rem;
+		}
+	}
+	
 	p {
 		text-align: center;
 		font-size: xx-small;
 		font-weight: bold;
 	}
-	
-	img {
-		display: block;
-		margin: auto;
-	}
-}
-
-.connect-icon {
-	margin-left: 0.5rem;
-	margin-right: 0.5rem;
 }
 
 input.search-form {
