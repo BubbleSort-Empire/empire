@@ -1,7 +1,6 @@
 <div class="listen-list">
 	{{- $baseURL := .Site.BaseURL -}}
 	{{- $this := . -}}
-	<div>
 		{{- with .Params.audioFile -}}
 			<a title="Download Audio" href="{{ $this.Render "audio/audioURL" }}">
 				<div class="listen-option">
@@ -18,7 +17,7 @@
 				</div>
 			</a>
 		{{- end -}}
-		{{ range sort .Site.Data.listenOptions "sortOrder" "asc" }}
+		{{- range sort .Site.Data.listenOptions "sortOrder" "asc" -}}
 			{{- $feedID := "" -}}
 			{{- if and (isset $this.CurrentSection.Params .feedIDParameter) (ne $this.CurrentSection.Params .feedIDParameter "") -}}
 				{{- $feedID = $this.CurrentSection.Param  .feedIDParameter -}}
@@ -33,6 +32,5 @@
 					</div>
 				</a>
 			{{- end -}}
-		{{ end }}
-	</div>
+		{{- end -}}
 </div>

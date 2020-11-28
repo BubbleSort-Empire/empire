@@ -138,51 +138,50 @@ div.hosted-shows-list {
 }
 
 .listen-list {
-	.listen-option {
-		float: left;
-		width: 42pt;
-		img {
-			width: 30pt;
-			display: block;
-			margin: auto;
+	display: flex;
+	flex-flow: row wrap;
+//	background-color: yellow;
+
+	a {
+		display: inline-block;
+		
+		.listen-option {
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+			align-content: center;
+			margin: 0.2rem 0.5rem 0 0.5rem;
+			
+			img {
+				width: 45px;
+			}
+			
+			p {
+				color: $foreground-color;
+				font-size: xx-small;
+				font-weight: bold;
+			}
 		}
+	}
+}
+
+.connect-options {
+	display: flex;
+	flex-flow: row wrap;
+	
+	.connect-option {
+		margin-left: 0.5rem;
+		margin-right: 1rem;
 		
 		a {
 			display: inline-block;
 		}
 		
 		p {
-			color: $foreground-color;
 			text-align: center;
 			font-size: xx-small;
 			font-weight: bold;
 		}
-	}
-
-	padding-top: 10pt;
-	margin-left: 0.05rem;
-}
-
-.connect-options {
-	display: flex;
-	flex-flow: row wrap;
-}
-
-.connect-option {
-	display: flex;
-	
-	a {
-		display: inline-block;
-		
-		i {
-			margin: 0.5rem;
-		}
-	}
-	
-	p {
-		text-align: center;
-		font-size: xx-small;
-		font-weight: bold;
 	}
 }
 
