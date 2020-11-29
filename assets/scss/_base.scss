@@ -101,38 +101,6 @@ div.hosted-shows-list {
 	padding-bottom: 20px;
 }
 
-.header-host-list {
-}
-
-.small-host-list-item {
-	text-align: center;
-	img {
-		border-radius: 25%;
-		width: 80%;
-		
-		@media (max-width: 575.98px) {
-			width: 60%;
-		}
-	}
-	
-	p {
-		text-align: center;
-		font-size: xx-small;
-		font-weight: bold;
-	}
-
-	float: left;
-	width: 50pt;
-}
-
-.connect-list > {
-	p {
-		font-size: small;
-		margin-left: 1em;
-		margin-bottom: 0.5em;
-	}
-}
-
 .player-extra-options {
 	padding-top: 20pt;
 }
@@ -165,16 +133,29 @@ div.hosted-shows-list {
 	}
 }
 
-.connect-options {
+.connect-list {
 	display: flex;
 	flex-flow: row wrap;
 	
 	.connect-option {
-		margin-left: 0.5rem;
-		margin-right: 1rem;
+		display: flex;
+		flex-flow: row nowrap;
+		align-content: center;
 		
 		a {
 			display: inline-block;
+			color: $foreground-color;
+			
+			img {
+				display: block;
+				border-radius: 15%;
+				height: 50px;
+			}
+			
+			.social {
+				fill: $links;
+				height: 50px;
+			}
 		}
 		
 		p {

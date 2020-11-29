@@ -48,7 +48,7 @@
 		"feedIDParameter": "breakerfeedid"
 	},
 	"Pocket Casts": {
-		"name": "Pocket Casts",
+		"name": "Casts",
 		"image": "Pocketcasts.svg",
 		"description": "Listen in Pocket Casts.",
 		"sortOrder": "100",
