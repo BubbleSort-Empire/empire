@@ -101,9 +101,6 @@ div.hosted-shows-list {
 	padding-bottom: 20px;
 }
 
-.header-host-list {
-}
-
 .small-host-list-item {
 	text-align: center;
 	img {
@@ -125,22 +122,19 @@ div.hosted-shows-list {
 	width: 50pt;
 }
 
-.connect-list > {
-	p {
-		font-size: small;
-		margin-left: 1em;
-		margin-bottom: 0.5em;
-	}
-}
-
 .player-extra-options {
 	padding-top: 20pt;
+}
+
+// TODO fix the podcast and aggregate podcasts view for the listen list (line the left up closer to the connect options)
+
+.connect-list {
+// make this class the parent flexbox of hosts and connect options in "Hosts & feedback"	
 }
 
 .listen-list {
 	display: flex;
 	flex-flow: row wrap;
-//	background-color: yellow;
 
 	a {
 		display: inline-block;
