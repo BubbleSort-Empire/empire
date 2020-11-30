@@ -1,0 +1,4 @@
+{{ $svg := . }}
+{{ $match := "<svg (.*)?>(.*)</svg>" }}
+{{ $replaceWith := printf `<svg class="social" ${1}>${2}</svg>` }}
+{{ return (replaceRE $match $replaceWith (printf "/assets/images/connect/%s.svg" $svg | readFile) | safeHTML) }}

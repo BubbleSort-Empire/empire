@@ -101,37 +101,7 @@ div.hosted-shows-list {
 	padding-bottom: 20px;
 }
 
-.small-host-list-item {
-	text-align: center;
-	img {
-		border-radius: 25%;
-		width: 80%;
-		
-		@media (max-width: 575.98px) {
-			width: 60%;
-		}
-	}
-	
-	p {
-		text-align: center;
-		font-size: xx-small;
-		font-weight: bold;
-	}
-
-	float: left;
-	width: 50pt;
-}
-
-.player-extra-options {
-	padding-top: 20pt;
-}
-
-// TODO fix the podcast and aggregate podcasts view for the listen list (line the left up closer to the connect options)
-
-.connect-list {
-// make this class the parent flexbox of hosts and connect options in "Hosts & feedback"	
-}
-
+// TODO Combine listen-list and connect-list styles (they're basically the same)
 .listen-list {
 	display: flex;
 	flex-flow: row wrap;
@@ -140,6 +110,7 @@ div.hosted-shows-list {
 		display: inline-block;
 		
 		.listen-option {
+			flex-shrink: 0;
 			display: flex;
 			flex-flow: column nowrap;
 			align-items: center;
@@ -159,28 +130,50 @@ div.hosted-shows-list {
 	}
 }
 
-.connect-options {
+.other-ways {
+	padding-top: 2em;
+}
+
+.connect {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.connect-list {
 	display: flex;
 	flex-flow: row wrap;
 	
-	.connect-option {
-		margin-left: 0.5rem;
-		margin-right: 1rem;
+	a {
+		display: inline-block;
+		text-decoration: none;
 		
-		a {
-			display: inline-block;
-		}
-		
-		p {
-			text-align: center;
-			font-size: xx-small;
-			font-weight: bold;
+		.connect-option {
+			flex-shrink: 0;
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+			margin: 0.1rem 0.2rem;
+			
+			img {
+				height: 45px;
+				border-radius: 15%;
+			}
+			
+			p {
+				color: $links;
+				font-size: xx-small;
+				font-weight: bold;
+			}
+				
+			.social {
+				fill: $links;
+				height: 45px;
+			}
 		}
 	}
 }
 
 input.search-form {
-	// I can't for the life of me remember why I did this, but it had something to do with styling text inside text boxes
 	@include placeholder {
 		font-style: $search-form-text-style;
 		color: $search-form-text-color;

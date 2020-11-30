@@ -1,12 +1,10 @@
-<div class="small-host-list-item">
-	<div>
-		<a href="{{ .Permalink }}">
-			<img
-				alt="{{ partial "peopleViews/listItems/displayName" . }}"
-				title="{{ partial "peopleViews/listItems/displayName" . }}"
-				src="{{ partial "peopleViews/imageURL" . }}"
-			/>
-			<p>{{ partial "peopleViews/listItems/displayName" . }}</p>
-		</a>
+<a href="{{ .Permalink }}">
+	<div class="connect-option">
+		<img
+			alt="{{- partial "peopleViews/listItems/displayName" . -}}"
+			title="{{- partial "peopleViews/listItems/displayName" . -}}"
+			src="{{- partial "peopleViews/imageURL" . -}}"
+		/>
+		<p>{{- partial "peopleViews/listItems/displayName" . -}}</p>
 	</div>
-</div>
+</a>

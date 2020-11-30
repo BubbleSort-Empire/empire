@@ -34,6 +34,22 @@
 		}
 	}
 	
+	.connect-list {
+		a {
+			color: $links-dark;
+			
+			.connect-option {
+				.social {
+					fill: $links-dark;
+				}
+				
+				p {
+					color: $links-dark;
+				}
+			}
+		}
+	}
+	
 	.small-host-list-item {
 		p {
 			color: $links-dark;

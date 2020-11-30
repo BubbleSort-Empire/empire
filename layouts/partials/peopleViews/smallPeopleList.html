@@ -3,9 +3,7 @@
 {{- $peoplePages := union $guestPages $hostPages -}}
 
 {{- with $peoplePages -}}
-<div class="header-host-list">
 {{- range $peoplePages -}} 
 	{{- partial "peopleViews/listItems/smallListView" . -}} 
 {{- end -}}
-</div>
 {{- end -}}

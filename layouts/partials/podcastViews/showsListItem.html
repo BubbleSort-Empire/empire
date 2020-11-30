@@ -11,14 +11,18 @@
                     <h4>{{ .Title }}</h4>
                 </a>
                 <p>{{ .Description }}</p>
-				<div class="listen-list row">
+				<div class="listen-list">
 					{{ partial "listen-on" . }}
 				</div>
-				<div class="connect-list">
-					<p>Hosts & Feedback:</p>
-					{{ partial "peopleViews/smallPeopleList" . }}
-					{{ partial "connect" . }}
-				</div>
+				<div class="connect">
+                    <div class="connect-list">
+                        <small>Hosts & Feedback:</small>
+                    </div>
+                    <div class="connect-list">
+                        {{ partial "peopleViews/smallPeopleList" . }}
+                        {{ partial "connect" . }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
