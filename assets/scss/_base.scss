@@ -101,10 +101,6 @@ div.hosted-shows-list {
 	padding-bottom: 20px;
 }
 
-.player-extra-options {
-	padding-top: 20pt;
-}
-
 // TODO Combine listen-list and connect-list styles (they're basically the same)
 .listen-list {
 	display: flex;
@@ -134,6 +130,10 @@ div.hosted-shows-list {
 	}
 }
 
+.other-ways {
+	padding-top: 2em;
+}
+
 .connect {
 	display: flex;
 	flex-flow: column nowrap;
@@ -152,8 +152,7 @@ div.hosted-shows-list {
 			display: flex;
 			flex-flow: column nowrap;
 			align-items: center;
-			align-content: center;
-			margin: 0.2rem 0.5rem 0 0.5rem;
+			margin: 0.1rem 0.2rem;
 			
 			img {
 				height: 45px;
