@@ -14,10 +14,14 @@
 				<div class="listen-list">
 					{{ partial "listen-on" . }}
 				</div>
-				<small>Hosts & Feedback:</small>
-				<div class="connect-list">
-					{{- partial "peopleViews/smallPeopleList" . -}}
-					{{- partial "connect" . -}}
+				<div class="connect">
+					<div class="connect-title">
+						<p><small>Hosts & Feedback:</small></p>
+					</div>
+					<div class="connect-list">
+						{{- partial "peopleViews/smallPeopleList" . -}}
+						{{- partial "connect" . -}}
+					</div>
 				</div>
 			</div>
 		</div>

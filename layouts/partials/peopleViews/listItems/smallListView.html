@@ -1,9 +1,10 @@
-<div class="connect-option">
-	<a href="{{ .Permalink }}">
+<a href="{{ .Permalink }}">
+	<div class="connect-option">
 		<img
 			alt="{{- partial "peopleViews/listItems/displayName" . -}}"
 			title="{{- partial "peopleViews/listItems/displayName" . -}}"
 			src="{{- partial "peopleViews/imageURL" . -}}"
 		/>
-		<p>{{- partial "peopleViews/listItems/displayName" . -}}</p></a>
-</div>
+		<p>{{- partial "peopleViews/listItems/displayName" . -}}</p>
+	</div>
+</a>

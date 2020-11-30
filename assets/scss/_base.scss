@@ -133,35 +133,40 @@ div.hosted-shows-list {
 	}
 }
 
+.connect {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
 .connect-list {
 	display: flex;
 	flex-flow: row wrap;
 	
-	.connect-option {
-		display: flex;
-		flex-flow: row nowrap;
-		align-content: center;
+	a {
+		display: inline-block;
 		
-		a {
-			display: inline-block;
-			color: $foreground-color;
+		.connect-option {
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+			align-content: center;
+			margin: 0.2rem 0.5rem 0 0.5rem;
 			
 			img {
-				display: block;
-				border-radius: 15%;
 				height: 50px;
+				border-radius: 15%;
 			}
 			
+			p {
+				color: $foreground-color;
+				font-size: xx-small;
+				font-weight: bold;
+			}
+				
 			.social {
-				fill: $links;
+				fill: $foreground-color;
 				height: 50px;
 			}
-		}
-		
-		p {
-			text-align: center;
-			font-size: xx-small;
-			font-weight: bold;
 		}
 	}
 }
