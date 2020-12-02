@@ -1,9 +1,9 @@
-<div class="listen-list">
+<div class="connect-list">
 	{{- $baseURL := .Site.BaseURL -}}
 	{{- $this := . -}}
 		{{- with .Params.audioFile -}}
 			<a title="Download Audio" href="{{ $this.Render "audio/audioURL" }}">
-				<div class="listen-option">
+				<div class="connect-option">
 					<img src="{{ $baseURL }}images/listen-buttons/Download.svg" />
 					<p>Download</p>
 				</div>
@@ -11,7 +11,7 @@
 		{{- end -}}
 		{{- with .CurrentSection.OutputFormats.Get "RSS" -}}
 			<a title="Audio RSS Feed" href="{{ .RelPermalink }}">
-				<div class="listen-option">
+				<div class="connect-option">
 					<img src="{{ $baseURL }}images/listen-buttons/RSS.svg" />
 					<p>RSS</p>
 				</div>
@@ -26,7 +26,7 @@
 			{{- end -}}
 			{{- if ne $feedID "" -}}
 				<a title="{{ .description }}" href="{{ .urlPrefix }}{{ $feedID }}">
-					<div class="listen-option">
+					<div class="connect-option">
 						<img src="{{ $baseURL }}images/listen-buttons/{{ .image }}" />
 						<p>{{ .name }}</p>
 					</div>

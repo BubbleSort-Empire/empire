@@ -12,10 +12,10 @@
                 </a>
                 <p>{{ .Description }}</p>
                 <h5>Currently viewing episodes from all {{ with  .OutputFormats.Get "showslist" -}} <a href="{{ .RelPermalink }}"> Sub Shows</a>{{- end }}</h5>
-				<div class="listen-list">
-					{{ partial "listen-on" . }}
-				</div>
 				<div class="connect">
+                    <div class="listen-list">
+                        {{ partial "listen-on" . }}
+                    </div>
 					<div class="connect-list">
 						<small>Hosts & Feedback:</small>
 					</div>

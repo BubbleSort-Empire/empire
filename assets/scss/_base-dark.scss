@@ -25,15 +25,6 @@
 }
 
 @mixin connect_iconic_dark {
-	.listen-list {
-		.listen-option {
-			p {
-				color: $links-dark;
-				font-weight: bold;
-			}
-		}
-	}
-	
 	.connect-list {
 		a {
 			color: $links-dark;
@@ -47,12 +38,6 @@
 					color: $links-dark;
 				}
 			}
-		}
-	}
-	
-	.small-host-list-item {
-		p {
-			color: $links-dark;
 		}
 	}
 }

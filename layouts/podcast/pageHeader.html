@@ -11,10 +11,10 @@
 					<h2>{{ .CurrentSection.Title }}</h2>
 				</a>
 				<p>{{ .Description }}</p>
-				<div class="listen-list">
-					{{ partial "listen-on" . }}
-				</div>
 				<div class="connect">
+					<div class="connect-list">
+						{{ partial "listen-on" . }}
+					</div>
 					<div class="connect-list">
 						<small>Hosts & Feedback:</small>
 					</div>
