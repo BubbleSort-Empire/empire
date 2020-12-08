@@ -35,10 +35,12 @@
 <p>Options Map: {{ $scratch.Get "optionsMap" }}</p>
 
 {{ range $key, $val := $scratch.Get "optionsMap" }}
+{{ with index $.Site.Data.socials $key }}
 	<a href="{{ $val }}">
 		<div class="connect-option">
-			{{- ( printf ".Site.Data.socials.%s.svg" $key ) | safeHTML -}}
-			<p>{{- printf ".Site.Data.socials.%s.name" $key -}}</p>
+			{{- .svg | safeHTML -}}
+			<p>{{- .name -}}</p>
 		</div>
 	</a>
+{{ end }}
 {{- end -}}
