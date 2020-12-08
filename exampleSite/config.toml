@@ -29,6 +29,12 @@ Paginate = 3
   # If there is no audio url prefix at any level you should include the full url to your 
   # audio file in the episode's audioFile parameter.
   defaultAudioURLPrefix = "https://empireforhugotheme.site/audio/"
+  
+  [params.connections]
+  Slack = "https://config.slack.com"
+  Twitter = "https://twitter.com/config"
+  Email = "config@feedback.config"
+  Instagram = "https://instagram.com/config"
 
 [outputFormats]
   [outputFormats.jsonfeed]

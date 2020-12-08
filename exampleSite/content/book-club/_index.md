@@ -56,6 +56,9 @@ audioURLPrefix = ""
 # These values should not be changed
 type = "aggregatedPodcast"
 
-
+[connections]
+Slack = "https://aggregate.slack.com"
+Twitter = "https://twitter.com/aggregate"
+Email = "aggregate@aggregate.com"
 +++
 

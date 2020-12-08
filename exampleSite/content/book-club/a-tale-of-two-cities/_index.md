@@ -37,5 +37,6 @@ audioURLPrefix = ""
 # These values should not be changed
 type = "podcast"
 
-
+[connections]
+Twitter = "https://twitter.com/podcast"
 +++

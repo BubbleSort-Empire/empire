@@ -1,18 +1,38 @@
-<a href="https://slack.com">	
-	<div class="connect-option">
-		{{- .Site.Data.socials.Slack.svg | safeHTML -}}
-		<p>Slack</p>
-	</div>
-</a>
-<a href="https://twitter.com/">
-	<div class="connect-option">
-		{{- .Site.Data.socials.Twitter.svg | safeHTML -}}
-		<p>Twitter</p>
-	</div>
-</a>
-<a href="https://twitter.com/">
-	<div class="connect-option">
-		{{- .Site.Data.socials.Email.svg | safeHTML -}}
-		<p>Email</p>
-	</div>
-</a>
+{{- $this := . -}}
+{{ $socialsMap := .Page.Param "connections" -}}
+{{ $socialsParentMap := .CurrentSection.Parent.Page.Param "connections" }}
+{{ $socialsConfigMap := .Site.Params.connections }}
+
+{{ $socials := slice }}
+{{ $socialsParent := slice }}
+{{ $socialsConfig := slice }}
+
+{{ $socials = $socials | append "Socials: "}}
+{{ $socialsParent = $socialsParent | append "Socials Parent: "}}
+{{ $socialsConfig = $socialsConfig | append "Socials Config: "}}
+
+{{ range $a, $b := $socialsMap }}
+{{ $socials = $socials | append $a " " $b }}
+{{ end }}
+
+{{ range $c, $d := $socialsParentMap }}
+{{ $socialsParent = $socialsParent | append $c " " $d }}
+{{ end }}
+
+{{ range $e, $f := $socialsConfigMap }}
+{{ $socialsConfig = $socialsConfig | append $e " " $f }}
+{{ end }}
+
+<p>{{ $socials }}</p>
+<p>{{ $socialsParent }}</p>
+<p>{{ $socialsConfig }}</p>
+
+{{- $social := "" -}}
+{{- if ne $social "" -}}
+	<a href="{{ .url }}">
+		<div class="connect-option">
+			{{- .svg | safeHTML -}}
+			<p>{{ .name }}</p>
+		</div>
+	</a>
+{{- end -}}

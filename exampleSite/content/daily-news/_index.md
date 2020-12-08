@@ -57,6 +57,9 @@ audioURLPrefix = ""
 # These values should not be changed
 type = "podcast"
 
-
+[connections]
+Slack = "https://bubblesortshow.slack.com"
+Twitter = "https://twitter.com/bubblesortshow"
+Email = "feedback@bubblesort.show"
 +++
 
