@@ -1,4 +1,4 @@
-{{ $scratch := .Scratch }}
+{{ $scratch := newScratch }}
 {{ $socialsMap := .CurrentSection.Param "connections" -}}
 {{ $socialsParentMap := .CurrentSection.Parent.Param "connections" }}
 {{ $socialsConfigMap := .Site.Params.connectionOptions }}
@@ -16,27 +16,29 @@
 
 <p>Map Register: {{ $mapRegister }}</p>
 
-{{ range $key, $value := $socialsMap }}
-{{ $scratch.Add "socials" (slice $key) }}
+{{ if eq $mapRegister 111 }}
+{{ $scratch.Set "optionsMap" ( merge $socialsConfigMap ( merge $socialsParentMap $socialsMap )) }}
+{{ else if eq $mapRegister 110 }}
+{{ $scratch.Set "optionsMap" ( merge $socialsConfigMap $socialsParentMap ) }}
+{{ else if eq $mapRegister 101 }}
+{{ $scratch.Set "optionsMap" ( merge $socialsConfigMap $socialsMap ) }}
+{{ else if eq $mapRegister 011 }}
+{{ $scratch.Set "optionsMap" ( merge $socialsParentMap $socialsMap ) }}
+{{ else if eq $mapRegister 100 }}
+{{ $scratch.Set "optionsMap" $socialsConfigMap }}
+{{ else if eq $mapRegister 010 }}
+{{ $scratch.Set "optionsMap" $socialsParentMap }}
+{{ else if eq $mapRegister 001 }}
+{{ $scratch.Set "optionsMap" $socialsMap }}
 {{ end }}
-{{ $scratch.Set "socials" (uniq ($scratch.Get "socials")) }}
 
-{{ range $key, $value := $socialsParentMap }}
-{{ $scratch.Add "socialsAggregate" (slice $key) }}
-{{ end }}
-{{ $scratch.Set "socialsAggregate" (( uniq ($scratch.Get "socialsAggregate")) | complement ($scratch.Get "socials")) }}
+<p>Options Map: {{ $scratch.Get "optionsMap" }}</p>
 
-{{ range $key, $value := $socialsConfigMap }}
-{{ $scratch.Add "socialsSite" (slice $key) }}
-{{ end }}
-{{ $scratch.Set "socialsSite" (( uniq ($scratch.Get "socialsSite")) | complement ($scratch.Get "socials") ($scratch.Get "socialsAggregate")) }}
-
-{{- $social := "" -}}
-{{- if ne $social "" -}}
-	<a href="{{ .url }}">
+{{ range $key, $val := $scratch.Get "optionsMap" }}
+	<a href="{{ $val }}">
 		<div class="connect-option">
-			{{- .svg | safeHTML -}}
-			<p>{{ .name }}</p>
+			{{- ( printf ".Site.Data.socials.%s.svg" $key ) | safeHTML -}}
+			<p>{{- printf ".Site.Data.socials.%s.name" $key -}}</p>
 		</div>
 	</a>
 {{- end -}}
