@@ -14,7 +14,7 @@
 {{ $mapRegister = add $mapRegister 100 }}
 {{ end }}
 
-<p>Map Register: {{ $mapRegister }}</p>
+<!--<p>Map Register: {{ $mapRegister }}</p>-->
 
 {{ if eq $mapRegister 111 }}
 {{ $scratch.Set "optionsMap" ( merge $socialsConfigMap ( merge $socialsParentMap $socialsMap )) }}
@@ -32,7 +32,7 @@
 {{ $scratch.Set "optionsMap" $socialsMap }}
 {{ end }}
 
-<p>Options Map: {{ $scratch.Get "optionsMap" }}</p>
+<!--<p>Options Map: {{ $scratch.Get "optionsMap" }}</p>-->
 
 {{ range $key, $val := $scratch.Get "optionsMap" }}
 {{ with index $.Site.Data.socials $key }}
