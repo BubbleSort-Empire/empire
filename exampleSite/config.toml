@@ -30,11 +30,11 @@ Paginate = 3
   # audio file in the episode's audioFile parameter.
   defaultAudioURLPrefix = "https://empireforhugotheme.site/audio/"
   
-  [params.connections]
-  Slack = "https://config.slack.com"
-  Twitter = "https://twitter.com/config"
-  Email = "config@feedback.config"
-  Instagram = "https://instagram.com/config"
+  [params.connectionOptions]
+    Slack = "https://site.slack.com"
+    Twitter = "https://twitter.com/site"
+    Email = "feedback@site.com"
+    Instagram = "https://instagram.com/site"
 
 [outputFormats]
   [outputFormats.jsonfeed]

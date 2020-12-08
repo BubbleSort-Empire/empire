@@ -57,8 +57,8 @@ audioURLPrefix = ""
 type = "aggregatedPodcast"
 
 [connections]
-Slack = "https://aggregate.slack.com"
-Twitter = "https://twitter.com/aggregate"
-Email = "aggregate@aggregate.com"
+	Slack = "https://bookclub.slack.com"
+	Twitter = "https://twitter.com/bookclub"
+	Email = "bookclub@bookclub.com"
 +++
 

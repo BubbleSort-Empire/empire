@@ -1,31 +1,35 @@
-{{- $this := . -}}
-{{ $socialsMap := .Page.Param "connections" -}}
-{{ $socialsParentMap := .CurrentSection.Parent.Page.Param "connections" }}
-{{ $socialsConfigMap := .Site.Params.connections }}
+{{ $scratch := .Scratch }}
+{{ $socialsMap := .CurrentSection.Param "connections" -}}
+{{ $socialsParentMap := .CurrentSection.Parent.Param "connections" }}
+{{ $socialsConfigMap := .Site.Params.connectionOptions }}
 
-{{ $socials := slice }}
-{{ $socialsParent := slice }}
-{{ $socialsConfig := slice }}
-
-{{ $socials = $socials | append "Socials: "}}
-{{ $socialsParent = $socialsParent | append "Socials Parent: "}}
-{{ $socialsConfig = $socialsConfig | append "Socials Config: "}}
-
-{{ range $a, $b := $socialsMap }}
-{{ $socials = $socials | append $a " " $b }}
+{{ $mapRegister := 0 }}
+{{ if reflect.IsMap $socialsMap }}
+{{ $mapRegister = add $mapRegister 1 }}
+{{ end }}
+{{ if reflect.IsMap $socialsParentMap }}
+{{ $mapRegister = add $mapRegister 10 }}
+{{ end }}
+{{ if reflect.IsMap $socialsConfigMap }}
+{{ $mapRegister = add $mapRegister 100 }}
 {{ end }}
 
-{{ range $c, $d := $socialsParentMap }}
-{{ $socialsParent = $socialsParent | append $c " " $d }}
-{{ end }}
+<p>Map Register: {{ $mapRegister }}</p>
 
-{{ range $e, $f := $socialsConfigMap }}
-{{ $socialsConfig = $socialsConfig | append $e " " $f }}
+{{ range $key, $value := $socialsMap }}
+{{ $scratch.Add "socials" (slice $key) }}
 {{ end }}
+{{ $scratch.Set "socials" (uniq ($scratch.Get "socials")) }}
 
-<p>{{ $socials }}</p>
-<p>{{ $socialsParent }}</p>
-<p>{{ $socialsConfig }}</p>
+{{ range $key, $value := $socialsParentMap }}
+{{ $scratch.Add "socialsAggregate" (slice $key) }}
+{{ end }}
+{{ $scratch.Set "socialsAggregate" (( uniq ($scratch.Get "socialsAggregate")) | complement ($scratch.Get "socials")) }}
+
+{{ range $key, $value := $socialsConfigMap }}
+{{ $scratch.Add "socialsSite" (slice $key) }}
+{{ end }}
+{{ $scratch.Set "socialsSite" (( uniq ($scratch.Get "socialsSite")) | complement ($scratch.Get "socials") ($scratch.Get "socialsAggregate")) }}
 
 {{- $social := "" -}}
 {{- if ne $social "" -}}

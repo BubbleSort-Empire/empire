@@ -38,5 +38,5 @@ audioURLPrefix = ""
 type = "podcast"
 
 [connections]
-Twitter = "https://twitter.com/podcast"
+	Twitter = "https://twitter.com/twocities"
 +++

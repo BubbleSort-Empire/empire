@@ -58,8 +58,8 @@ audioURLPrefix = ""
 type = "podcast"
 
 [connections]
-Slack = "https://bubblesortshow.slack.com"
-Twitter = "https://twitter.com/bubblesortshow"
-Email = "feedback@bubblesort.show"
+	Slack = "https://dailynews.slack.com"
+	Twitter = "https://twitter.com/dailynews"
+	Email = "feedback@dailynews.show"
 +++
 
