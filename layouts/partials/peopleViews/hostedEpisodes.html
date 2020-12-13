@@ -4,10 +4,10 @@
 {{- $appearancePages := union $hostedEpisodes $guestedEpisodes -}}
 
 {{- if gt (len $appearancePages) 0 -}}
-<h3>All Episode Appearances</h3> 
-<div>
-  {{- range $appearancePages -}}
-  {{ .Render "listItems/hostListItem" }}
-  {{- end -}}
-</div>
+	<h3>All Episode Appearances</h3>
+	<div>
+		{{- range $appearancePages -}}
+			{{ .Render "listItems/hostListItem" }}
+		{{- end -}}
+	</div>
 {{- end -}}
