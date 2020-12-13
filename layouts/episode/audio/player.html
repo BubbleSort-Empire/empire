@@ -1,11 +1,15 @@
-<div class="row">
-  <div class="col">
-    <div class="audio-player">
-        <audio width="100%" preload="none">
-          <source src="{{ .Render "audio/audioURL" }}" /> 
-          Your browser does not support the audio tag.
-        </audio>
-        <div class="download-link"><a href="{{ .Render "audio/audioURL" }}">Download Episode</a></div>
-    </div>
-  </div>
-</div>
+{{- with .Params.audio.file -}}
+	<div class="row">
+		<div class="col">
+			<div class="audio-player">
+				<audio width="100%" preload="none">
+					<source src="{{ $.Render "audio/audioURL" }}" />
+					Your browser does not support the audio tag.
+				</audio>
+				<div class="download-link">
+					<a href="{{ $.Render "audio/audioURL" }}">Download Episode</a>
+				</div>
+			</div>
+		</div>
+	</div>
+{{- end -}}
