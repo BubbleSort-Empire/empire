@@ -1,4 +1,8 @@
 +++
+# These values should not be changed
+type = "episode"
+# ----------------------------------
+
 title = "{{ replace .Name "-" " " | title }}"
 description = "{{ replace .Name "-" " " | title }} Description"
 date = {{ .Date }}
@@ -26,11 +30,11 @@ image = ""
 # If you haven't configured any audio url prefixes at any level,
 # you should include the full url to your audio file in the audioFile parameter.
 # If you are using url prefixes, only use the actual audio file name.
-audioDuration = "##:##"
-audioFile = ""
-audioBytes = "#########" # No Commas
+[audio]
+	duration = "##:##"
+	file = ""
+	bytes = "#########" # No Commas
 
 
-# These values should not be changed
-type = "episode"
+
 +++
