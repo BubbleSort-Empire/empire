@@ -1,4 +1,8 @@
 +++
+# These values should not be changed
+type = "podcast"
+# ----------------------------------
+
 title = "The Weekly Wrap"
 description = "Here's what happened in the Empire this week."
 
@@ -54,8 +58,6 @@ breakerFeedID = "the-liner-project"
 audioURLPrefix = ""
 
 
-# These values should not be changed
-type = "podcast"
 
 
 +++

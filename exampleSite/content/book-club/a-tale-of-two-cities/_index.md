@@ -1,4 +1,8 @@
 +++
+# These values should not be changed
+type = "podcast"
+# ----------------------------------
+
 title = "A Tale of Two Cities"
 description = "Join the Deathstar crew as they read the famed Dickens Classic."
 
@@ -34,8 +38,6 @@ iTunesFeedID = "1483394883"
 audioURLPrefix = ""
 
 
-# These values should not be changed
-type = "podcast"
 
 [connections]
 	Twitter = "https://twitter.com/twocities"

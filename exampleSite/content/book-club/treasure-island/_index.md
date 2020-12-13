@@ -1,4 +1,8 @@
 +++
+# These values should not be changed
+type = "podcast"
+# ----------------------------------
+
 title = "Treasure Island"
 description = "Join the Knights of Ren as they unwind fram a hard day of Kilo's whining to read the famed Robert Louis Stevenson classic."
 
@@ -34,8 +38,6 @@ iTunesFeedID = "1448205156"
 audioURLPrefix = ""
 
 
-# These values should not be changed
-type = "podcast"
 
 
 +++

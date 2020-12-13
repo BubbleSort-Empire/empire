@@ -1,4 +1,8 @@
 +++
+# These values should not be changed
+type = "podcast"
+# ----------------------------------
+
 title = "{{ replace .Name "-" " " | title }}"
 description = "{{ replace .Name "-" " " | title }} Description"
 
@@ -54,8 +58,6 @@ breakerFeedID = ""
 audioURLPrefix = ""
 
 
-# These values should not be changed
-type = "podcast"
 
 
 +++

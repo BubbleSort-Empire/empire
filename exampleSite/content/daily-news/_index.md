@@ -1,4 +1,8 @@
 +++
+# These values should not be changed
+type = "podcast"
+# ----------------------------------
+
 title = "The Daily News Show"
 description = "Get caught up on the daily news within the empire."
 
@@ -54,8 +58,6 @@ breakerFeedID = "bubblesort"
 audioURLPrefix = ""
 
 
-# These values should not be changed
-type = "podcast"
 
 [connections]
 	Slack = "https://dailynews.slack.com"
