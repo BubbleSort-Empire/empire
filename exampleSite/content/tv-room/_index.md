@@ -1,4 +1,8 @@
 +++
+# These values should not be changed
+type = "aggregatedPodcast"
+# ----------------------------------
+
 title = "The TV Room"
 description = "Manning a lonely remote outpost can get boring. Sometimes you just need some good TV."
 
@@ -53,8 +57,7 @@ breakerFeedID = "bubblesort-tv"
 # from the site configuration will be used.
 audioURLPrefix = ""
 
-# These values should not be changed
-type = "aggregatedPodcast"
+
 
 
 +++

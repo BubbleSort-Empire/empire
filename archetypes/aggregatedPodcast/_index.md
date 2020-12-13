@@ -1,4 +1,8 @@
 +++
+# These values should not be changed
+type = "aggregatedPodcast"
+# ----------------------------------
+
 title = "{{ replace .Name "-" " " | title }}"
 description = "{{ replace .Name "-" " " | title }} Description"
 
@@ -53,8 +57,7 @@ breakerFeedID = ""
 # from the site configuration will be used.
 audioURLPrefix = ""
 
-# These values should not be changed
-type = "aggregatedPodcast"
+
 
 
 +++

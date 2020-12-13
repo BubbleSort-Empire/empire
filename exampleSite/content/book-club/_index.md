@@ -1,4 +1,8 @@
 +++
+# These values should not be changed
+type = "aggregatedPodcast"
+# ----------------------------------
+
 title = "The Empire Book Club"
 description = "Running the Empire is hard work. Sometimes you just need to unwind with a good book."
 
@@ -53,8 +57,7 @@ breakerFeedID = "rabbit-hole-2"
 # from the site configuration will be used.
 audioURLPrefix = ""
 
-# These values should not be changed
-type = "aggregatedPodcast"
+
 
 [connections]
 	Slack = "https://bookclub.slack.com"
