@@ -57,7 +57,5 @@ breakerFeedID = ""
 # from the site configuration will be used.
 audioURLPrefix = ""
 
-
-
-
+{{ partial "socialsFrontMatter" . }}
 +++

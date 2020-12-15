@@ -25,7 +25,7 @@ image = ""
 # Ex: image = "weekly-wrap/show-art-large.png" for an image located at static/images/weekly-wrap/show-art-large.png
 feedImage = ""
 
-# iTunes Feed ID 
+# Numeric iTunes Feed ID 
 # EX: for this iTunes link https://podcasts.apple.com/podcast/id1448327383
 # The ID would be 1448327383
 iTunesFeedID = ""
@@ -57,7 +57,5 @@ breakerFeedID = ""
 # from the site configuration will be used.
 audioURLPrefix = ""
 
-
-
-
+{{ partial "socialsFrontMatter" . }}
 +++
