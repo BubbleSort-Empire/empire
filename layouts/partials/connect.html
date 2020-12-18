@@ -42,7 +42,7 @@
 <!-- using the merged map set, look for each connection name and image in socials.json -->
 {{ range $key, $val := $scratch.Get "optionsMap" }}
 {{ with index $.Site.Data.socials $key }}
-	<a href="{{ $val }}">
+	<a href="{{ $val }}" title="{{ .name }}">
 		<div class="connect-option">
 			{{- .svg | safeHTML -}}
 			<p>{{- .name -}}</p>
