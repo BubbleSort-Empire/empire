@@ -6,5 +6,5 @@ nickName = ""
 image = ""
 description = ""
 
-{{ partial "socialsFrontMatter" . }}
+{{ partial "archetypes/socialsFrontMatter" . }}
 +++
