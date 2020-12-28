@@ -7,6 +7,13 @@
 				</a>
 			</div>
 			<div class="col-md-6">
+				{{- if ne .CurrentSection.Parent.Title .Site.Title -}}
+					<div>
+						<a href="{{ .CurrentSection.Parent.Permalink }}">
+							{{- .CurrentSection.Parent.Title -}}
+						</a>
+					</div>
+				{{- end -}}
 				<a href="{{ .Permalink }}">
 					<h2>{{ .CurrentSection.Title }}</h2>
 				</a>
