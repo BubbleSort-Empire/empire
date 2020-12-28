@@ -42,6 +42,12 @@
 	}
 }
 
+.filter-button {
+	svg {
+		fill: $links-dark;
+	}
+}
+
 @mixin pagination_dark {
 	a.page-link {
 		color: $links-dark;

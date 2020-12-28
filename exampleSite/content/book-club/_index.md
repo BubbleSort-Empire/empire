@@ -3,6 +3,13 @@
 type = "aggregatedPodcast"
 # ----------------------------------
 
+# Use these parameters to customize the "Sort By" button,
+# and page header of the list of sorted shows that make up your aggregated podcast. 
+# Ex: TV Room Podcast can have a button to "Sort By TV Shows" linking to a list of 
+# child podcasts with a header displaying "TV Room Podcast Sorted By TV Show"
+episodeFilterButtonText = "Browse by Book"
+filteredEpisodeText = "Sorted By Book"
+
 title = "The Empire Book Club"
 description = "Running the Empire is hard work. Sometimes you just need to unwind with a good book."
 

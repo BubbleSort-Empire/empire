@@ -1,5 +1,5 @@
 {{ define "main" }}
-<h2>{{ .CurrentSection.Title }} Sub Shows List</h2>
+<h2>{{ .CurrentSection.Title }} {{ .CurrentSection.Params.filteredEpisodeText }}</h2>
 
 {{ range .Pages  }}
     {{ partial "podcastViews/showsListItem" . }}

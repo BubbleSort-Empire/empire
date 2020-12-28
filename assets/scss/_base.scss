@@ -144,6 +144,17 @@ div.hosted-shows-list {
 	}
 }
 
+.filter-button {
+	svg {
+		fill: $links;
+		height: 30px;
+		margin-right: 10pt;
+	}
+	
+	margin-bottom: 10pt;
+	font-size: x-large;
+}
+
 input.search-form {
 	@include placeholder {
 		font-style: $search-form-text-style;
