@@ -13,12 +13,24 @@
 	}
 }
 
+/* body and page styles */
+
 body {
 	background-color: $background-color;
 }
 
+/* header navbar styles */
+
 .navbar {
 	padding: 0.1rem 0 0.1rem 1.5rem;
+	
+	@media (max-width: 374.98px) {
+		padding-left: 0.5rem;
+	}
+	
+	@media (min-width: 375px) and (max-width: 575.98px) {
+		padding-left: 0.7rem;
+	}
 }
 
 .navbar-expand-sm,
@@ -43,7 +55,21 @@ body {
 	margin-right: 1rem;
 	height: 60px;
 	width: 60px;
+	
+	@media (max-width: 374.98px) {
+		margin-right: 0.5rem;
+		height: 30px;
+		width: 30px;
+	}
+	
+	@media (min-width: 375px) and (max-width: 575.98px) {
+		margin-right: 0.5rem;
+		height: 40px;
+		width: 40px;
+	}
 }
+
+/* page content styles */
 
 .container-md,
 p.footer_copyright {
@@ -66,6 +92,14 @@ p.footer_copyright {
 	}
 }
 
+.pagination-numbers-tiny-be-gone {
+	@media (max-width: 374.98px) {
+		display: none;
+	}
+}
+
+/* podcast styles */
+
 .row.episode-row {
 	padding-bottom: 20px;
 	padding-top: 20px;
@@ -81,11 +115,33 @@ p.footer_copyright {
 	padding: 10pt;
 }
 
+.show-art-large {
+	@media (max-width: 575.98px) {
+		max-width: 80%;
+		padding-top: 10pt;
+		padding-bottom: 10pt;
+		margin: auto;
+	}
+	
+	@media (min-width: 576px) and (max-width: 767.98px) {
+		max-width: 80%;
+		margin: auto;
+	}
+}
+
 .show-art-small {
 	width: 100pt;
 	float: left;
 	padding-left: 10pt;
 	padding-right: 10pt;
+	
+	@media (max-width: 575.98px) {
+		width: 100px;
+	}
+	
+	@media (min-width: 576px) and (max-width: 767.98px) {
+		max-width: 150px;
+	}
 }
 
 .show-art-large,
@@ -103,6 +159,18 @@ div.hosted-shows-list {
 
 .single-player {
 	margin-bottom: 5em;
+}
+
+.host-list-upper-player {
+	@media (max-width: 575.98px) {
+		display: none;
+	}
+}
+
+.host-list-lower-player {
+	@media (min-width: 768px) {
+		display: none;
+	}
 }
 
 .connect {
@@ -155,6 +223,8 @@ div.hosted-shows-list {
 	font-size: x-large;
 }
 
+/* search styles */
+
 input.search-form {
 	@include placeholder {
 		font-style: $search-form-text-style;
@@ -199,65 +269,4 @@ div.search-results-details {
 	width: 100%;
 	padding: 0.2rem 0 0.8rem 0;
 	font-size: 1.2rem;
-}
-
-/* portrait mode smaller than iPhone 8 */
-@media (max-width: 374.98px) {
-	/* pagination class for hiding page numbers on small devices */
-	.pagination-numbers-tiny-be-gone {
-		display: none;
-	}
-
-	.navbar {
-		padding-left: 0.5rem;
-	}
-
-	.brand-image {
-		margin-right: 0.5rem;
-		height: 30px;
-		width: 30px;
-	}
-}
-
-/* Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) {
-	.brand-image {
-		margin-right: 0.5rem;
-		height: 40px;
-		width: 40px;
-	}
-	.navbar {
-		padding-left: 0.7rem;
-	}
-	.show-art-large {
-		max-width: 80%;
-		padding-top: 10pt;
-		padding-bottom: 10pt;
-		margin: auto;
-	}
-	.show-art-small {
-		width: 100px;
-	}
-
-	.host-list-upper-player {
-		display: none;
-	}
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-	.show-art-small {
-		max-width: 150px;
-	}
-	.show-art-large {
-		max-width: 80%;
-		margin: auto;
-	}
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-	.host-list-lower-player {
-		display: none;
-	}
 }
