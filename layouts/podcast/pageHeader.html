@@ -3,14 +3,7 @@
 		<div class="row">
 			<div class="col-md-5 show-art-large">
 				<a href="{{ .Permalink }}">
-					<img src="{{ .Site.BaseURL }}images/
-					{{- if and (isset .CurrentSection.Params "image") (ne .CurrentSection.Params.image "") -}}
-						{{- .CurrentSection.Param "image" -}}
-					{{- else if and (isset .CurrentSection.Parent.Params "image") (ne .CurrentSection.Parent.Params.image "") -}}
-						{{- .CurrentSection.Parent.Param "image" -}}
-					{{- else -}}
-					Generic-Podcast-Art.svg
-					{{- end -}}" />
+					{{ partial "artwork" . }}
 				</a>
 			</div>
 			<div class="col-md-6">
