@@ -1,3 +1,4 @@
+<!-- This partial figures out which artwork to use for a given aggregate podcast, podcast, or podcast episode. -->
 {{- $image := "/images/Generic-Podcast-Art.svg" -}}
 
 {{- if and (and (and (isset .CurrentSection.Params "imagepathprefix") (ne .CurrentSection.Params.imagepathprefix "" )) (and (isset .CurrentSection.Params "image") (ne .CurrentSection.Params.image ""))) (fileExists (printf "/static/images/%s%s" .CurrentSection.Params.imagepathprefix .CurrentSection.Params.image)) -}}
@@ -5,4 +6,4 @@
 {{- else if and (and (and (isset .CurrentSection.Parent.Params "imagepathprefix") (ne .CurrentSection.Parent.Params.imagepathprefix "" )) (and (isset .CurrentSection.Parent.Params "image") (ne .CurrentSection.Parent.Params.image ""))) (fileExists (printf "/static/images/%s%s" .CurrentSection.Parent.Params.imagepathprefix .CurrentSection.Parent.Params.image)) -}}
 	{{- $image = printf "/images%s%s" .CurrentSection.Parent.Params.imagepathprefix .CurrentSection.Parent.Params.image -}}
 {{- end -}}
-<img src="{{- $image | absURL -}}" />
+{{ $image | absURL }}
