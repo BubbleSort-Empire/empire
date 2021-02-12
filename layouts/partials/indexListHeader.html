@@ -3,7 +3,8 @@
         <div class="row">
             <div class="col-md-5 show-art-large">
                 <a href="{{ .Permalink }}">
-                    <img src="{{ .Site.BaseURL }}images/Generic-Podcast-Art.svg">
+                    <img src="{{ .Site.BaseURL }}images/
+                    {{- if and (isset .Site.Params "networklogoimage") (ne .Site.Params.networklogoimage "") -}}{{- .Site.Params.networkLogoImage -}}{{- else -}}Generic-Podcast-Art.svg{{- end -}}">
                 </a>
             </div>            
             <div class="col-md-6">

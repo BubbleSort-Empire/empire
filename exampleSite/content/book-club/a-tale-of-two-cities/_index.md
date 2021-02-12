@@ -11,15 +11,12 @@ description = "Join the Deathstar crew as they read the famed Dickens Classic."
 # Ex: ["vader", "palpatine"]
 hosts = []
 
-# Images only need to be specified if you want a different episode for the episode from the podcast image.
-# Place images into the static/images directory of your site's files. You may nest them in sub-directories if you wish.
+# Place show artwork images into the static/images directory of your site's files. You may nest them in sub-directories if you wish.
 # Define the parameter as filename and path for anything after static/images/
 # Ex: image = "weekly-wrap/show-art.png" for an image located at static/images/weekly-wrap/show-art.png
 image = ""
 
 # Feed images should be of size 3000px X 3000px
-# You can leave this parameter blank if your regular image is already the appropriate size. 
-# The theme will default back to that one when feedImage is blank.
 # Place images into the static/images directory of your site's files. You may nest them in sub-directories if you wish.
 # Define the parameter as filename and path for anything after static/images/
 # Ex: image = "weekly-wrap/show-art-large.png" for an image located at static/images/weekly-wrap/show-art-large.png

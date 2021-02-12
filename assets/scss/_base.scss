@@ -116,7 +116,12 @@ p.footer_copyright {
 }
 
 .show-art-large {
-	@media (max-width: 575.98px) {
+	img {
+		max-width: 100%;
+		object-fit: contain;
+	}
+	
+ 	@media (max-width: 575.98px) {
 		max-width: 80%;
 		padding-top: 10pt;
 		padding-bottom: 10pt;
