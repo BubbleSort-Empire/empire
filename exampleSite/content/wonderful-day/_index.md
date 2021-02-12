@@ -13,8 +13,10 @@ hosts = ["maul"]
 
 # Images only need to be specified if you want a different episode for the episode from the podcast image.
 # Place images into the static/images directory of your site's files. You may nest them in sub-directories if you wish.
-# Define the parameter as filename and path for anything after static/images/
-# Ex: image = "weekly-wrap/show-art.png" for an image located at static/images/weekly-wrap/show-art.png
+# Define the imagePathPrefix parameter as path for anything after static/images/
+# Ex: imagePathPrefix = "shows/weekly-wrap/" for the folder located at static/images/weekly-wrap/
+# Define the image parameter as the actual filename of the image located in static/images/imagePathPrefix
+# Ex: imagePathPrefix = "shows/weekly-wrap" and image = "show-art.svg" to use the image located at static/images/shows/weekly-wrap/show-art.svg"
 imagePathPrefix = "shows/wonderful-day/"
 image = "show-art.svg"
 
