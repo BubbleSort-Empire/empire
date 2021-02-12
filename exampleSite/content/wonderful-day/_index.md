@@ -15,7 +15,7 @@ hosts = ["maul"]
 # Place images into the static/images directory of your site's files. You may nest them in sub-directories if you wish.
 # Define the parameter as filename and path for anything after static/images/
 # Ex: image = "weekly-wrap/show-art.png" for an image located at static/images/weekly-wrap/show-art.png
-image = ""
+image = "shows/wonderful-day/show-art.svg"
 
 # Feed images should be of size 3000px X 3000px
 # You can leave this parameter blank if your regular image is already the appropriate size. 

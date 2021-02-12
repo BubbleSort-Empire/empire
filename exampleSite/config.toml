@@ -14,7 +14,7 @@ Paginate = 3
   # "light" (light background, dark foreground) (default)
   colorscheme = "auto"
   brandImage = "DeathStar.png"
-  networkLogoImage = "empire_web.png"
+  networkLogoImage = "empire_web.svg"
   copyright_notice = "Copyright 2020 [Vic Hudson](https://vichudson1.com) & [Scott Willsey](https://scottwillsey.com)"
 
   description = "Serving all of The Empire's podcast listening needs."
