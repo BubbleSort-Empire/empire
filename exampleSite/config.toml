@@ -37,6 +37,16 @@ Paginate = 3
     Twitter = "https://twitter.com/site"
     Email = "feedback@site.com"
     Instagram = "https://instagram.com/site"
+    
+  [params.metaTags]
+    description = "free web tutorials"
+    keywords = "javascript, html, css"
+    author = "John Doe"
+    food = "pizza"
+    
+  [params.includes]
+    icon1 = ["icon","images/DeathStar.png"]
+    icon2 = ["icon", "images/empire_web.png", "image/png"]
 
 [outputFormats]
   [outputFormats.jsonfeed]
