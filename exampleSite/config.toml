@@ -38,15 +38,23 @@ Paginate = 3
     Email = "feedback@site.com"
     Instagram = "https://instagram.com/site"
     
+  # Add custom meta tags here. These will go in the page head.
+  # Format is name = "value" which would result in
+  # <meta name="name" description="value"> being added as a meta tag.
+  # E.g, food = "pizza" will create <meta name="food" description="pizza">
   [params.metaTags]
     description = "free web tutorials"
     keywords = "javascript, html, css"
     author = "John Doe"
     food = "pizza"
-    
+  
+  # Add custom page head includes here. Format is ["rel","url"]
+  # For example, adding ["stylesheet","css/myCustomCss.css"] to link to 
+  # a custom css stylesheet would add <link rel="stylesheet" href="/css/DeathStar.css">
+  # to the page head.
   [params.includes]
-    icon1 = ["icon","images/DeathStar.png"]
-    icon2 = ["icon", "images/empire_web.png", "image/png"]
+    myCss = ["stylesheet","css/DeathStar.css"]
+    myIcon = ["icon", "images/empire_web.png", "image/png"]
 
 [outputFormats]
   [outputFormats.jsonfeed]
