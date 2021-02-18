@@ -98,8 +98,13 @@ Paginate = 3
   url = "guests/"
 
 [[menu.main]]
-  name = "About"
+  name = "Blog"
   weight = 6
+  url = "blog/"
+  
+[[menu.main]]
+  name = "About"
+  weight = 8
   url = "about/"
 
 [[menu.main]]
