@@ -7,7 +7,6 @@
     {{- $search := resources.Get "js/search.js" -}}
     {{- $searchJS := $search | resources.Minify | resources.Fingerprint -}}
     <script type="text/javascript" src="{{ $searchJS.RelPermalink }}" integrity="{{ $searchJS.Data.Integrity }}"></script>
-    
     <div class="search">
         <input id="search-input" type="text" placeholder="{{ .Site.Params.SearchPlaceholderText }}" name="search-input"
             class="search-form">

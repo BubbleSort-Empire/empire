@@ -5,7 +5,7 @@ tags = ["announcement"]
 # ----------------------------------
 
 title = "Announce1"
-description = "Announce1 Description"
+description = "A new podcast announcement!"
 date = 2021-02-19T12:10:13-08:00
 
 # Announcements have an expiration date so that they disappear from
@@ -17,7 +17,6 @@ date = 2021-02-19T12:10:13-08:00
 expirydate = 2021-03-05T12:10:13-08:00
 
 # Comment out draft status or change value to false for publishing
-draft = true
+draft = false
 +++
-
 I am a robot. I am a robot. I am a robot.

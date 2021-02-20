@@ -1,11 +1,7 @@
 {{ define "main" }}
-
-{{ $paginator := .Paginate .Pages.ByDate.Reverse }}
-
-{{ range $paginator.Pages }}
-	{{ .Content }}
+<h2>{{ .Title }}</h2>
+{{ range .Pages  }}
+	<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+	<p>{{ .Content }}</p>
 {{ end }}
-
-{{ partial "pagination.html" . }}
-
 {{ end }}
