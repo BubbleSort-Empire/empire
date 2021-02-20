@@ -1,7 +1,24 @@
 {{ define "main" }}
-<h2>{{ .Title }}</h2>
+<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 {{ range .Pages  }}
-	<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-	<p>{{ .Content }}</p>
+
+<div class="row episode-row">
+    <div class="col-md-12">
+        <a href="{{ .Permalink }}">
+            <h4>{{ .Title }}</h4>
+        </a>
+        <div class="publishDate small">Posted on <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time></div>
+        <div class="row">
+            <div class="col">
+                <p>{{ .Summary }}</p>
+                {{ if .Truncated }}
+				<div>
+				    <a href="{{ .RelPermalink }}" class="btn btn-outline-info">View Full Article</a>
+				</div>
+				{{ end }} 
+            </div>
+        </div>
+    </div>
+</div>	
 {{ end }}
 {{ end }}
