@@ -1,6 +1,7 @@
 {{ define "main" }}
 <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-{{ range .Pages  }}
+{{ $paginator := .Paginate .Pages.ByDate.Reverse }}
+{{ range $paginator.Pages }}
 
 <div class="row episode-row">
     <div class="col-md-12">
@@ -21,4 +22,5 @@
     </div>
 </div>	
 {{ end }}
+{{ partial "pagination.html" . }}
 {{ end }}

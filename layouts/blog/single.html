@@ -1,7 +1,10 @@
 {{ define "main" }}
-
+<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+<div class="publishDate small">Posted on <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time></div>
 <div>
-	<p>{{ .Description }}</p>
-	{{ .Content }}
+    {{ .Content }}
+</div>
+<div>
+	{{with .Pages.ByDate.Reverse.Next . }}{{.RelPermalink}}{{end}}
 </div>
 {{ end }}
