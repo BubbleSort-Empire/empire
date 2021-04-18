@@ -1,8 +1,10 @@
 +++
 title = "General Grievous"
-firstName = "General"
-lastName = "Grievous"
-nickName = ""
+firstName = "Qymaen"
+middleName = "jai"
+lastName = "Sheelal"
+preferredDisplayNameLong = "General Grievous"
+preferredDisplayNameShort = "Grievous"
 image = "grievous.jpg"
 description = "General Grievous is a brilliant Separatist military strategist and a feared Jedi hunter, known for his ruthlessness and hacking cough."
 

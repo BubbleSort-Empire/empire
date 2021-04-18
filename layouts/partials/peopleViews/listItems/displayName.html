@@ -1,5 +1,8 @@
-{{- if ne .Params.nickName "" -}}
-    {{ .Params.nickName }}
+{{- if ne .Params.preferredDisplayNameLong "" -}}
+    {{ .Params.preferredDisplayNameLong }}
+{{- else if ne .Params.preferredDisplayNameShort "" -}}
+	{{ .Params.preferredDisplayNameShort }}
 {{- else -}}
-    {{ .Params.firstName }} {{ .Params.lastName }}
+    {{- $name := slice .Params.firstName .Params.middleName .Params.lastName -}}
+	{{ range $name }}{{ . }} {{ end }}
 {{- end -}}

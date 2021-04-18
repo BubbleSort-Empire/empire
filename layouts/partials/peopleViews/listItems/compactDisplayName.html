@@ -1,0 +1,5 @@
+{{- if ne .Params.preferredDisplayNameShort "" -}}
+    {{ .Params.preferredDisplayNameShort }}
+{{- else -}}
+    {{ .Params.firstName }}
+{{- end -}}

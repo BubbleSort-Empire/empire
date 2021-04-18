@@ -1,0 +1,4 @@
+{{- if or (ne .Params.preferredDisplayNameLong "") (ne .Params.preferredDisplayNameShort "") -}}
+	{{- $name := slice .Params.firstName .Params.middleName .Params.lastName -}}
+    <h6>{{ range $name }}{{ . }} {{ end }}</h6>
+{{- end -}}

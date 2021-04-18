@@ -1,8 +1,10 @@
 +++
 title = "Darth Maul"
-firstName = "Darth"
-lastName = "Maul"
-nickName = "Darth Maul"
+firstName = ""
+middleName = ""
+lastName = ""
+preferredDisplayNameLong = "Darth Maul"
+preferredDisplayNameShort = "Maul"
 image = "maul.jpg"
 description = "Darth Maul is a kind, caring podcast host, but he's also a top-notch martial artist who would rather kill you than look at you. He has a dual-laser light saber that requires expert handling, and he likes arts and crafts (hence the face paints)."
 
@@ -31,3 +33,5 @@ description = "Darth Maul is a kind, caring podcast host, but he's also a top-no
 #	YouTube  = ""
 
 +++
+
+Darth Maul is a kind, caring podcast host, but he's also a top-notch martial artist who would rather kill you than look at you. He has a dual-laser light saber that requires expert handling, and he likes arts and crafts (hence the face paints).
