@@ -1,28 +1,46 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
-<link href="/css/all.min.css" rel="stylesheet">
+<link
+	rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous"
+/>
+<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+	integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+	crossorigin="anonymous"
+/>
 
 {{ if .Site.IsServer -}}
-    {{- $cssOpts := (dict "targetPath" "css/empire.css" "outputStyle" "compressed" "enableSourceMap" true ) -}}
-    {{- $styles := resources.Get "scss/empire.scss" | resources.ExecuteAsTemplate "style.empire.css" . | toCSS $cssOpts -}}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
-{{ else -}}
-    {{- $cssOpts := (dict "targetPath" "css/empire.css" "outputStyle" "compressed") -}}
-    {{- $styles := resources.Get "scss/empire.scss" | resources.ExecuteAsTemplate "style.empire.css" . | toCSS $cssOpts | minify | fingerprint -}}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+	{{- $cssOpts := (dict "targetPath" "css/empire.css" "outputStyle" "compressed" "enableSourceMap" true ) -}}
+	{{- $styles := resources.Get "scss/empire.scss" | resources.ExecuteAsTemplate "style.empire.css" . | toCSS $cssOpts -}}
+	<link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
+	{{ else -}}
+	{{- $cssOpts := (dict "targetPath" "css/empire.css" "outputStyle" "compressed") -}}
+	{{- $styles := resources.Get "scss/empire.scss" | resources.ExecuteAsTemplate "style.empire.css" . | toCSS $cssOpts | minify | fingerprint -}}
+	<link
+		rel="stylesheet"
+		href="{{ $styles.RelPermalink }}"
+		integrity="{{ $styles.Data.Integrity }}"
+		crossorigin="anonymous"
+		media="screen"
+	/>
 {{- end }}
 
 {{- if  or (eq .Site.Params.colorscheme "auto") (eq .Site.Params.colorscheme "dark") -}}
-    {{ if .Site.IsServer -}}
-        {{ $cssOpts := (dict "targetPath" "css/empire-dark.css" "enableSourceMap" true ) -}}
-        {{ $styles := resources.Get "scss/empire-dark.scss" | resources.ExecuteAsTemplate "style.empire-dark.css" . | toCSS $cssOpts -}}
-        <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
-    {{ else -}}
-        {{ $cssOpts := (dict "targetPath" "css/empire-dark.css" ) -}}
-        {{ $styles := resources.Get "scss/empire-dark.scss" | resources.ExecuteAsTemplate "style.empire-dark.css" . | toCSS $cssOpts | minify | fingerprint -}}
-        <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"
-            crossorigin="anonymous" media="screen" />
-    {{- end -}}
+	{{ if .Site.IsServer -}}
+		{{ $cssOpts := (dict "targetPath" "css/empire-dark.css" "enableSourceMap" true ) -}}
+		{{ $styles := resources.Get "scss/empire-dark.scss" | resources.ExecuteAsTemplate "style.empire-dark.css" . | toCSS $cssOpts -}}
+		<link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
+		{{ else -}}
+		{{ $cssOpts := (dict "targetPath" "css/empire-dark.css" ) -}}
+		{{ $styles := resources.Get "scss/empire-dark.scss" | resources.ExecuteAsTemplate "style.empire-dark.css" . | toCSS $cssOpts | minify | fingerprint -}}
+		<link
+			rel="stylesheet"
+			href="{{ $styles.RelPermalink }}"
+			integrity="{{ $styles.Data.Integrity }}"
+			crossorigin="anonymous"
+			media="screen"
+		/>
+	{{- end -}}
 {{- end }}

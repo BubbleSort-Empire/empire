@@ -14,7 +14,7 @@ date = 2021-02-19T12:10:13-08:00
 # Change the numbers after .AddDate to set an expiration date for
 # this announcement. Set 0 0 0 for no expiration. The three numbers
 # represent years, months, days respectively.
-expirydate = 2021-03-05T12:10:13-08:00
+expirydate = 2021-06-05T12:10:13-08:00
 
 # Comment out draft status or change value to false for publishing
 draft = false
