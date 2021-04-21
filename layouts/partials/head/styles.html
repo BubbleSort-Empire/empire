@@ -1,3 +1,10 @@
+{{- $cssOpts := (dict "targetPath" "css/fork-awesome-min.css" "outputStyle" "compressed" "enableSourceMap" false ) -}}
+{{- $styles := resources.Get "css/fork-awesome.min.css" | resources.ExecuteAsTemplate "fork-awesome.css" . | toCSS $cssOpts | minify | fingerprint -}}
+<link rel="stylesheet" 
+	href="{{ $styles.RelPermalink }}" 
+	integrity="{{ $styles.Data.Integrity }}"
+	crossorigin="anonymous"
+	media="screen" />
 <link
 	rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
