@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm">
     <!-- Site name/logo -->
     <a class="navbar-brand" href="{{ .Site.BaseURL | absURL }}">
-        <img class="brand-image" src="{{ .Site.BaseURL }}images/{{ .Site.Params.BrandImage }}"> Empire Theme</a>
+        <img class="brand-image" src="{{ .Site.BaseURL }}images/{{ .Site.Params.BrandImage }}">{{ .Site.Title }}</a>
 
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
