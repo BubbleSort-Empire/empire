@@ -2,7 +2,8 @@
 {{ .Render "views/pageHeader" }}
 <div>
     <p>{{ .Description }}</p>
-    {{ .Content }}
+	{{ .Content }}
+	{{- .CurrentSection.Content -}}
 </div>
 {{ partial "player-includes" . }}
 {{ end }}
