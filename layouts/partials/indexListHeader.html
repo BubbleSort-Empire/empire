@@ -11,7 +11,12 @@
                 <h1>Welcome to {{ .Site.Title}}</h1>
                 <p>{{ .Site.Params.Description }}</p>
                 <h5>Currently viewing episodes from all {{ with  .OutputFormats.Get "showslist" -}} <a href="{{ .RelPermalink }}">Shows</a>{{- end }}</h5>
+				<div class="connect-list">
+					<p><small>Contact or Connect With Us:</small></p>
+				</div>
+				<div class="connect-list">{{- partial "indexListConnect" . -}}</div>
             </div>
+			
         </div>  
     </div>
 </div>
