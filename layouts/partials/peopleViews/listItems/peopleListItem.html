@@ -10,7 +10,11 @@
         <a href="{{ .Permalink }}">
           <h4>{{ partial "peopleViews/listItems/displayName" . }}</h4>
         </a>
-        <p>{{ .Description }}</p>
+        <p>{{ .Content }}</p>
+        <div class="connect-list">
+          <p><small>Contact:</small></p>
+        </div>
+        <div class="connect-list">{{- partial "peopleViews/connect" . -}}</div>
       </div>
     </div>
   </div>

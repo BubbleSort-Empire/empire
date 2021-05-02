@@ -6,7 +6,7 @@
 {{- $peoplePages := union $guestPages $hostPages -}}
 
 {{- with $peoplePages -}}
-{{- range $peoplePages -}} 
-	{{- partial "peopleViews/listItems/smallListView" . -}} 
-{{- end -}}
+	{{- range $peoplePages -}} 
+		{{- partial "peopleViews/listItems/smallListView" . -}} 
+	{{- end -}}
 {{- end -}}

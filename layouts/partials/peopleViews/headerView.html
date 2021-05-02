@@ -16,6 +16,10 @@
 				</a>
 				{{- partial "peopleViews/listItems/fullNameDisplay" . -}}
 				<p>{{ .Content }}</p>
+				<div class="connect-list">
+					<p><small>Contact:</small></p>
+				</div>
+				<div class="connect-list">{{- partial "peopleViews/connect" . -}}</div>
 			</div>
 		</div>
 	</div>
