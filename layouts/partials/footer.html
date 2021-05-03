@@ -3,13 +3,11 @@
     <div class="col-md-12">
       <nav class="navbar navbar-default navbar_footer">
         <ul class="nav navbar-nav navbar-right">
-          {{ if (isset .Site.Params "copyright_notice" ) }}
           <li>
             <p class="footer_copyright">
-              {{ .Site.Params.copyright_notice | markdownify}}
+              &copy; {{ now.Format "2006" }} {{ .Site.Params.Copyright_notice_credit }}
             </p>
           </li>
-          {{ end }}
         </ul>
       </nav>
     </div>
