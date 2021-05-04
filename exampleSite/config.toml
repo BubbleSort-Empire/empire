@@ -31,7 +31,7 @@ Paginate = 3
   # audio file in the episode's audioFile parameter.
   defaultAudioURLPrefix = "https://empireforhugotheme.site/audio/"
   
-  [params.connectionOptions]
+  [params.connections]
     Slack = "https://site.slack.com"
     TikTok = "https://tiktok.com/site"
     Twitter = "https://twitter.com/site"

@@ -1,0 +1,7 @@
+{{- if .Get "social" -}}
+	{{- if ($.Page.Param (printf "%s.%s" "connections" (.Get "social"))) -}}
+		{{- $name := .Get "social" -}}
+		{{- $value := $.Page.Param (printf "%s.%s" "connections" (.Get "social")) -}}
+		<a href="{{- $value -}}">{{- $name | title -}}</a>
+	{{- end -}}
+{{- end -}}

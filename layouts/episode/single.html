@@ -2,8 +2,13 @@
 {{ .Render "views/pageHeader" }}
 <div>
     <p>{{ .Description }}</p>
+	{{- if eq .CurrentSection.Params.addednotes "above" -}}
+		{{- .CurrentSection.Content -}}
+	{{- end -}}
 	{{ .Content }}
-	{{- .CurrentSection.Content -}}
+	{{- if eq .CurrentSection.Params.addednotes "below" -}}
+		{{- .CurrentSection.Content -}}
+	{{- end -}}
 </div>
 {{ partial "player-includes" . }}
 {{ end }}
