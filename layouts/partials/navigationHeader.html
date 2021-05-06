@@ -1,20 +1,22 @@
 <nav class="navbar navbar-expand-sm">
-    <!-- Site name/logo -->
-    <a class="navbar-brand" href="{{ .Site.BaseURL | absURL }}">
-        <img class="brand-image" src="{{ .Site.BaseURL }}images/{{ .Site.Params.BrandImage }}">{{ .Site.Title }}</a>
-
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="container">
+        <!-- Site name/logo -->
+        <a class="navbar-brand" href="{{ .Site.BaseURL | absURL }}">
+            <img class="brand-image" src="{{ .Site.BaseURL }}images/{{ .Site.Params.BrandImage }}">{{ .Site.Title }}</a>
     
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-        {{- with .Site.Menus.main -}}
-        {{- range sort . -}}
-        <li class="nav-item"><a class="nav-link" href="{{ .URL | absURL }}">{{ if .Pre }}{{ .Pre }}{{ else }}{{ .Name }}{{ end }}</a></li>
-        {{- end -}}
-        {{- end -}}
-        </ul>
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+            {{- with .Site.Menus.main -}}
+            {{- range sort . -}}
+            <li class="nav-item"><a class="nav-link" href="{{ .URL | absURL }}">{{ if .Pre }}{{ .Pre }}{{ else }}{{ .Name }}{{ end }}</a></li>
+            {{- end -}}
+            {{- end -}}
+            </ul>
+        </div>
     </div>
 </nav>

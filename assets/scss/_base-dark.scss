@@ -16,6 +16,7 @@
 @mixin base_dark {
     background-color: $background-color-dark;
 }
+
 @mixin content_dark {
 	.navbar-expand-sm, .bg-primary, .navbar-dark {
 		background-color: $nav-menu-background-color-dark;
