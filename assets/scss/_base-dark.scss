@@ -1,3 +1,18 @@
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+
 @mixin base_dark {
     background-color: $background-color-dark;
 }
@@ -78,11 +93,22 @@
 	}
 }
 
+@mixin search_dark {
+	input.search-form {
+		@include placeholder {
+			color: $search-form-text-color-dark;
+		}
+		color: $search-form-text-color-dark;
+		background-color: $search-form-background-color-dark;
+	}
+}
+
 body.colorscheme-dark {
   @include base_dark;
   @include content_dark;
   @include connect_iconic_dark;
   @include pagination_dark;
+  @include search_dark;
 }
 
 body.colorscheme-auto {
@@ -91,5 +117,6 @@ body.colorscheme-auto {
 	@include content_dark;
 	@include connect_iconic_dark;
 	@include pagination_dark;
+	@include search_dark;
   }
 }
