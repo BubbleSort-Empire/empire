@@ -1,5 +1,5 @@
-{{- if ne .Params.preferredDisplayNameLong "" -}}
-    {{ .Params.preferredDisplayNameLong }}
+{{- if ne .Params.title "" -}}
+    {{ .Params.title }}
 {{- else if ne .Params.preferredDisplayNameShort "" -}}
 	{{ .Params.preferredDisplayNameShort }}
 {{- else -}}
