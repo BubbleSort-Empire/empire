@@ -2,13 +2,13 @@
 # All people should have either a first name or 
 # short display name. The rest are optional except Title.
 # Title is used to generate a search result link in search.
-title = ""
+title = "{{ replace .Name "-" " " | title }}"
 firstName = ""
 middleName = ""
 lastName = ""
 preferredDisplayNameShort = ""
 image = ""
-description = ""
+description = "{{ replace .Name "-" " " | title }} Description"
 
 {{ partial "archetypes/socialsFrontMatter" . }}
 +++
