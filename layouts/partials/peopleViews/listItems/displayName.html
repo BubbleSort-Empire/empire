@@ -3,6 +3,5 @@
 {{- else if ne .Params.preferredDisplayNameShort "" -}}
 	{{ .Params.preferredDisplayNameShort }}
 {{- else -}}
-    {{- $name := slice .Params.firstName .Params.middleName .Params.lastName -}}
-	{{ range $name }}{{ . }} {{ end }}
+    {{ partial "peopleViews/fullName" . }}
 {{- end -}}

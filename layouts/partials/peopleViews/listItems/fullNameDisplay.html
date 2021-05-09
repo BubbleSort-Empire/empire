@@ -1,4 +1,7 @@
-{{- if or (ne .Params.title "") (ne .Params.preferredDisplayNameShort "") -}}
-	{{- $name := slice .Params.firstName .Params.middleName .Params.lastName -}}
-    <h6>{{ range $name }}{{ . }} {{ end }}</h6>
+{{- $fullName := partial "peopleViews/fullName" . -}}
+
+{{- if or (and (ne .Params.title $fullName) (ne .Params.title "")) (ne .Params.preferredDisplayNameShort "") -}}
+    <h6>{{ $fullName }}</h6>
 {{- end -}}
+
+
