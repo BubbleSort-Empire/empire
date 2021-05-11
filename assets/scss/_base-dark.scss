@@ -18,11 +18,19 @@
 }
 
 @mixin content_dark {
-	.navbar-expand-sm, .bg-primary, .navbar-dark {
+	.navbar-expand-sm,
+	.navbar-expand-md,
+	.bg-primary, 
+	.navbar-dark {
 		background-color: $nav-menu-background-color-dark;
 	}
 	
-    .navbar-expand-sm, .bg-primary, .navbar-dark, .container-md, .footer_copyright {
+    .navbar-expand-sm, 
+	.navbar-expand-md,
+	.bg-primary, 
+	.navbar-dark, 
+	.container-md, 
+	.footer_copyright {
 		color: $foreground-color-dark;
 	    a {
 	    	color: $links-dark;
