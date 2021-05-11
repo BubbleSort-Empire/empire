@@ -8,13 +8,10 @@ title = "Announcing a new podcast!"
 description = "A new podcast announcement!"
 date = 2021-02-19T12:10:13-08:00
 
-# Announcements have an expiration date so that they disappear from
-# the site front page and the Current Announcements section after the
-# expiration date.
-# Change the numbers after .AddDate to set an expiration date for
-# this announcement. Set 0 0 0 for no expiration. The three numbers
-# represent years, months, days respectively.
-expirydate = 2021-06-05T12:10:13-08:00
+# Announcement Start Date determines when the announcements show up on the home page
+# Announcement End Date determines when the announcements stop showing up on the home page
+announcementStartDate = 2021-02-19T12:10:13-08:00
+announcementEndDate = 2021-06-05T12:10:13-08:00
 
 # Comment out draft status or change value to false for publishing
 draft = false
