@@ -1,0 +1,13 @@
+name: site deploy
+
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  hook:
+    runs-on: self-hosted
+
+    steps:
+      - name: webhook deploy
+        run: /etc/bluebox/webhook/deploy.sh "vader" "https://empire.bubblesort.show" "Bluebox"
