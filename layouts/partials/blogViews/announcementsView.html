@@ -1,8 +1,7 @@
-{{ $currentAnnouncements := where .Site.RegularPages.ByDate.Reverse "Params.announcementDateStart" "lt" now }}
-{{ $currentAnnouncements := $currentAnnouncements | intersect (where .Site.RegularPages.ByDate.Reverse "Params.announcementDateEnd" "gt" now) }}
+{{- $currentAnnouncements := where (where .Site.RegularPages.ByDate.Reverse "Params.announcementDateStart" "lt" now) "Params.announcementDateEnd" "gt" now -}}
 {{ if gt (len $currentAnnouncements) 0 }}
 	<div class="row episode row">
-		<div class="col-md-12">
+		<div class="announce col-md-12">
 			<h4><a href="{{ "/blog" | absURL }}">ANNOUNCEMENTS!!</a></h4>
 			<ul>
 			{{ range $currentAnnouncements }}
