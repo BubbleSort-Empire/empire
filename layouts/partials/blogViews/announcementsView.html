@@ -1,12 +1,12 @@
 <div class="row episode row">
 	<div class="col-md-12">
 		<h4><a href="{{ "/blog" | absURL }}">ANNOUNCEMENTS!!</a></h4>
-		{{ $currentAnnouncements := (where .Site.RegularPages.ByDate.Reverse "Type" "blog") }}
+		{{ $currentAnnouncements := .Site.RegularPages.ByDate.Reverse }}
 		{{ if gt (len $currentAnnouncements) 0 }}
 			{{ range $currentAnnouncements }}
-			<li>
+			<ul>
 				{{- .Render "views/homepageAnnouncementsViews" -}}
-			</li>
+			</ul>
 			{{ end }}
 		{{ end }}
 	</div>
