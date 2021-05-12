@@ -10,8 +10,8 @@ date = 2021-02-19T12:10:13-08:00
 
 # Announcement Start Date determines when the announcements show up on the home page
 # Announcement End Date determines when the announcements stop showing up on the home page
-announcementStartDate = 2021-02-19T12:10:13-08:00
-announcementEndDate = 2021-06-05T12:10:13-08:00
+announcementDateStart = 2021-02-19T12:10:13-08:00
+announcementDateEnd = 2021-06-05T12:10:13-08:00
 
 # Comment out draft status or change value to false for publishing
 draft = false
