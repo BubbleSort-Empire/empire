@@ -16,6 +16,9 @@ announcementDateEnd = 2021-06-05T12:10:13-08:00
 # Comment out draft status or change value to false for publishing
 draft = false
 +++
+Now it can be told:
+
+
 People need structure. They need order. They need direction.
 
 The Empire is here to provide all that, PLUS ensure that your children never have to think for themselves! They'll either worship and obey us or die!!! It's so simple, even a Tuskan Raider can do it.
