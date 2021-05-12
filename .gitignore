@@ -8,6 +8,3 @@
 
 # exclude build output
 /exampleSite/public
-
-# ignore pipeline resources during development in favor of manually adding them to theme for release.
-/exampleSite/resources/_gen
