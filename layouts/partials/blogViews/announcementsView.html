@@ -1,11 +1,11 @@
-{{ $currentAnnouncements := .Site.RegularPages.ByDate.Reverse }}
+{{ $currentAnnouncements := and (where .Site.RegularPages.ByDate.Reverse "Params.announcementStartDate" "lt" now) (where .Site.RegularPages.ByDate.Reverse "Params.announcementEndDate" "gt" now) }}
 {{ if gt (len $currentAnnouncements) 0 }}
 	<div class="row episode row">
 		<div class="col-md-12">
 			<h4><a href="{{ "/blog" | absURL }}">ANNOUNCEMENTS!!</a></h4>
 			<ul>
 			{{ range $currentAnnouncements }}
-				{{- .Render "views/homepageAnnouncementsViews" -}}
+				{{- .Render "views/homepageAnnouncementsViews" -}}{{ lt (.Param "announcementStartDate") now }} {{ .Param "announcementStartDate" }}
 			{{ end }}
 			</ul>
 		</div>
