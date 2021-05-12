@@ -1,13 +1,13 @@
-<div class="row episode row">
-	<div class="col-md-12">
-		<h4><a href="{{ "/blog" | absURL }}">ANNOUNCEMENTS!!</a></h4>
-		{{ $currentAnnouncements := .Site.RegularPages.ByDate.Reverse }}
-		{{ if gt (len $currentAnnouncements) 0 }}
-			{{ range $currentAnnouncements }}
+{{ $currentAnnouncements := .Site.RegularPages.ByDate.Reverse }}
+{{ if gt (len $currentAnnouncements) 0 }}
+	<div class="row episode row">
+		<div class="col-md-12">
+			<h4><a href="{{ "/blog" | absURL }}">ANNOUNCEMENTS!!</a></h4>
 			<ul>
+			{{ range $currentAnnouncements }}
 				{{- .Render "views/homepageAnnouncementsViews" -}}
-			</ul>
 			{{ end }}
-		{{ end }}
+			</ul>
+		</div>
 	</div>
-</div>
+{{ end }}
