@@ -61,10 +61,10 @@
 			border: 1px solid $links-dark;
 			background-color: $nav-menu-background-color-dark;
 			a {
-				color: $foreground-color-dark;
+				color: $links-dark;
 				&:hover {
 					text-decoration: none;
-					color: $links-dark;
+					color: $links-hover-dark;
 				}
 			}
 		}
