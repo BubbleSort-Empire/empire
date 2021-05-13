@@ -47,6 +47,29 @@
   		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 	}
 	
+	div.announce {
+		div.h {
+			background-color: $links-dark;
+		}
+		a {
+			color: $nav-menu-background-color-dark;
+			&:hover {
+				color: $foreground-color-dark;
+			}
+		}
+		ul {
+			border: 1px solid $links-dark;
+			background-color: $nav-menu-background-color-dark;
+			a {
+				color: $foreground-color-dark;
+				&:hover {
+					text-decoration: none;
+					color: $links-dark;
+				}
+			}
+		}
+	}
+	
 	.show-art-large,
 	.art-square-list-item,
 	.show-art-small {

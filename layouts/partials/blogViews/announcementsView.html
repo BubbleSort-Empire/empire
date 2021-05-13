@@ -2,11 +2,11 @@
 {{ if gt (len $currentAnnouncements) 0 }}
 	<div class="row episode row">
 		<div class="announce col-md-12">
-			<h4><a href="{{ "/blog" | absURL }}">ANNOUNCEMENTS!!</a></h4>
+			<div class="h"><h4><a href="{{ "/blog" | absURL }}">ANNOUNCEMENTS</a></h4></div>
 			<ul>
-			{{ range $currentAnnouncements }}
+			{{- range $currentAnnouncements -}}
 				{{- .Render "views/homepageAnnouncementsViews" -}}
-			{{ end }}
+			{{- end -}}
 			</ul>
 		</div>
 	</div>
