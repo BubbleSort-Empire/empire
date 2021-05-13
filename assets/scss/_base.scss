@@ -237,8 +237,12 @@ div.hosted-shows-list {
 /* announcement styles */
 
 div.announce {
+	margin: auto;
+	width: 45rem;
+	max-width: 90%;
 	div.h {
 		border-radius: 0.5rem;
+		// border: 1px solid $foreground-color;
 		margin-bottom: 0.25rem;
 		background-color: $nav-menu-background-color;
 		
@@ -258,6 +262,7 @@ div.announce {
 		list-style: none;
 		padding: 0.5rem 3rem;
 		border-radius: 0.5rem;
+		border: 1px solid $foreground-color;
 		background-color: $nav-menu-links-hover;
 		li {
 			padding: 0.1rem 0;
