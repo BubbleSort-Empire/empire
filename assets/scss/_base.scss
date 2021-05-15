@@ -263,18 +263,34 @@ div.announce-section {
 		background-color: $announce-background-color;
 		border-radius: 0 0 0.5rem 0.5rem;
 		display: grid;
-		grid-template-columns: 1fr 3fr 1fr;
+		grid-template-columns: 2em 6em 5fr;
+		column-gap: .2rem;
+		row-gap: .5rem;
+		align-items: start;
 		padding: 0.5rem 2rem;
-
-		a {
-			color: $announce-links;
-			&:hover {
-				color: $nav-menu-links-hover;
+		
+		div {
+			justify-self: start;
+			align-self: start;
+			margin: 0;
+			padding: 0;
+			
+			&.item-date {
+				font-style: italic;
+				font-size: .8rem;
+				padding-top: .2rem;
 			}
-			&.announce-link {
-				text-decoration: underline;
+			
+			a {
+				color: $announce-links;
+				&:hover {
+					color: $nav-menu-links-hover;
+				}
+				&.announce-link {
+					text-decoration: underline;
+				}
 			}
-		}	
+		}
 	}
 }
 

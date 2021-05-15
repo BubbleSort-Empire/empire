@@ -1,3 +1,3 @@
-{{ dateFormat "2006-01-02" .Params.AnnouncementDateStart }}
-<a href="{{ .Permalink }}">{{- .Title -}}</a>
-<a class="announce-link" href="{{ .Permalink }}">(Read More!)</a>
+<div class="item-cal"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+<div class="item-date">{{ dateFormat "2006-01-02" .Params.AnnouncementDateStart }}</div>
+<div class="item-title-link"><a class="announce-link" href="{{ .Permalink }}">{{- .Title -}}</a></div>
