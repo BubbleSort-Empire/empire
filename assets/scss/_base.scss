@@ -263,7 +263,7 @@ div.announce-section {
 		background-color: $announce-background-color;
 		border-radius: 0 0 0.5rem 0.5rem;
 		display: grid;
-		grid-template-columns: 2em 6em 5fr;
+		grid-template-columns: 2em 6em 2fr 5fr;
 		column-gap: .2rem;
 		row-gap: .5rem;
 		align-items: start;
@@ -279,6 +279,13 @@ div.announce-section {
 				font-style: italic;
 				font-size: .8rem;
 				padding-top: .2rem;
+			}
+			
+			&.item-snippet {
+				a {
+					font-style: italic;
+					font-size: .8rem;
+				}
 			}
 			
 			a {
