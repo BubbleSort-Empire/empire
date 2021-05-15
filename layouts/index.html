@@ -1,7 +1,7 @@
 {{ define "main" }}
-	{{ partial "indexListHeader" . }}
-	
 	{{ partial "blogViews/announcementsView.html" . }}
+	
+	{{ partial "indexListHeader" . }}
 
 	{{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "episode") }}
 

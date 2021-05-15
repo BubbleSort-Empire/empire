@@ -1,2 +1,3 @@
-<li><span>{{ dateFormat "2006-01-02" .Params.AnnouncementDateStart }}</span> <a href="{{ .Permalink }}">{{- .Title -}}</a> 
-... <a class="announce" href="{{ .Permalink }}">Read More!</a></li>
+{{ dateFormat "2006-01-02" .Params.AnnouncementDateStart }}
+<a href="{{ .Permalink }}">{{- .Title -}}</a>
+<a class="announce-link" href="{{ .Permalink }}">(Read More!)</a>
