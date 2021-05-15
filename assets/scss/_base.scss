@@ -263,7 +263,7 @@ div.announce-section {
 		background-color: $announce-background-color;
 		border-radius: 0 0 0.5rem 0.5rem;
 		display: grid;
-		grid-template-columns: 2em 6em 2fr 5fr;
+		grid-template-columns: 2em 6em 5fr;
 		column-gap: .2rem;
 		row-gap: .5rem;
 		align-items: start;
@@ -281,11 +281,8 @@ div.announce-section {
 				padding-top: .2rem;
 			}
 			
-			&.item-snippet {
-				a {
-					font-style: italic;
-					font-size: .8rem;
-				}
+			p {
+				margin-bottom: .6rem;
 			}
 			
 			a {
@@ -295,6 +292,10 @@ div.announce-section {
 				}
 				&.announce-link {
 					text-decoration: underline;
+				}
+				&.announce-link-more {
+					font-style: italic;
+					font-size: .8rem;
 				}
 			}
 		}
