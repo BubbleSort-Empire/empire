@@ -1,4 +1,4 @@
 <div class="item-cal"><i class="fa fa-calendar-o" aria-hidden="true"></i></div>
 <div class="item-date">{{ dateFormat "2006-01-02" .Params.AnnouncementDateStart }}</div>
 <div class="item-title-link"><a class="announce-link" href="{{ .Permalink }}">{{- .Title -}}</a></div>
-<div class="item-snippet">{{ .Summary | safeHTML | truncate 100 }} <a href="{{ .Permalink }}">(more)</a></div>
+<div class="item-snippet">{{ .Summary | safeHTML | truncate 150 }} <a href="{{ .Permalink }}">(more)</a></div>
