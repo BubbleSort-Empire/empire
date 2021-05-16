@@ -2,6 +2,14 @@
 title = "{{ replace .Name "-" " " | title }}"
 description = "{{ replace .Name "-" " " | title }} Description"
 
+# Displaying Season and Episode Numbers on the website is optional.
+# They will always be included in the RSS feed when present in front matter.
+# In the case of Aggregated Podcasts episode numbers for the aggregated 
+# list and feed will be generated automatically for you. These parameters will
+# determine how episode titles are presented in the aggregated list though.
+displayEpisodeNumbers = false
+displaySeasonNumbers = false
+
 # hosts are optional, but a nice touch as they will be displayed on the site anywhere a show is described or listed.
 # they should be a list of base filenames of hosts in your /content/hosts section
 # Ex: ["vader", "palpatine"]
