@@ -12,5 +12,7 @@ filteredEpisodeText = "Sorted By Topic"
 
 {{ partial "archetypes/podcastBaseFrontMatter" . }}
 
+{{ partial "archetypes/subscribeOptions" . }}
+
 {{ partial "archetypes/socialsFrontMatter" . }}
 +++

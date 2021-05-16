@@ -5,5 +5,7 @@ type = "podcast"
 
 {{ partial "archetypes/podcastBaseFrontMatter" . }}
 
+{{ partial "archetypes/subscribeOptions" . }}
+
 {{ partial "archetypes/socialsFrontMatter" . }}
 +++
