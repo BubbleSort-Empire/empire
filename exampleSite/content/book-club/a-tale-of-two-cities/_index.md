@@ -22,17 +22,35 @@ image = ""
 # Ex: image = "weekly-wrap/show-art-large.png" for an image located at static/images/weekly-wrap/show-art-large.png
 feedImage = ""
 
-# Numeric iTunes Feed ID 
-# EX: for this iTunes link https://podcasts.apple.com/podcast/id1448327383
-# The ID would be 1448327383
-iTunesFeedID = "1483394883"
-
 # Audio prefixes are used to build audio urls for episodes. This allows episode front matter 
 # to only have a need to specify the actual filename of the audio and also allows
 # for easily prepending stats tracking URLS like BluBrry to audio files.
 # URL prefixes at this level are optional. If omitted here the default prefix
 # from the site configuration will be used.
 audioURLPrefix = ""
+
+# Subscription Options
+# Uncomment the ones that you need and fill in the required Feed ID.
+[listeningOptions]
+#	Podcasts - EX: for this iTunes link https://podcasts.apple.com/podcast/id1448327383 the ID would be 1448327383.
+#	This feed ID also provides subscription options for Overcast and Castro.
+	itunesfeedid = "1483394883"
+
+#	Google - EX: for this Google link https://podcasts.google.com/?feed=aHR0cHM6Ly90aGVsaW5lcnByb2plY3QuY29tL2luZGV4LnhtbA==
+#	The ID would be aHR0cHM6Ly90aGVsaW5lcnByb2plY3QuY29tL2luZGV4LnhtbA==
+#	googlefeedid = ""
+
+#	Spotify - EX: for this Spotify link https://open.spotify.com/show/52Xo86cea1ZUg6BGv4azGN
+#	The ID would be 52Xo86cea1ZUg6BGv4azGN
+#	spotifyfeedid = ""
+
+#	Breaker - EX: for this Breaker link https://www.breaker.audio/rabbit-hole-2
+#	The ID would be rabbit-hole-2
+#	breakerfeedid = ""
+
+#	Casts - # EX: for this Pocket Casts link https://pca.st/7ilyfbc6
+#	The ID would be 7ilyfbc6
+#	pocketcastsfeedid = ""
 
 
 
