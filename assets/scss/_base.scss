@@ -269,9 +269,23 @@ div.announce-section {
 		display: grid;
 		grid-template-columns: 2em 6em 5fr;
 		column-gap: .2rem;
-		row-gap: .5rem;
+		row-gap: 1.2rem;
 		align-items: start;
 		padding: 0.5rem 2rem;
+		
+		@media (max-width: 575.98px) {
+			display: block;
+			
+			div {
+				&.item-cal, &.item-date {
+				display: inline;
+				margin: 0 1rem 1rem 0;
+				}
+				&.item-title-link {
+					margin: 0.5rem 0 1.5rem 0;
+				}
+			}
+		}
 		
 		div {
 			justify-self: start;
