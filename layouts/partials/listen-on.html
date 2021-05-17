@@ -19,10 +19,11 @@
 		{{- end -}}
 		{{- range sort .Site.Data.listenOptions "sortOrder" "asc" -}}
 			{{- $feedID := "" -}}
-			{{- if and (isset $this.CurrentSection.Params .feedIDParameter) (ne $this.CurrentSection.Params .feedIDParameter "") -}}
-				{{- $feedID = $this.CurrentSection.Param  .feedIDParameter -}}
-			{{- else if and (isset $this.CurrentSection.Parent.Params .feedIDParameter) (ne $this.CurrentSection.Parent.Params .feedIDParameter "") -}}
-				{{- $feedID = $this.CurrentSection.Parent.Param .feedIDParameter -}}		
+			{{ $parameterName := printf "listeningoptions.%s" .feedIDParameter}}
+			{{- if ne ($this.CurrentSection.Param $parameterName) nil -}}
+				{{- $feedID = $this.CurrentSection.Param  $parameterName -}}
+			{{- else if ne ($this.CurrentSection.Parent.Param $parameterName) nil -}}
+				{{- $feedID = $this.CurrentSection.Parent.Param $parameterName -}}	
 			{{- end -}}
 			{{- if ne $feedID "" -}}
 				<a title="{{ .description }}" href="{{ .urlPrefix }}{{ $feedID }}">
