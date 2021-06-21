@@ -2,7 +2,7 @@
 <div class="row episode-row">
 	<div class="col-md-12">
 		<h2>{{ .Title }}</h2>
-		<div class="publishDate small"><a href="{{ .Permalink }}">Posted on <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time></a></div>
+		<div class="publishDate small"><a href="{{ .Permalink }}"><i class="fa fa-calendar-o" aria-hidden="true"></i>Posted on <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time></a></div>
 		<div>
 		    {{ .Content }}
 		</div>
