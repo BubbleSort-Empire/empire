@@ -8,9 +8,9 @@
       </a>
     </li>
     {{- end -}}
-    {{ if (and .PrevInSection .NextInSection) }}
+    {{- if (and .PrevInSection .NextInSection) -}}
     &nbsp;&nbsp;&nbsp;&nbsp;
-    {{ end }}
+    {{- end -}}
     {{- if .NextInSection -}}
     <li class="page-item">
       <a class="page-link" href="{{.NextInSection.Permalink}}">
