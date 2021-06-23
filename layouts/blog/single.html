@@ -9,6 +9,8 @@
 		<div>
 			{{with .Pages.ByDate.Reverse.Next . }}{{.RelPermalink}}{{end}}
 		</div>
+		{{ partial "paginationSingle.html" . }}
 	</div>
 </div>
+
 {{ end }}

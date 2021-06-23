@@ -1,0 +1,24 @@
+{{- if (or .PrevInSection .NextInSection) -}}
+  <ul class="pagination justify-content-center">
+    
+    {{- if .PrevInSection -}}
+    <li class="page-item">
+      <a href="{{.PrevInSection.Permalink}}" class="page-link">
+        < Previous
+      </a>
+    </li>
+    {{- end -}}
+    {{ if (and .PrevInSection .NextInSection) }}
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    {{ end }}
+    {{- if .NextInSection -}}
+    <li class="page-item">
+      <a class="page-link" href="{{.NextInSection.Permalink}}">
+        Next >
+      </a>
+    </li>
+    {{- end -}}
+
+  </ul>
+  
+{{- end -}}
