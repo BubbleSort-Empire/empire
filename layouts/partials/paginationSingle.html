@@ -3,7 +3,7 @@
     
     {{- if .NextInSection -}}
     <li class="page-item">
-      <a href="{{.NextInSection.Permalink}}" class="page-link">
+      <a class="page-link" href="{{.NextInSection.Permalink}}">
         < Newer
       </a>
     </li>
@@ -20,5 +20,4 @@
     {{- end -}}
 
   </ul>
-  
 {{- end -}}
