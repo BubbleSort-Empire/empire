@@ -93,6 +93,10 @@ p.footer_copyright {
 	}
 }
 
+.pagination {
+	padding-top: 1em;
+}
+
 .pagination-numbers-tiny-be-gone {
 	@media (max-width: 374.98px) {
 		display: none;

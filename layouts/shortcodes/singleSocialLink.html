@@ -1,7 +1,13 @@
 {{- if .Get "social" -}}
 	{{- if ($.Page.Param (printf "%s.%s" "connections" (.Get "social"))) -}}
-		{{- $name := .Get "social" -}}
+		{{- $name := "" -}}
+		{{- if .Get "text" -}}
+			{{- $name = (.Get "text") -}}
+		{{- else -}}
+			{{- $name = (.Get "social" | title) -}}
+		{{- end -}}
 		{{- $value := $.Page.Param (printf "%s.%s" "connections" (.Get "social")) -}}
-		<a href="{{- $value -}}">{{- $name | title -}}</a>
+		{{ if eq (.Get "social") "Email"}}{{ $value = printf "%s%s" "mailto:" $value }}{{ end }}
+		<a href="{{- $value -}}" title="{{- $name -}}" alt="{{- $name -}}">{{- $name -}}</a>
 	{{- end -}}
 {{- end -}}

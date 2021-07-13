@@ -1,0 +1,11 @@
+{{- $url := .Site.BaseURL -}}
+{{- $name := .Site.Title -}}
+{{- if .Get "path" -}}
+	{{- $url = ((printf "%s%s" $url (.Get "path")) | absURL) -}}
+{{- end -}}
+{{- if .Get "text" -}}
+	{{- $name = (.Get "text") -}}
+{{- else -}}
+	{{- $name = $url -}}
+{{- end -}}
+<a href="{{- $url -}}" title="{{- $name -}}" alt="{{- $name -}}">{{- $name -}}</a>
