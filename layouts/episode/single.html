@@ -3,6 +3,9 @@
 <div>
     <p>{{ .Description }}</p>
 	
+	{{- if .Content -}}
+	<h2>Show Notes</h2>
+	{{- end -}}
 	{{- if eq .CurrentSection.Params.evergreenContentOnTop true -}}
 		{{- .CurrentSection.Content -}}
 		{{ .Content }}
