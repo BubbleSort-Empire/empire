@@ -17,12 +17,6 @@
 					<a href="{{ .CurrentSection.Permalink }}">
 						{{ .CurrentSection.Title }}
 					</a>
-						{{- if and (isset .CurrentSection.Params "displayseasonnumbers") (ne .CurrentSection.Params.displaySeasonNumber "") (isset .Params "seasonnumber") (ne .Params.seasonNumber "") -}}
-							<small>Season: {{ .Params.seasonNumber }} </small>
-						{{- end -}}
-						{{- if and (isset .CurrentSection.Params "displayepisodenumbers") (ne .CurrentSection.Params.displayEpisodeNumber "") (isset .Params "episodenumber") (ne .Params.episodeNumber "") -}}
-							<small>Episode: {{ .Params.episodeNumber }}</small>
-					{{- end -}}
 				</div>
 				<a href="{{ .Permalink }}">
 					<h2>{{ .Title }}</h2>
