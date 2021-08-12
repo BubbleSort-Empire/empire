@@ -14,6 +14,9 @@ seasonNumber = ""
 # Comment out draft status or change value to false for publishing
 draft = true
 
+# GUID - Only fill this in if porting an existing podcast.
+# GUID = ""
+
 # hosts are optional, but a nice touch as they will be displayed on the site anywhere an episode is described.
 # they should be a list of base filenames of hosts in your /content/hosts section
 # Ex: ["vader", "palpatine"]
