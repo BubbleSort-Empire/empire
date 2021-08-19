@@ -7,9 +7,9 @@ title = "{{ replace .Name "-" " " | title }}"
 description = "{{ replace .Name "-" " " | title }} Description"
 date = {{ .Date }}
 
-# Episode and Season Numbers are optional.
-episodeNumber = "" 
+# Season and Episode Numbers are optional.
 seasonNumber = ""
+episodeNumber = ""
 
 # Comment out draft status or change value to false for publishing
 draft = true

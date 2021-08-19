@@ -1,11 +1,12 @@
 <div class="publishDate small">
-	<div>{{- if and (isset .CurrentSection.Params "displayseasonnumbers") (ne .CurrentSection.Params.displaySeasonNumber "") (isset .Params "seasonnumber") (ne .Params.seasonNumber "") -}}
-		Season {{ .Params.seasonNumber }},<span> </span>
+	<div>
+	{{- if and (.CurrentSection.Params.displaySeasonNumbers) (ne .Params.seasonNumber "") -}}
+		Season {{ .Params.seasonNumber }}<span> </span>
 	{{- end -}}
-	{{- if and (isset .CurrentSection.Params "displayepisodenumbers") (ne .CurrentSection.Params.displayEpisodeNumber "") (isset .Params "episodenumber") (ne .Params.episodeNumber "") -}}
-		 Episode {{ .Params.episodeNumber }}
-	{{- end -}}</div>
+	{{- if and (.CurrentSection.Params.displayEpisodeNumbers) (ne .Params.episodeNumber "") -}}
+		Episode {{ .Params.episodeNumber }}
+	{{- end -}}
+	</div>
 	<i class="fa fa-calendar-o" aria-hidden="true"></i>
 	<time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
-
 </div>
