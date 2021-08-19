@@ -23,11 +23,13 @@
 						{{ partial "listen-on" . }}
 					</div>
 					<div class="connect-list">
-						<small>Hosts & Feedback:</small>
+						{{- $hosts := partial "functions/hostList" . -}}
+						{{- $socials := partial "functions/socialsList" . -}}
+						<small>{{- if $hosts -}}Hosts{{- end }}{{ if and ($hosts) ($socials) }} & {{ end }}{{- if $socials -}}Feedback{{- end -}}{{- if or ($hosts) ($socials) -}}:{{- end -}}</small>
 					</div>
 					<div class="connect-list">
 						{{- partial "peopleViews/smallPeopleList" . -}}
-						{{- partial "connect" . -}}
+						{{- partial "socials" . -}}
 					</div>
 				</div>
 			</div>

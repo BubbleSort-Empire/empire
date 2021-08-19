@@ -1,12 +1,5 @@
-{{- $hostPages := (where .Site.RegularPages ".File.BaseFileName" "in" .Params.hosts) -}}
-{{- if eq (len $hostPages) 0 -}}
-{{- $hostPages = (where .Site.RegularPages ".File.BaseFileName" "in" .Parent.Params.hosts) -}}
-{{- end -}}
-{{- $guestPages := (where .Site.RegularPages ".File.BaseFileName" "in" .Params.guests) -}}
-{{- $peoplePages := union $guestPages $hostPages -}}
-
-{{- with $peoplePages -}}
-	{{- range $peoplePages -}} 
+{{- with partial "functions/hostList" . -}}
+	{{- range . -}} 
 		{{- partial "peopleViews/listItems/smallListView" . -}} 
 	{{- end -}}
 {{- end -}}

@@ -231,6 +231,15 @@ div.hosted-shows-list {
 	}
 }
 
+.season-number, .episode-number {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.fa-calendar-o {
+	padding-top: 0.3em;
+}
+
 .filter-button {
 	svg {
 		fill: $links;

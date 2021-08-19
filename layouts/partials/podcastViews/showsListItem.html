@@ -16,11 +16,12 @@
                         {{ partial "listen-on" . }}
                     </div>
                     <div class="connect-list">
-                        <small>Hosts:</small>
+                        {{- $hosts := partial "functions/hostList" . -}}
+                        <small>{{- if $hosts -}}Hosts:{{- end }}</small>
                     </div>
                     <div class="connect-list">
                         {{ partial "peopleViews/smallPeopleList" . }}
-                    <!--    {{ partial "connect" . }} -->
+                    <!--    {{ partial "socials" . }} -->
                     </div>
                 </div>
             </div>

@@ -38,17 +38,4 @@
 	<!-- only page has connections set, use it -->
 	{{ $scratch.Set "optionsMap" $socialsMap }}
 {{ end }}
-
-<!-- using the merged map set, look for each connection name and image in socials.json -->
-{{ range $key, $val := $scratch.Get "optionsMap" }}
-{{ with index $.Site.Data.socials $key }}
-<!-- if the social link being constructed is an email address, make it a mailto: link -->
-{{ if eq .name "Email"}}{{ $val = printf "%s%s" "mailto:" $val }}{{ end }}
-	<a href="{{ $val }}" title="{{ .name }}" alt="{{ .name }}">
-		<div class="connect-option">
-			{{- .svg | safeHTML -}}
-			<p>{{- .name -}}</p>
-		</div>
-	</a>
-{{ end }}
-{{- end -}}
+{{ return $scratch.Get "optionsMap" }}
