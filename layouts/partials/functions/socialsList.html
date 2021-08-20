@@ -1,41 +1,8 @@
 <!-- Check for connection options in page, parent, and site config -->
-{{ $scratch := newScratch }}
-{{ $socialsMap := .CurrentSection.Param "connections" -}}
-{{ $socialsParentMap := .CurrentSection.Parent.Param "connections" }}
-{{ $socialsConfigMap := .Site.Params.connections }}
+{{ $socials := .CurrentSection.Param "connections" -}}
+{{ $socialsParent := .CurrentSection.Parent.Param "connections" }}
+{{ $socialsConfig := .Site.Params.connections }}
 
-<!-- create a simple numeric value map for the combination of connection maps to merge -->
-{{ $mapRegister := 0 }}
-{{ if reflect.IsMap $socialsMap }}
-	{{ $mapRegister = add $mapRegister 1 }}
-{{ end }}
-{{ if reflect.IsMap $socialsParentMap }}
-	{{ $mapRegister = add $mapRegister 10 }}
-{{ end }}
-{{ if reflect.IsMap $socialsConfigMap }}
-	{{ $mapRegister = add $mapRegister 100 }}
-{{ end }}
+{{ $connectionsMap := merge $socialsConfig $socialsParent $socials }}
 
-{{ if eq $mapRegister 111 }}
-	<!-- all three places have connections set, merge all 3 maps -->
-	{{ $scratch.Set "optionsMap" ( merge $socialsConfigMap ( merge $socialsParentMap $socialsMap )) }}
-{{ else if eq $mapRegister 110 }}
-	<!-- only site config and parent have connections set, merge site and parent maps -->
-	{{ $scratch.Set "optionsMap" ( merge $socialsConfigMap $socialsParentMap ) }}
-{{ else if eq $mapRegister 101 }}
-	<!-- only site config and page have connections set, merge site and page maps -->
-	{{ $scratch.Set "optionsMap" ( merge $socialsConfigMap $socialsMap ) }}
-{{ else if eq $mapRegister 011 }}
-	<!-- only parent and page have connections set, merge parent and page maps -->
-	{{ $scratch.Set "optionsMap" ( merge $socialsParentMap $socialsMap ) }}
-{{ else if eq $mapRegister 100 }}
-	<!-- only site config has connections set, use it -->
-	{{ $scratch.Set "optionsMap" $socialsConfigMap }}
-{{ else if eq $mapRegister 010 }}
-	<!-- only parent has connections set, use it -->
-	{{ $scratch.Set "optionsMap" $socialsParentMap }}
-{{ else if eq $mapRegister 001 }}
-	<!-- only page has connections set, use it -->
-	{{ $scratch.Set "optionsMap" $socialsMap }}
-{{ end }}
-{{ return $scratch.Get "optionsMap" }}
+{{ return $connectionsMap }}
