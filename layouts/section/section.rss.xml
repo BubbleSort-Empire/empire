@@ -2,7 +2,10 @@
 {{- $pages := slice -}}
 {{- $pages = where $pctx.Pages "Type" "episode" -}}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+	>
   <channel>
 	<title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} Podcast from {{ end }}{{ .Site.Title }}{{ end }}</title>
 	<link>{{ .Permalink }}</link>
