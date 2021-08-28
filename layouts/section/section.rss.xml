@@ -4,8 +4,14 @@
 	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
 	>
   <channel>
-	{{ partial "feeds/channel" . }}
-	{{ range (where (where .Site.Pages.ByDate.Reverse "Section" .Section) "Type" "episode") }}
+	<description>{{ .Params.Type }}</description>
+	{{ $episodes := slice }}
+	{{ if eq .Params.Type "aggregatedPodcast" }}
+	{{ $episodes = (where (where .Site.Pages.ByDate.Reverse "Section" .Section) "Type" "episode") }}
+	{{ else }}
+	{{ $episodes = where .Pages.ByDate.Reverse "Type" "episode" }}
+	{{ end }}
+	{{ range $episodes }}
 	<item>
 	  <title>{{ .Title }}</title>
 	  <link>{{ .Permalink }}</link>
