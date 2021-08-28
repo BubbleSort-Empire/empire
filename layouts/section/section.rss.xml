@@ -4,7 +4,7 @@
 	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
 	>
   <channel>
-	<description>{{ .Params.Type }}</description>
+	{{ partial "feeds/channel" . }}
 	{{ $episodes := slice }}
 	{{ if eq .Params.Type "aggregatedPodcast" }}
 	{{ $episodes = (where (where .Site.Pages.ByDate.Reverse "Section" .Section) "Type" "episode") }}
