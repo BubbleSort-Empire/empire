@@ -1,9 +1,14 @@
+{{/* 
+Container for podcast feed channel section.
+The .Params parameters here should be in the [cascade] section in 
+config.toml, or podcast or aggregated podcast _index.md front matter.
+*/}}
 <title>{{ with .Params.FeedTitle }}{{.}}{{end}}</title>
 <link>{{ .Permalink }}</link>
 <description>{{- with .Params.FeedDescription -}}{{.}}{{end}}</description>
 <generator>Hugo -- gohugo.io</generator>
 <itunes:image href="{{ .Site.BaseURL }}images/{{ with .Params.FeedImage }}{{.}}{{end}}" />
-{{ with .Params.Rssfeed.language }}<language>{{.}}</language>{{end}}
+{{ with .Params.FeedLanguage }}<language>{{.}}</language>{{end}}
 {{ with .Params.AuthorEmail }}
 <managingEditor>{{.}}{{ with $.Params.AuthorName }} ({{.}}){{end}}</managingEditor>{{end}}
 {{ with .Params.AuthorEmail }}
