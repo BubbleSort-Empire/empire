@@ -1,1 +1,12 @@
 {{/* A text list of links to hosts and guests */}}
+{{- $hosts := partial "functions/hostList" . -}}
+{{- if $hosts -}}
+	<h3>Personalities</h3>
+	<ul>
+	{{- with $hosts -}}
+		{{- range . -}} 
+			<li><a href="{{- .Permalink -}}">{{- partial "peopleViews/listItems/displayName" . -}}</a></li>
+		{{- end -}}
+	</ul>
+	{{- end -}}
+{{- end -}}
