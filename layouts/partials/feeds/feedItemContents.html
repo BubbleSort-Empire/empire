@@ -11,3 +11,4 @@
 <content:encoded>
 {{ "<!" | safeHTML }}[CDATA[{{ partial "feeds/showNotes" . | safeHTML }}]]>
 </content:encoded>
+<enclosure url="{{ partial "functions/audioURL" . }}" length="{{- .Params.audio.bytes -}}" type="audio/mpeg"/>
