@@ -8,7 +8,8 @@
 	{{ partial "feeds/channel" . }}
 	{{ range (sort (where .Site.Pages "Type" "episode") ".Params.date" "desc") }}
 	<item>
-	  {{ partial "feeds/feedItemContents" . }}
+		<title>{{ .Title }}</title> {{/* This needs changed to the function call, episodeTitleForFeedType, when I write it. */}}
+	    {{ partial "feeds/feedItemContents" . }}
 	</item>
 	{{ end }}
   </channel>
