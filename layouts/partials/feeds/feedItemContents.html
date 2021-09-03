@@ -2,7 +2,7 @@
 	The main Container for feed items (episodes).
 	Includes contents from other partials.
 */}}
-<title>{{ .Title }}</title>
+<itunes:title>{{ .Title }}</itunes:title> {{/* Do we want to abstract the itunes and google specific tags out to another partial or leave them all here? */}}
 <link>{{ .Permalink }}</link>
 <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
 {{ with .Params.AuthorEmail }}<author>{{.}}{{ with $.Params.AuthorName }} ({{.}}){{end}}</author>{{end}}
