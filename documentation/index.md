@@ -1,11 +1,13 @@
 # Empire for Hugo
 Empire is a Hugo theme suitable for running a podcast network with. Blah Blah Blah.
 
-# Site Configuration
+## Site Configuration
 
-Link Config.toml parameter descriptions goes here.
+* [config.toml](siteConfiguration.md) – The config.toml is used for configuring the
+site based on many different parameter values, such as baseURL (the URL to get to the 
+site home page), site title, site theme (this Empire theme, for example), and more.
 
-# Content Types
+## Content Types
 
 There are several content types with matching archetypes provided to help you add new content for your site.
 
