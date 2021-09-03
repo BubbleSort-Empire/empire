@@ -1,8 +1,8 @@
 <div class="connect-list">
 	{{- $baseURL := .Site.BaseURL -}}
 	{{- $this := . -}}
-		{{- with .Params.audio.file -}}
-			<a title="Download Audio" href="{{ $this.Render "audio/audioURL" }}">
+		{{- if .Params.audio.file -}}
+			<a title="Download Audio" href="{{ partial "functions/audioURL" . }}">
 				<div class="connect-option">
 					<img src="{{ $baseURL }}images/listen-buttons/Download.svg" />
 					<p>Download</p>

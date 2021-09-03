@@ -1,11 +1,11 @@
-{{- with .Params.audio.file -}}
+{{- if .Params.audio.file -}}
 	<div class="row">
 		<div class="col">
 			<div class="single-player" id="single-player">
 				<div class="podcast">
 					<div class="podcast__meta">
 						<audio width="100%">
-							<source src="{{ $.Render "audio/audioURL" }}" />
+							<source src="{{ partial "functions/audioURL" . }}" />
 							Your browser does not support the audio tag.
 						</audio>
 					</div>

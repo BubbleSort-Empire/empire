@@ -1,13 +1,13 @@
-{{- with .Params.audio.file -}}
+{{- if .Params.audio.file -}}
 	<div class="row">
 		<div class="col">
 			<div class="audio-player">
 				<audio width="100%" preload="none">
-					<source src="{{ $.Render "audio/audioURL" }}" />
+					<source src="{{ partial "functions/audioURL" . }}" />
 					Your browser does not support the audio tag.
 				</audio>
 				<div class="download-link">
-					<a href="{{ $.Render "audio/audioURL" }}">Download Episode</a>
+					<a href="{{ partial "functions/audioURL" . }}">Download Episode</a>
 				</div>
 			</div>
 		</div>
