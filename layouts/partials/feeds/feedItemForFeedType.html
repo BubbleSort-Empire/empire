@@ -29,7 +29,14 @@
 	{{/* Any tags dependent of feed type go here */}}
 	<title>{{ $parentShowTitle }}{{ $showTitle }}{{ $numbering }}{{ .episode.Title }}</title>
 	<itunes:title>{{ $showTitle }}{{ .episode.Title }}</itunes:title>
-	
+	{{- if eq .feedType "podcast" -}} 
+		{{ with .episode.Params.episodeNumber }}
+			<itunes:episode>{{ . }}</itunes:episode>
+		{{ end }}
+		{{ with .episode.Params.seasonNumber }}
+			<itunes:season>{{ . }}</itunes:season>
+		{{ end }}
+	{{- end -}}
 	{{/* Any tags not dependent of feed type go in the following partial */}}
 	{{ partial "feeds/feedItemContents" .episode }}
 </item>
