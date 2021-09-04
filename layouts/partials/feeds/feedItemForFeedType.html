@@ -23,12 +23,10 @@
 	{{ $numbering = printf "%s " .episode.Params.episodeNumber }}
 {{- end -}}
 
-
-
 <item>
 	{{/* Any tags dependent of feed type go here */}}
 	<title>{{ $parentShowTitle }}{{ $showTitle }}{{ $numbering }}{{ .episode.Title }}</title>
-	<itunes:title>{{ $showTitle }}{{ if ne .feedType "podcast" }}{{ $numbering }}{{ end }}{{ .episode.Title }}</itunes:title>
+	<itunes:title>{{ if eq .feedType "network" }}{{ $parentShowTitle }}{{ end }}{{ $showTitle }}{{ if ne .feedType "podcast" }}{{ $numbering }}{{ end }}{{ .episode.Title }}</itunes:title>
 	{{- if eq .feedType "podcast" -}} 
 		{{ with .episode.Params.episodeNumber }}
 			<itunes:episode>{{ . }}</itunes:episode>
