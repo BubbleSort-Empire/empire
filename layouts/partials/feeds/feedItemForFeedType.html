@@ -1,0 +1,35 @@
+{{/* base feed item container - requires multiple parameters 
+	(dict "episode" . "feedType" $.Params.Type) 
+	feedType is a string with the following acceptable values
+		network: represents the network feed containing all episodes hosted
+		podcast: represents a regular podcast feed listing episodes for a single show
+		aggregatedPodcast: represents an aggregated podcast with episodes from sub shows
+*/}}
+{{- $parentShowTitle := "" -}}
+{{- $showTitle := "" -}}
+{{- $numbering := "" -}}
+
+{{- if and (eq .feedType "network") (ne .episode.CurrentSection.Parent.Title .episode.Site.Title) -}} 
+	{{ $parentShowTitle = printf "%s - " .episode.CurrentSection.Parent.Title }}
+{{- end -}}
+
+{{- if ne .feedType "podcast" -}} 
+	{{ $showTitle = printf "%s: " .episode.CurrentSection.Title }}
+{{- end -}}
+
+{{- if .episode.Params.seasonNumber -}}
+	{{ $numbering = printf "S%sE%s " .episode.Params.seasonNumber .episode.Params.episodeNumber }}
+{{- else -}}
+	{{ $numbering = printf "%s " .episode.Params.episodeNumber }}
+{{- end -}}
+
+
+
+<item>
+	{{/* Any tags dependent of feed type go here */}}
+	<title>{{ $parentShowTitle }}{{ $showTitle }}{{ $numbering }}{{ .episode.Title }}</title>
+	<itunes:title>{{ $showTitle }}{{ .episode.Title }}</itunes:title>
+	
+	{{/* Any tags not dependent of feed type go in the following partial */}}
+	{{ partial "feeds/feedItemContents" .episode }}
+</item>
