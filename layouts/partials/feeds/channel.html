@@ -8,6 +8,7 @@ config.toml, or podcast or aggregated podcast _index.md front matter.
 <description>{{- with .Params.FeedDescription -}}{{.}}{{end}}</description>
 <generator>Hugo -- gohugo.io</generator>
 <itunes:image href="{{ .Site.BaseURL }}images/{{ with .Params.FeedImage }}{{.}}{{end}}" />
+{{ with .Params.feedType }}<itunes:type>{{.}}</itunes:type>{{ end }}
 {{ with .Params.FeedLanguage }}<language>{{.}}</language>{{end}}
 {{ with .Params.AuthorEmail }}
 <managingEditor>{{.}}{{ with $.Params.AuthorName }} ({{.}}){{end}}</managingEditor>{{end}}
