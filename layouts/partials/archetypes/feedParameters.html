@@ -1,0 +1,25 @@
+# Cascade Parameters are parameters that may have values at site level, 
+# aggregated podcast level, or podcast level. Using [cascade] allows Hugo
+# to look back up the chain if a given parameter isn't set at the current level 
+# being rendered.
+# Some of these parameters are for RSS feed generation.
+# RSS feed parameters are used for constructing the podcast RSS feed. If these are blank,
+# values for any parent aggregated podcasts will be used. If those don't exist because
+# there are no parent aggregated podcasts or its values are blank, the default values in
+# config.toml rssfeeds parameter section will be used.
+
+# Feed images should be of size 3000px X 3000px
+# You can leave this parameter blank if your regular image is already the appropriate size. 
+# The theme will default back to that one when feedImage is blank.
+# Place images into the static/images directory of your site's files. You may nest them in sub-directories if you wish.
+# Define the parameter as filename and path for anything after static/images/
+# Ex: image = "weekly-wrap/show-art-large.png" for an image located at 
+# static/images/weekly-wrap/show-art-large.png
+[cascade]
+#	authorName = ""
+#	authorEmail = ""
+#	feedTitle = ""
+#	feedLanguage = "en-us" # EX: "en-us"
+#	feedImage = ""
+#	feedDescription = ""
+#	feedType = ""

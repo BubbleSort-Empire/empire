@@ -14,5 +14,7 @@ filteredEpisodeText = "Sorted By Topic"
 
 {{ partial "archetypes/subscribeOptions" . }}
 
+{{ partial "archetypes/feedParameters" . }}
+
 {{ partial "archetypes/socialsFrontMatter" . }}
 +++
