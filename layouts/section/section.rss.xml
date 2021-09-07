@@ -4,16 +4,16 @@
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
 	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
 	>
-  <channel>
-	{{ partial "feeds/channel" . }}
-	{{ $episodes := slice }}
-	{{ if eq .Params.Type "aggregatedPodcast" }}
-	{{ $episodes = (where (where .Site.Pages.ByDate.Reverse "Section" .Section) "Type" "episode") }}
-	{{ else }}
-	{{ $episodes = where .Pages.ByDate.Reverse "Type" "episode" }}
-	{{ end }}
-	{{ range $episodes }}
-		{{ partial "feeds/feedItemForFeedType" (dict "episode" . "feedType" $.Params.Type) }}
-	{{ end }}
-  </channel>
+	<channel>
+		{{ partial "feeds/channel" . }}
+		{{ $episodes := slice }}
+		{{ if eq .Params.Type "aggregatedPodcast" }}
+			{{ $episodes = (where (where .Site.Pages.ByDate.Reverse "Section" .Section) "Type" "episode") }}
+		{{ else }}
+			{{ $episodes = where .Pages.ByDate.Reverse "Type" "episode" }}
+		{{ end }}
+		{{ range $episodes }}
+			{{ partial "feeds/feedItemForFeedType" (dict "episode" . "feedType" $.Params.Type) }}
+		{{ end }}
+	</channel>
 </rss>
