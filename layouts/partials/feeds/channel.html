@@ -9,13 +9,30 @@ config.toml, or podcast or aggregated podcast _index.md front matter.
 <generator>Hugo -- gohugo.io</generator>
 <itunes:image href="{{ .Site.BaseURL }}images/{{ with .Params.FeedImage }}{{.}}{{end}}" />
 {{ with .Params.feedType }}<itunes:type>{{.}}</itunes:type>{{ end }}
+
+<itunes:author>The Sunset Explorers</itunes:author>
+<itunes:owner>
+	<itunes:name>Sunset Explorers</itunes:name>
+	<itunes:email>mountainscape@icloud.com</itunes:email>
+</itunes:owner>
+<itunes:category text="TV &amp; Film">
+	<itunes:category text="TV Reviews"/>
+</itunes:category>
+<itunes:explicit>false</itunes:explicit>
+
 {{ with .Params.FeedLanguage }}<language>{{.}}</language>{{end}}
 {{ with .Params.AuthorEmail }}
-<managingEditor>{{.}}{{ with $.Params.AuthorName }} ({{.}}){{end}}</managingEditor>{{end}}
+	<managingEditor>{{.}}{{ with $.Params.AuthorName }} ({{.}}){{end}}</managingEditor>
+{{end}}
 {{ with .Params.AuthorEmail }}
-<webMaster>{{.}}{{ with $.Params.AuthorName }} ({{.}}){{end}}</webMaster>{{end}}{{ with .Site.Copyright }}
-<copyright>{{.}}</copyright>{{end}}{{ if not .Date.IsZero }}
-<lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+	<webMaster>{{.}}{{ with $.Params.AuthorName }} ({{.}}){{end}}</webMaster>
+{{end}}
+{{ with .Site.Copyright }}
+	<copyright>{{.}}</copyright>
+{{end}}
+{{ if not .Date.IsZero }}
+	<lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+{{ end }}
 {{- with .OutputFormats.Get "RSS" -}}
-{{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+	{{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
 {{- end -}}

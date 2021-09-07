@@ -2,13 +2,17 @@
 	The main Container for feed items (episodes).
 	Includes contents from other partials.
 */}}
+{{ if .Params.image }}<itunes:image href="{{ partial "artworkURL" . }}" />{{ end }}
+
+<itunes:duration>3627</itunes:duration>
+<itunes:explicit>false</itunes:explicit>
+  
 <link>{{ .Permalink }}</link>
 <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
 {{ with .Params.AuthorEmail }}<author>{{.}}{{ with $.Params.AuthorName }} ({{.}}){{end}}</author>{{end}}
 <guid>{{- if isset .Params "guid" -}}{{ .Params.guid }}{{- else -}}{{ .Permalink }}{{- end -}}</guid>
+<enclosure url="{{ partial "functions/audioURL" . }}" length="{{- .Params.audio.bytes -}}" type="audio/mpeg"/>
 <description>{{ .Description | html }}</description>
 <content:encoded>
 {{ "<!" | safeHTML }}[CDATA[{{ partial "feeds/showNotes" . | safeHTML }}]]>
 </content:encoded>
-<enclosure url="{{ partial "functions/audioURL" . }}" length="{{- .Params.audio.bytes -}}" type="audio/mpeg"/>
-{{ if .Params.image }}<itunes:image href="{{ partial "artworkURL" . }}" />{{ end }}
