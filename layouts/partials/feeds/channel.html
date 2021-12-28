@@ -10,23 +10,17 @@ config.toml, or podcast or aggregated podcast _index.md front matter.
 <itunes:image href="{{ .Site.BaseURL }}images/{{ with .Params.FeedImage }}{{.}}{{end}}" />
 {{ with .Params.feedType }}<itunes:type>{{.}}</itunes:type>{{ end }}
 
-<itunes:author>The Sunset Explorers</itunes:author>
+<itunes:author>{{ with .Params.AuthorName }}{{.}}{{end}}</itunes:author>
 <itunes:owner>
-	<itunes:name>Sunset Explorers</itunes:name>
-	<itunes:email>mountainscape@icloud.com</itunes:email>
+	<itunes:name>{{ with .Params.AuthorName }}{{.}}{{end}}</itunes:name>
+	<itunes:email>{{ with .Params.AuthorEmail }}{{.}}{{end}}</itunes:email>
 </itunes:owner>
-<itunes:category text="TV &amp; Film">
-	<itunes:category text="TV Reviews"/>
+<itunes:category text="{{ with .Params.feedCategory }}{{.}}{{end}}">
+	<itunes:category text="{{ with .Params.feedSubCategory }}{{.}}{{end}}"/>
 </itunes:category>
 <itunes:explicit>false</itunes:explicit>
 
 {{ with .Params.FeedLanguage }}<language>{{.}}</language>{{end}}
-{{ with .Params.AuthorEmail }}
-	<managingEditor>{{.}}{{ with $.Params.AuthorName }} ({{.}}){{end}}</managingEditor>
-{{end}}
-{{ with .Params.AuthorEmail }}
-	<webMaster>{{.}}{{ with $.Params.AuthorName }} ({{.}}){{end}}</webMaster>
-{{end}}
 {{ with .Site.Copyright }}
 	<copyright>{{.}}</copyright>
 {{end}}
