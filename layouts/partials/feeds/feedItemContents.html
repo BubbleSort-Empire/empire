@@ -4,8 +4,8 @@
 */}}
 {{ if .Params.image }}<itunes:image href="{{ partial "artworkURL" . }}" />{{ end }}
 
-<itunes:duration>3627</itunes:duration>
-<itunes:explicit>false</itunes:explicit>
+<itunes:duration>{{ .Params.audio.duration }}</itunes:duration>
+<itunes:explicit>{{ .Params.explicit }}</itunes:explicit>
   
 <link>{{ .Permalink }}</link>
 <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>

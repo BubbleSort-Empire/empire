@@ -42,6 +42,7 @@ image = ""
 	file = ""
 	bytes = "#########" # No Commas
 
-
-
+# eplicit tag is a cascaded tag set in config.toml and section index.md files. Override per episode or show if necessary
+[cascade]
+	explicit = "false"
 +++

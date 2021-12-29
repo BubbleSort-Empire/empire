@@ -18,7 +18,7 @@ config.toml, or podcast or aggregated podcast _index.md front matter.
 <itunes:category text="{{ with .Params.feedCategory }}{{.}}{{end}}">
 	<itunes:category text="{{ with .Params.feedSubCategory }}{{.}}{{end}}"/>
 </itunes:category>
-<itunes:explicit>false</itunes:explicit>
+<itunes:explicit>{{ with .Params.explicit }}{{.}}{{end}}</itunes:explicit>
 
 {{ with .Params.FeedLanguage }}<language>{{.}}</language>{{end}}
 {{ with .Site.Copyright }}
