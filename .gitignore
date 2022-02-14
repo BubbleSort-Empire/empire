@@ -8,3 +8,5 @@
 
 # exclude build output
 /exampleSite/public
+
+#exclude node_modules
