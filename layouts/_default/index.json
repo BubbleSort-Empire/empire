@@ -1,0 +1,7 @@
+{{- $siteTitleRef := printf "All Shows Hosted On %s" .Site.Title -}}
+{{- $.Scratch.Add "index" slice -}}
+{{- range where .Site.Pages ".Params.exclude_search" "!=" true -}}
+{{- $.Scratch.Add "index" (dict "title" .Title "ref" .Permalink "description" .Description "body" .Plain "excerpt" .Summary) -}}
+{{- end -}}
+{{- $.Scratch.Add "index" (dict "title" "Shows" "ref" "/shows/" "body" $siteTitleRef "excerpt" $siteTitleRef)}}
+{{- $.Scratch.Get "index" | jsonify -}}

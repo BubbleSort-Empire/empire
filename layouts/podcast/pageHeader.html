@@ -1,3 +1,38 @@
-<div>
-    <h2>{{ .CurrentSection.Title }} Episode List</h2>
+<div class="row episode-row">
+	<div class="col-md-12">
+		<div class="row">
+			<div class="col-md-5 show-art-large">
+				<a href="{{ .Permalink }}">
+					<img src="{{ partial "artworkURL" . }}" />
+				</a>
+			</div>
+			<div class="col-md-6">
+				{{- if ne .CurrentSection.Parent.Title .Site.Title -}}
+					<div>
+						<a href="{{ .CurrentSection.Parent.Permalink }}">
+							{{- .CurrentSection.Parent.Title -}}
+						</a>
+					</div>
+				{{- end -}}
+				<a href="{{ .Permalink }}">
+					<h2>{{ .CurrentSection.Title }}</h2>
+				</a>
+				<p>{{ .Description }}</p>
+				<div class="connect">
+					<div class="connect-list">
+						{{ partial "listen-on" . }}
+					</div>
+					<div class="connect-list">
+						{{- $hosts := partial "functions/hostList" . -}}
+						{{- $socials := partial "functions/socialsList" . -}}
+						<small>{{- if $hosts -}}Hosts{{- end }}{{ if and ($hosts) ($socials) }} & {{ end }}{{- if $socials -}}Feedback{{- end -}}{{- if or ($hosts) ($socials) -}}:{{- end -}}</small>
+					</div>
+					<div class="connect-list">
+						{{- partial "peopleViews/smallPeopleList" . -}}
+						{{- partial "socials" . -}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

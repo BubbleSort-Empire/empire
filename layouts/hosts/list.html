@@ -1,8 +1,11 @@
 {{ define "main" }}
-<h2>Hosts of {{ .Site.Title }}</h2>
-<ul>
-    {{ range .Pages  }}
-        {{ .Render "listItems/hostListItem" }}
-    {{ end }}
-</ul>
+<div class="row episode-row">
+    <div class="col-md-12">
+        <h2>Hosts of {{ .Site.Title }}</h2>
+        
+        {{ range .Pages  }}
+            {{  partial "peopleViews/listItems/peopleListItem" . }}
+        {{ end }}
+    </div>
+</div>
 {{ end }}

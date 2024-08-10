@@ -1,0 +1,41 @@
+
+title = "{{ replace .Name "-" " " | title }}"
+description = "{{ replace .Name "-" " " | title }} Description"
+
+# Displaying Season and Episode Numbers on the website is optional.
+# They will always be included in the RSS feed when present in front matter.
+# In the case of Aggregated Podcasts episode numbers for the aggregated 
+# list and feed will be generated automatically for you. These parameters will
+# determine how episode titles are presented in the aggregated list though.
+displaySeasonNumbers = true
+displayEpisodeNumbers = true
+
+# hosts are optional, but a nice touch as they will be displayed on the site anywhere a show is described or listed.
+# they should be a list of base filenames of hosts in your /content/hosts section
+# Ex: ["vader", "palpatine"]
+hosts = []
+
+# Images only need to be specified if you want a different episode for the episode from the podcast image.
+# Place images into the static/images directory of your site's files. You may nest them in sub-directories if you wish.
+# Define the parameter as filename and path for anything after static/images/
+# Ex: image = "weekly-wrap/show-art.png" for an image located at static/images/weekly-wrap/show-art.png
+image = ""
+
+# Audio prefixes are used to build audio urls for episodes. This allows episode front matter 
+# to only have a need to specify the actual filename of the audio and also allows
+# for easily prepending stats tracking URLS like BluBrry to audio files.
+# URL prefixes at this level are optional. If omitted here the default prefix
+# from the site configuration will be used.
+audioURLPrefix = ""
+
+# Evergreen Show Notes Location 
+# Evergreen show notes are content that exists for all episodes of a show without changing. 
+# They are defined in the content section of a podcast's _index.md. 
+# Any content there will automatically be included in the show notes for all episodes of that show.
+# By default Evergreen Show Notes will be positioned below the content of each episode 
+# if you'd prefer it to come first set this parameter to true.
+# evergreenContentOnTop = true
+
+# eplicit tag is a cascaded tag set in config.toml and section index.md files. Override per episode or show if necessary
+[cascade]
+#	explicit = "false"

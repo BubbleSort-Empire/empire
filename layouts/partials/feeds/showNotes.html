@@ -1,0 +1,6 @@
+{{/* 
+The container for feed item show notes. This includes both episode specific
+show notes and podcast specific evergreen show notes (such as contact links, etc).
+This partial must be called from within a content encoded CDATA block.
+*/}}
+{{ .Description }}{{ .Content }}{{ .Parent.Content }}{{ partial "feeds/personalitiesList" . }}

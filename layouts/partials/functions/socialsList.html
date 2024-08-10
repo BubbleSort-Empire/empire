@@ -1,0 +1,8 @@
+<!-- Check for connection options in page, parent, and site config -->
+{{ $socials := .CurrentSection.Param "connections" -}}
+{{ $socialsParent := .CurrentSection.Parent.Param "connections" }}
+{{ $socialsConfig := .Site.Params.connections }}
+
+{{ $connectionsMap := merge $socialsConfig $socialsParent $socials }}
+
+{{ return $connectionsMap }}

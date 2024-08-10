@@ -1,10 +1,58 @@
-baseURL = "https://empireforhugothe.me"
+baseURL = "https://empireforhugotheme.site/"
 languageCode = "en-us"
 title = "Empire Podcast Network"
 themesdir = "../.."
 theme = "empire"
 
 Paginate = 3
+
+[params]
+  # Specify light/dark colorscheme
+  # Supported values:
+  # "auto" (use preference set by browser)
+  # "dark" (dark background, light foreground)
+  # "light" (light background, dark foreground) (default)
+  colorscheme = "auto"
+  brandImage = "DeathStar.png"
+  networkLogoImage = "empire_web.svg"
+  copyright_notice_credit = "[Vic Hudson](https://vichudson1.com) & [Scott Willsey](https://scottwillsey.com)"
+
+  description = "Serving all of The Empire's podcast listening needs."
+
+  searchPageTitle = "Search The Empire"
+  searchPlaceholderText = "Tear this ship apart and find me those plans"
+  
+  # Audio prefixes are used to build audio urls for episodes. This allows episode front matter 
+  # to only have a need to specify the actual filename of the audio and also allows
+  # for easily prepending stats tracking URLS like BluBrry to audio files.
+  # These prefixes can be defined in front matter to Podcasts and Aggregated Podcasts.
+  # When they are not defined there, the default prefix specified below will be used. 
+  # If there is no audio url prefix at any level you should include the full url to your 
+  # audio file in the episode's audioFile parameter.
+  defaultAudioURLPrefix = "https://empireforhugotheme.site/audio/"
+  
+  [params.connections]
+    Slack = "https://site.slack.com"
+    TikTok = "https://tiktok.com/site"
+    Twitter = "https://twitter.com/site"
+    Email = "feedback@site.com"
+    Instagram = "https://instagram.com/site"
+    
+  # Add custom meta tags here. These will go in the page head.
+  # Format is name = "value" which would result in
+  # <meta name="name" description="value"> being added as a meta tag.
+  # E.g, food = "pizza" will create <meta name="food" description="pizza">
+  [params.metaTags]
+#    author = "John Doe"
+#    food = "pizza"
+  
+  # Add custom page head includes here. Format is ["rel","url"]
+  # For example, adding ["stylesheet","css/myCustomCss.css"] to link to 
+  # a custom css stylesheet would add <link rel="stylesheet" href="/css/DeathStar.css">
+  # to the page head.
+  [params.includes]
+#    myCss = ["stylesheet","css/DeathStar.css"]
+#    myIcon = ["icon", "images/empire_web.png", "image/png"]
 
 [outputFormats]
   [outputFormats.jsonfeed]
@@ -16,9 +64,14 @@ Paginate = 3
     baseName = "index"
     isPlainText = false
     path = "shows"
+  [outputFormats.search]
+    mediaType = "text/html"
+    baseName = "index"
+    isPlainText = false
+    path = "search"
 
 [outputs]
-  home = ["html", "rss", "showslist"]
+  home = ["html", "rss", "showslist", "json", "search"]
   page = ["html"]
   section = ["html", "rss", "showslist"]
 
@@ -38,11 +91,24 @@ Paginate = 3
   name = "Hosts"
   weight = 4
   url = "hosts/"
+  
+[[menu.main]]
+  name = "Guests"
+  weight = 5
+  url = "guests/"
 
 [[menu.main]]
-  name = "About"
+  name = "Blog"
   weight = 6
+  url = "blog/"
+  
+[[menu.main]]
+  name = "About"
+  weight = 8
   url = "about/"
 
-[params]
-copyright_notice = "Copyright 2020 [Vic Hudson](https://vichudson1.com) & [Scott Willsey](https://scottwillsey.com)"
+[[menu.main]]
+  pre = "<i class='fa fa-search'></i>"
+  name = "Search"
+  weight = 10
+  url = "search/"

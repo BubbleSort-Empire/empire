@@ -1,0 +1,21 @@
+<div class="row episode-row">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-3 show-art-large">
+        <a href="{{ .Permalink }}">
+          <img src="{{ partial "peopleViews/imageURL" . }}" class="img-fluid">
+        </a>
+      </div>
+      <div class="col-md-8">
+        <a href="{{ .Permalink }}">
+          <h4>{{ partial "peopleViews/listItems/displayName" . }}</h4>
+        </a>
+        <p>{{ .Content }}</p>
+        <div class="connect-list">
+          <p><small>Contact:</small></p>
+        </div>
+        <div class="connect-list">{{- partial "peopleViews/connect" . -}}</div>
+      </div>
+    </div>
+  </div>
+</div>

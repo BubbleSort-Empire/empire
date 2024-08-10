@@ -1,0 +1,27 @@
+<!-- This partial figures out which artwork to use for a given aggregate podcast, podcast, or podcast episode. -->
+{{- $imagePrefix := "" -}}
+{{- $episodeImage := "badURL" -}}
+{{- $image := "/images/Generic-Podcast-Art.svg" -}}
+
+<!-- Check for an image prefix on current section or parent -->
+{{- if and (isset .CurrentSection.Params "imagepathprefix") (ne .CurrentSection.Params.imagepathprefix "" ) -}}
+	{{- $imagePrefix = .CurrentSection.Params.imagePathPrefix -}}
+{{- else if and (isset .CurrentSection.Parent.Params "imagepathprefix") (ne .CurrentSection.Parent.Params.imagepathprefix "" ) -}}
+	{{- $imagePrefix = .CurrentSection.Parent.Params.imagePathPrefix -}}
+{{- end -}}
+
+<!-- Check for an image parameter on the episode, current section or parent -->
+{{- if and (isset .Params "image") (ne .Params.image "" ) -}}
+	{{- $episodeImage = .Params.image -}}
+{{- else if and (isset .CurrentSection.Params "image") (ne .CurrentSection.Params.image "" ) -}}
+	{{- $episodeImage = .CurrentSection.Params.image -}}
+{{- else if and (isset .CurrentSection.Parent.Params "image") (ne .CurrentSection.Parent.Params.image "" ) -}}
+	{{- $episodeImage = .CurrentSection.Parent.Params.image -}}
+{{- end -}}
+
+<!-- Check there is actually an image in the file system -->
+{{- if fileExists (printf "/static/images/%s%s" $imagePrefix $episodeImage) -}}
+	{{- $image = printf "/images/%s%s" $imagePrefix $episodeImage -}}
+{{- end -}}
+
+{{ $image | absURL }}

@@ -1,0 +1,6 @@
+# Social connections
+# Uncomment the ones that you need and put in the URL of your social media account
+[connections]
+{{ range .Site.Data.socials -}}
+#	{{ println .name " = \"\"" | safeHTML }}
+{{- end -}}

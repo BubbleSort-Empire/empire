@@ -1,4 +1,15 @@
-<li>
-    <h4><a href="{{ .Permalink }}">{{ .Render "titles/masterListTitle" }}</a></h4>
-    {{ .Render "listItems/baseListItem" }}
-</li>
+<div class="row episode-row">
+    <div class="col-md-12">
+        <a href="{{ .Permalink }}">
+            <h4>{{ .Render "titles/masterListTitle" }}</h4>
+        </a>
+        {{ .Render "listItems/components/publishView" }}
+        <div class="row">
+            {{ .Render "listItems/components/artView" }}
+            <div class="col-md-8">
+                {{ .Render "listItems/components/episodeDetails" }}
+            </div>
+        </div>
+        {{ .Render "audio/player" }}
+    </div>
+</div>

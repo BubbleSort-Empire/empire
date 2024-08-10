@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="row episode-row">
+    <div class="col-md-12">
+        <h2>{{ .Title }}</h2>
+        {{ $paginator := .Paginate .Pages.ByDate.Reverse }}
+        {{ range $paginator.Pages }}
+        <div class="row episode-row">
+            <div class="col-md-12">
+                <a href="{{ .Permalink }}">
+                    <h4>{{ .Title }}</h4>
+                </a>
+                <div class="publishDate small">Posted on <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time></div>
+                <div class="row">
+                    <div class="col">
+                        <p>{{ .Summary }}</p>
+                        {{ if .Truncated }}
+        				<div>
+        				    <a href="{{ .RelPermalink }}" class="btn btn-outline-info">View Full Article</a>
+        				</div>
+        				{{ end }} 
+                    </div>
+                </div>
+            </div>
+        </div>	
+        {{ end }}
+        {{ partial "pagination.html" . }}
+    </div>
+</div>
+{{ end }}

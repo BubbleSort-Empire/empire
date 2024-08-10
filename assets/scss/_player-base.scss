@@ -1,0 +1,241 @@
+.download-link {
+	margin: $download-link-margin;
+	display: $download-link-display;
+}
+
+div.audio-player {
+	position: $div-audio-player-position;
+	width: $div-audio-player-width;
+	height: $div-audio-player-height;
+	padding: $div-audio-player-padding;
+
+	@media (max-width: 575.98px) {
+		width: $div-audio-player-width-mobile;
+	}
+
+	/* Small devices (landscape phones, 576px and up) */
+	@media (min-width: 576px) and (max-width: 767.98px) {
+		width: $div-audio-player-width-mobile;
+	}
+
+	/* Medium devices (tablets, 768px and up) */
+	@media (min-width: 768px) and (max-width: 991.98px) {
+		width: $div-audio-player-width-smaller;
+	}
+
+	/* Large devices (desktops, 992px and up) */
+	@media (min-width: 992px) and (max-width: 1199.98px) {
+		width: $div-audio-player-width;
+	}
+
+	/* Extra large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {
+		width: $div-audio-player-width;
+	}
+}
+
+.mejs__container {
+	background: $container-background;
+	box-sizing: $container-box-sizing;
+	font-family: $container-font-family;
+	position: $container-position;
+	text-align: $container-text-align;
+	text-indent: $container-text-indent;
+	vertical-align: $container-vertical-align;
+	border-radius: $container-border-radius;
+}
+
+.mejs__controls:not([style*="display: none"]) {
+	background: $controls-background-webkit;
+	background: $controls-background;
+	border-radius: $controls-border-radius;
+}
+
+.mejs__play > {
+	button {
+		background: $button-background-play-light;
+		background-position: $button-background-position;
+		background-size: $button-background-size;
+	}
+}
+
+.mejs__pause > {
+	button {
+		background: $button-background-pause-light;
+		background-position: $button-background-position;
+		background-size: $button-background-size;
+	}
+}
+
+.mejs-skip-back-button >,
+.mejs__skip-back-button > {
+	button {
+		background: $button-background-skip-back-light;
+		background-position: $button-background-position;
+		background-size: $button-background-size;
+	}
+}
+
+.mejs-jump-forward-button > button,
+.mejs__jump-forward-button > button {
+	background: $button-background-jump-forward-light;
+	background-position: $button-background-position;
+	background-size: $button-background-size;
+}
+
+.mejs__mute > {
+	button {
+		background: $button-background-mute-light;
+		background-position: $button-background-position;
+		background-size: $button-background-size;
+	}
+}
+
+.mejs__unmute > {
+	button {
+		background: $button-background-unmute-light;
+		background-position: $button-background-position;
+		background-size: $button-background-size;
+	}
+}
+
+.mejs__time {
+	color: $controls-time-color;
+	font-weight: $controls-font-weight;
+}
+
+.player-header {
+	background-color: $header-background-color;
+	display: -webkit-box;
+	display: $header-display;
+	-webkit-box-pack: $header-webkit-box;
+	justify-content: $header-justify-content;
+	margin-bottom: $header-margin-bottom;
+	background: $header-background-webkit;
+	background: $header-background;
+}
+
+.single-player {
+	.mejs__container {
+		margin: 0px;
+	}
+
+	.mejs__controls {
+		display: $controls-display;
+	}
+
+	.mejs__controls,
+	.mejs__container {
+		background: none !important;
+	}
+
+	.podcast {
+		margin: $podcast-margin;
+	}
+
+	.mejs__horizontal-volume-slider {
+		display: none !important;
+	}
+
+	.mejs-prepended-buttons {
+		display: $single-player-display-webkit;
+		display: $single-player-display;
+	}
+
+	.mejs-appended-buttons {
+		display: $single-player-display-webkit;
+		display: $single-player-display;
+		-webkit-box-pack: $single-player-justify-content;
+		justify-content: $single-player-justify-content;
+	}
+
+	.mejs__time {
+		@media (prefers-color-scheme: light) {
+			color: $button-text-label-color;
+			font-weight: $controls-font-weight;
+		}
+	}
+
+	.mejs__time-total {
+		@media (prefers-color-scheme: light) {
+			background: $time-total-background;
+			margin: $time-total-margin;
+			width: $time-total-width;
+		}
+	}
+
+	.mejs__time-current {
+		@media (prefers-color-scheme: light) {
+			background: $time-current-background;
+		}
+	}
+
+	.mejs__button > {
+		button {
+			width: $button-width;
+			height: $button-height;
+			font-size: $button-font-size;
+
+			@media (prefers-color-scheme: light) {
+				color: $button-text-label-color;
+			}
+		}
+	}
+
+	.mejs__speed-button > {
+		button {
+			width: 40px;
+			font-size: 14px;
+		}
+	}
+
+	.mejs__play > {
+		button {
+			@media (prefers-color-scheme: light) {
+				background: $button-background-play;
+			}
+		}
+	}
+
+	.mejs__pause > {
+		button {
+			@media (prefers-color-scheme: light) {
+				background: $button-background-pause;
+			}
+		}
+	}
+
+	.mejs-skip-back-button >,
+	.mejs__skip-back-button > {
+		button {
+			@media (prefers-color-scheme: light) {
+				background: $button-background-skip-back;
+			}
+		}
+	}
+
+	.mejs-jump-forward-button >,
+	.mejs__jump-forward-button > {
+		button {
+			@media (prefers-color-scheme: light) {
+				background: $button-background-jump-forward;
+			}
+		}
+	}
+
+	.mejs__mute > {
+		button {
+			@media (prefers-color-scheme: light) {
+				background: $button-background-mute;
+			}
+		}
+	}
+
+	.mejs__unmute > {
+		button {
+			@media (prefers-color-scheme: light) {
+				background: $button-background-unmute;
+			}
+		}
+	}
+}

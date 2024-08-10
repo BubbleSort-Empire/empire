@@ -1,0 +1,70 @@
+// base variables
+$font-family: "Helvetica", Arial, serif;
+$download-link-margin: 0 0 0 10px;
+$download-link-display: block;
+
+$podcast-margin: 30px auto;
+
+// div.audio-player variables
+$div-audio-player-position: relative;
+$div-audio-player-width: 80%;
+$div-audio-player-width-xl: 60%;
+$div-audio-player-width-smaller: 90%;
+$div-audio-player-width-mobile: 100%;
+$div-audio-player-height: 70px;
+$div-audio-player-padding: 15px 0 0 0;
+
+// container variables
+$container-background: gray;
+$container-box-sizing: border-box;
+$container-font-family: $font-family;
+$container-position: relative;
+$container-text-align: left;
+$container-text-indent: 0;
+$container-vertical-align: top;
+$container-border-radius: 30px;
+
+// me-js__controls variables
+$controls-background-webkit: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+$controls-background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+$controls-border-radius: 30px;
+$controls-time-color: rgb(255, 255, 255);
+$controls-font-weight: normal;
+$controls-display: block;
+$time-total-background: rgba(17, 16, 16, 0.4);
+$time-total-margin: 5px 0 0;
+$time-total-width: 100%;
+$time-current-background: rgba(75, 72, 72, 0.4);
+
+// player header variables
+$header-background-color: rgb(77, 77, 77);
+$header-background-webkit: -webkit-linear-gradient(rgba(0, 0, 0, 0.35), transparent);
+$header-background: linear-gradient(rgba(0, 0, 0, 0.35), transparent);
+$header-margin-bottom: 15px;
+$header-display: flex;
+$header-webkit-box: justify;
+$header-justify-content: space-between;
+
+$single-player-display-webkit: -webkit-box;
+$single-player-display: flex;
+$single-player-justify-content: space-evenly;
+
+// player button variables
+$button-text-label-color: rgb(17, 16, 16);
+$button-width: 30px;
+$button-height: 30px;
+$button-font-size: 10px;
+$button-background-position: center;
+$button-background-size: initial;
+$button-background-play: transparent url("/images/audio-player/Dark-Play.svg") no-repeat;
+$button-background-play-light: transparent url("/images/audio-player/Light-Play.svg") no-repeat;
+$button-background-pause: transparent url("/images/audio-player/Dark-Pause.svg") no-repeat;
+$button-background-pause-light: transparent url("/images/audio-player/Light-Pause.svg") no-repeat;
+$button-background-skip-back: transparent url("/images/audio-player/Dark-Backward.svg") no-repeat;
+$button-background-skip-back-light: transparent url("/images/audio-player/Light-Backward.svg") no-repeat;
+$button-background-jump-forward: transparent url("/images/audio-player/Dark-Forward.svg") no-repeat;
+$button-background-jump-forward-light: transparent url("/images/audio-player/Light-Forward.svg") no-repeat;
+$button-background-mute: transparent url("/images/audio-player/Dark-Sound.svg") no-repeat;
+$button-background-mute-light: transparent url("/images/audio-player/Light-Sound.svg") no-repeat;
+$button-background-unmute: transparent url("/images/audio-player/Dark-Mute.svg") no-repeat;
+$button-background-unmute-light: transparent url("/images/audio-player/Light-Mute.svg") no-repeat;

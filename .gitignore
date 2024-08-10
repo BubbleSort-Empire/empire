@@ -3,9 +3,10 @@
 # exclude vs code files
 /.vscode/*
 
-#exclude Nova files
+# exclude Nova files
 /.nova/*
 
 # exclude build output
 /exampleSite/public
-/exampleSite/resources/_gen
+
+#exclude node_modules

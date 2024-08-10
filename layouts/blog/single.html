@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="row episode-row">
+	<div class="col-md-12">
+		<h2>{{ .Title }}</h2>
+		<div class="publishDate small"><a href="{{ .Permalink }}"><i class="fa fa-calendar-o" aria-hidden="true"></i>Posted on <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time></a></div>
+		<div>
+		    {{ .Content }}
+		</div>
+		<div>
+			{{with .Pages.ByDate.Reverse.Next . }}{{.RelPermalink}}{{end}}
+		</div>
+		{{ partial "paginationSingle.html" . }}
+	</div>
+</div>
+
+{{ end }}

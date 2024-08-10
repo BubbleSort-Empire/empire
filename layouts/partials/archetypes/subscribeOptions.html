@@ -1,0 +1,10 @@
+# Subscription Options
+# Uncomment the ones that you need and fill in the required Feed ID.
+[listeningOptions]
+{{ range sort .Site.Data.listenOptions "sortOrder" "asc" }}
+{{- if eq .frontMatterField "true" -}}
+#	{{ .name }} - {{ .descriptiveText }}
+#	{{ .feedIDParameter }} = ""
+{{ println "" | safeHTML }}
+{{- end -}}
+{{- end -}}

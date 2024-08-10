@@ -1,0 +1,12 @@
+<div class="publishDate small">
+	<div>
+	{{- if and (.CurrentSection.Params.displaySeasonNumbers) (ne .Params.seasonNumber "") -}}
+		Season <span class="season-number">{{ .Params.seasonNumber }} </span>
+	{{- end -}}
+	{{- if and (.CurrentSection.Params.displayEpisodeNumbers) (ne .Params.episodeNumber "") -}}
+		Episode <span class="episode-number">{{ .Params.episodeNumber }}</span>
+	{{- end -}}
+	</div>
+	<i class="fa fa-calendar-o" aria-hidden="true"></i>
+	<time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+</div>

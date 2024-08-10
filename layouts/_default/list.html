@@ -1,8 +1,12 @@
 {{ define "main" }}
-<h2>Default List</h2>
-<ul>
-    {{ range .Pages  }}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-    {{ end }}
-</ul>
+<div class="row episode-row">
+    <div class="col-md-12">
+        <h2>Default List</h2>
+        <ul>
+            {{ range .Pages  }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
 {{ end }}

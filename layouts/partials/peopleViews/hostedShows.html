@@ -1,0 +1,14 @@
+{{- $podcasts := (where .Site.Pages "Type" "podcast") -}}
+{{- $aggregatedPodcasts := (where .Site.Pages "Type" "aggregatedPodcast") -}}
+{{- $shows := (sort (union $podcasts $aggregatedPodcasts) ".Params.title" "asc") -}}
+{{- $hostedShows := where $shows "Params.hosts" "intersect" (slice .File.BaseFileName) -}}
+
+{{- if gt (len $hostedShows) 0 -}}
+	<!-- list of all shows hosted by host -->
+	<h3>Hosts These Shows</h3>
+	<div class="row hosted-shows-list">
+		{{ range $hostedShows }}
+			{{ partial "podcastViews/artSquareListItem" . }}
+		{{ end }}
+	</div>
+{{- end -}}

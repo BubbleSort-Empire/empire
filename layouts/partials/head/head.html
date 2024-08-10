@@ -1,0 +1,24 @@
+{{ partial "head/metatags" . }}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+    {{- $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
+    {{- if eq $url "/" -}}
+        {{- .Site.Title -}}
+    {{- else -}}
+        {{- if .Params.Heading -}} 
+            {{- .Params.Heading -}} 
+        {{- else -}} 
+            {{- .Title -}}
+        {{- end -}}
+    {{- end -}}
+</title>
+<link rel="canonical" href="{{- .Permalink -}}">
+{{ partial "head/styles" .}}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+    crossorigin="anonymous"></script>
+
+{{ partial "head/includes" . }}
+{{ partial "head/icons" . }}

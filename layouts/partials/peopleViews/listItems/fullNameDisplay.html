@@ -1,0 +1,7 @@
+{{- $fullName := partial "peopleViews/fullName" . -}}
+
+{{- if or (and (ne .Params.title $fullName) (ne .Params.title "")) (ne .Params.preferredDisplayNameShort "") -}}
+    <h6>{{ $fullName }}</h6>
+{{- end -}}
+
+

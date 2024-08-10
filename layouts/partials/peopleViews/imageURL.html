@@ -1,0 +1,5 @@
+{{- if and (isset .Params "image") (ne .Params.image "") -}}
+  {{- .Site.BaseURL -}}images/people/{{- .Params.image -}}
+{{- else -}}
+  {{- .Site.BaseURL -}}images/Generic-People-Art.svg
+{{- end -}}

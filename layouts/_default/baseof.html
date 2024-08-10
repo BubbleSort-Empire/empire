@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        {{ partial "head.html" . }}
+    <head lang="en">
+        {{ partial "head/head.html" . }}
     </head>
     
-    <body>
+    {{ $csClass := "colorscheme-light" }}
+    {{ if eq .Site.Params.colorscheme "dark" }}
+        {{ $csClass = "colorscheme-dark" }}
+    {{ else if eq .Site.Params.colorscheme "auto" }}
+        {{ $csClass = "colorscheme-auto" }}
+    {{ end }}
+    <body class="{{ $csClass }}">
         {{ partial "navigationHeader.html" . }}
-        <div id="content">
+        <div class="container-md">
         {{- block "main" . -}}{{- end -}}
         </div>
         {{- partial "footer.html" . -}}

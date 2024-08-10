@@ -1,0 +1,158 @@
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+
+@mixin base_dark {
+    background-color: $background-color-dark;
+}
+
+@mixin content_dark {
+	.navbar-expand-sm,
+	.navbar-expand-md,
+	.bg-primary, 
+	.navbar-dark {
+		background-color: $nav-menu-background-color-dark;
+	}
+	
+    .navbar-expand-sm, 
+	.navbar-expand-md,
+	.bg-primary, 
+	.navbar-dark, 
+	.container-md, 
+	.footer_copyright {
+		color: $foreground-color-dark;
+	    a {
+	    	color: $links-dark;
+	        &:hover {
+	        	color: $links-hover-dark;
+	        }
+	        &:active {
+	            color: $links-active-dark;
+	        }
+		}
+	}
+
+	.navbar-toggler-icon {
+  		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+	}
+	
+	div.announce-section {
+		div.announce-h {
+			background-color: $links-dark;
+			
+			a {
+				color: $nav-menu-background-color-dark;
+				&:hover {
+					color: $foreground-color-dark;
+				}
+			}
+		}
+		
+		div.announce-list {
+			background-color: $nav-menu-background-color-dark;
+	
+			a {
+				color: $links-dark;
+				&:hover {
+					color: $links-hover-dark;
+				}
+				&.announce-link {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	
+	.show-art-large,
+	.art-square-list-item,
+	.show-art-small {
+		img {
+			border: 0.2rem solid $links-dark;
+		}
+	}
+}
+
+@mixin connect_iconic_dark {
+	.connect-list {
+		a {
+			color: $links-dark;
+			
+			.connect-option {
+				svg {
+					fill: $links-dark;
+				}
+				
+				p {
+					color: $links-dark;
+				}
+			}
+		}
+	}
+}
+
+.filter-button {
+	svg {
+		fill: $links-dark;
+	}
+}
+
+@mixin pagination_dark {
+	a.page-link {
+		color: $links-dark;
+		background-color: $background-color-dark;
+		border: 1px solid #17a2b8;
+		&:hover {
+			color: orange;
+  			background-color: #17a2b8;
+  			border-color: #17a2b8;
+		}
+		&:active {
+			background-color: #17a2b8;
+		}
+	}
+	.page-item.active .page-link {
+  		z-index: 3;
+  		color:$foreground-color-dark;
+  		background-color: #17a2b8;
+  		border-color: #17a2b8;
+	}
+}
+
+@mixin search_dark {
+	input.search-form {
+		@include placeholder {
+			color: $search-form-text-color-dark;
+		}
+		color: $search-form-text-color-dark;
+		background-color: $search-form-background-color-dark;
+	}
+}
+
+body.colorscheme-dark {
+  @include base_dark;
+  @include content_dark;
+  @include connect_iconic_dark;
+  @include pagination_dark;
+  @include search_dark;
+}
+
+body.colorscheme-auto {
+  @media (prefers-color-scheme: dark) {
+    @include base_dark;
+	@include content_dark;
+	@include connect_iconic_dark;
+	@include pagination_dark;
+	@include search_dark;
+  }
+}

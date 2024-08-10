@@ -1,0 +1,37 @@
+<div class="connect-list">
+	{{- $baseURL := .Site.BaseURL -}}
+	{{- $this := . -}}
+		{{- if .Params.audio.file -}}
+			<a title="Download Audio" href="{{ partial "functions/audioURL" . }}">
+				<div class="connect-option">
+					<img src="{{ $baseURL }}images/listen-buttons/Download.svg" />
+					<p>Download</p>
+				</div>
+			</a>
+		{{- end -}}
+		{{- with .CurrentSection.OutputFormats.Get "RSS" -}}
+			<a title="Audio RSS Feed" href="{{ .RelPermalink }}">
+				<div class="connect-option">
+					<img src="{{ $baseURL }}images/listen-buttons/RSS.svg" />
+					<p>RSS</p>
+				</div>
+			</a>
+		{{- end -}}
+		{{- range sort .Site.Data.listenOptions "sortOrder" "asc" -}}
+			{{- $feedID := "" -}}
+			{{ $parameterName := printf "listeningoptions.%s" .feedIDParameter}}
+			{{- if ne ($this.CurrentSection.Param $parameterName) nil -}}
+				{{- $feedID = $this.CurrentSection.Param  $parameterName -}}
+			{{- else if ne ($this.CurrentSection.Parent.Param $parameterName) nil -}}
+				{{- $feedID = $this.CurrentSection.Parent.Param $parameterName -}}	
+			{{- end -}}
+			{{- if ne $feedID "" -}}
+				<a title="{{ .description }}" href="{{ .urlPrefix }}{{ $feedID }}">
+					<div class="connect-option">
+						<img src="{{ $baseURL }}images/listen-buttons/{{ .image }}" />
+						<p>{{ .name }}</p>
+					</div>
+				</a>
+			{{- end -}}
+		{{- end -}}
+</div>

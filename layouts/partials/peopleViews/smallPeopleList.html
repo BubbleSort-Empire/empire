@@ -1,0 +1,5 @@
+{{- with partial "functions/hostList" . -}}
+	{{- range . -}} 
+		{{- partial "peopleViews/listItems/smallListView" . -}} 
+	{{- end -}}
+{{- end -}}

@@ -1,0 +1,72 @@
+{
+	"Podcasts": {
+		"name": "Podcasts",
+		"image": "Podcasts.svg",
+		"description": "Listen in Apple Podcasts.",
+		"sortOrder": "0",
+		"urlPrefix": "https://podcasts.apple.com/podcast/id",
+		"feedIDParameter": "itunesfeedid",
+		"descriptiveText": "EX: for this iTunes link https://podcasts.apple.com/podcast/id1448327383 the ID would be 1448327383.\n#\tThis feed ID also provides subscription options for Overcast and Castro.",
+		"frontMatterField": "true"
+	},
+	"Overcast": {
+		"name": "Overcast",
+		"image": "Overcast.svg",
+		"description": "Listen in Overcast.",
+		"sortOrder": "1",
+		"urlPrefix": "https://overcast.fm/itunes",
+		"feedIDParameter": "itunesfeedid",
+		"descriptiveText": "",
+		"frontMatterField": "false"
+	},
+	"Castro": {
+		"name": "Castro",
+		"image": "Castro.svg",
+		"description": "Listen in Castro.",
+		"sortOrder": "2",
+		"urlPrefix": "https://castro.fm/itunes/",
+		"feedIDParameter": "itunesfeedid",
+		"descriptiveText": "",
+		"frontMatterField": "false"
+	},
+	"Google": {
+		"name": "Google",
+		"image": "Google.svg",
+		"description": "Listen on Google.",
+		"sortOrder": "3",
+		"urlPrefix": "https://podcasts.google.com/?feed=",
+		"feedIDParameter": "googlefeedid",
+		"descriptiveText": "EX: for this Google link https://podcasts.google.com/?feed=aHR0cHM6Ly90aGVsaW5lcnByb2plY3QuY29tL2luZGV4LnhtbA==\n#\tThe ID would be aHR0cHM6Ly90aGVsaW5lcnByb2plY3QuY29tL2luZGV4LnhtbA==",
+		"frontMatterField": "true"
+	},
+	"Spotify": {
+		"name": "Spotify",
+		"image": "Spotify.svg",
+		"description": "Listen on Spotify.",
+		"sortOrder": "4",
+		"urlPrefix": "https://open.spotify.com/show/",
+		"feedIDParameter": "spotifyfeedid",
+		"descriptiveText": "EX: for this Spotify link https://open.spotify.com/show/52Xo86cea1ZUg6BGv4azGN\n#\tThe ID would be 52Xo86cea1ZUg6BGv4azGN",
+		"frontMatterField": "true"
+	},
+	"Breaker": {
+		"name": "Breaker",
+		"image": "Breaker.svg",
+		"description": "Listen on Breaker.",
+		"sortOrder": "5",
+		"urlPrefix": "https://www.breaker.audio/",
+		"feedIDParameter": "breakerfeedid",
+		"descriptiveText": "EX: for this Breaker link https://www.breaker.audio/rabbit-hole-2\n#\tThe ID would be rabbit-hole-2",
+		"frontMatterField": "true"
+	},
+	"Pocket Casts": {
+		"name": "Casts",
+		"image": "Pocketcasts.svg",
+		"description": "Listen in Pocket Casts.",
+		"sortOrder": "100",
+		"urlPrefix": "https://pca.st/",
+		"feedIDParameter": "pocketcastsfeedid",
+		"descriptiveText": "# EX: for this Pocket Casts link https://pca.st/7ilyfbc6\n#\tThe ID would be 7ilyfbc6",
+		"frontMatterField": "true"
+	}
+}

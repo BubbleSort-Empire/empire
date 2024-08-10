@@ -1,6 +1,22 @@
 {{ define "main" }}
 {{ .Render "pageHeader" }}
 <div>
-    {{ .Content }}
+    <p>{{ .Description }}</p>
+	
+	{{- if .Content -}}
+	
+	<h2>Show Notes</h2>
+	{{- end -}}
+	{{- if eq .CurrentSection.Params.evergreenContentOnTop true -}}
+		{{- .CurrentSection.Content -}}
+		{{ .Content }}
+	{{- else -}}
+		{{ .Content }}
+		{{- .CurrentSection.Content -}}
+	{{- end -}}
+	
+	{{- partial "paginationSingle.html" . -}}
+	
 </div>
+{{ partial "player-includes" . }}
 {{ end }}

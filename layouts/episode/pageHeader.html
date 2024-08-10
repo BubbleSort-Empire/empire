@@ -1,5 +1,48 @@
-<h1>{{ if ne .CurrentSection.Parent.Title .Site.Title }}{{ .CurrentSection.Parent.Title }} - {{ end }}{{ .CurrentSection.Title }}</h1>
-<h2>{{ .Title }}</h2>
-<div>
-    {{ .Params.description }}
+<div class="row episode-row player-header">
+	<div class="col-md-12">
+		<div class="row">
+			<div class="col-md-5 show-art-large">
+				<a href="{{ .Permalink }}">
+					<img src="{{ partial "artworkURL" . }}">
+				</a>
+			</div>
+			<div class="col-md-6">
+				<div>
+					{{ if ne .CurrentSection.Parent.Title .Site.Title }}
+						<a href="{{ .CurrentSection.Parent.Permalink }}">
+							{{ .CurrentSection.Parent.Title }}
+						</a>
+						>
+					{{ end }}
+					<a href="{{ .CurrentSection.Permalink }}">
+						{{ .CurrentSection.Title }}
+					</a>
+				</div>
+				<a href="{{ .Permalink }}">
+					<h2>{{ .Title }}</h2>
+				</a>
+				{{ .Render "listItems/components/publishView" }}
+				{{ .Render "audio/player-single" }}
+				<div class="connect">
+					<div class="connect-list">
+						<small>Other Ways To Listen:</small>
+					</div>
+					<div class="connect-list">
+						{{ partial "listen-on" . }}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="connect">
+			<div class="connect-list">
+				{{- $hosts := partial "functions/hostList" . -}}
+				{{- $socials := partial "functions/socialsList" . -}}
+				<small>{{- if $hosts -}}Hosts{{- end }}{{ if and ($hosts) ($socials) }} & {{ end }}{{- if $socials -}}Feedback{{- end -}}{{- if or ($hosts) ($socials) -}}:{{- end -}}</small>
+			</div>
+			<div class="connect-list">
+				{{ partial "peopleViews/smallPeopleList" . }}
+				{{ partial "socials" . }}
+			</div>
+		</div>
+	</div>
 </div>

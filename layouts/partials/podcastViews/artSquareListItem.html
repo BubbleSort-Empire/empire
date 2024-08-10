@@ -1,6 +1,4 @@
-<li>
-    <div>
-        <div><!-- Show Art Goes Here --></div>
-        <div><a href="{{ .Permalink }}">{{ .Title }}</a></div>
-    </div>
-</li>
+<div class="art-square-list-item">
+    <div><a href="{{ .Permalink }}"><img class="small-show-art" src="{{ partial "artworkURL" . }}"></a></div>
+    <div class="text-center"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+</div>

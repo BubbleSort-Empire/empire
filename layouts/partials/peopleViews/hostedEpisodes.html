@@ -1,0 +1,13 @@
+{{- $episodes := where $.Site.Pages "Type" "episode" -}}
+{{- $hostedEpisodes := where $episodes "Params.hosts" "intersect" (slice .File.BaseFileName) -}}
+{{- $guestedEpisodes := where $episodes "Params.guests" "intersect" (slice .File.BaseFileName) -}}
+{{- $appearancePages := union $hostedEpisodes $guestedEpisodes -}}
+
+{{- if gt (len $appearancePages) 0 -}}
+	<h3>All Episode Appearances</h3>
+	<div>
+		{{- range $appearancePages -}}
+			{{ .Render "listItems/hostListItem" }}
+		{{- end -}}
+	</div>
+{{- end -}}

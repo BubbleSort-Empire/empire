@@ -1,0 +1,27 @@
+// light theme colors
+$links: rgb(0, 153, 255);
+$links-hover: rgb(51, 61, 214);
+$links-active: rgb(0, 153, 255);
+$nav-menu-background-color: rgb(0,153,255);
+$nav-menu-links: rgb(238, 235, 235);
+$nav-menu-links-hover: rgb(111, 197, 255);
+$background-color: rgb(255, 255, 255);
+$foreground-color: black;
+$announce-links: rgb(51, 61, 214);
+$announce-background-color: rgb(237, 247, 255);
+$search-form-text-style: italic;
+$search-form-text-color: rgb(255, 255, 255);
+$search-form-text-weight: 400;
+$search-form-background-color: $nav-menu-background-color;
+$search-form-border: 1px solid $foreground-color;
+
+// dark theme colors
+$links-dark: rgb(111, 197, 255);
+$links-hover-dark: orange;
+$links-active-dark: rgb(111, 197, 255);
+$nav-menu-background-color-dark: rgb(16,27,36);
+$background-color-dark: rgb(26, 27, 36);
+$foreground-color-dark: rgb(238, 235, 235);
+$pagination-background-color-dark: orange;
+$search-form-text-color-dark: rgb(0, 0, 0);
+$search-form-background-color-dark: $links-dark;

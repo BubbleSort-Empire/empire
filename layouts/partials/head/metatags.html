@@ -1,0 +1,3 @@
+{{- range $name, $val := .Site.Params.MetaTags -}}
+	<meta name="{{ $name }}" description="{{ $val }}">
+{{ end -}}
