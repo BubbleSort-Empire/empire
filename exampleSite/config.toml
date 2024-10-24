@@ -4,7 +4,8 @@ title = "Empire Podcast Network"
 themesdir = "../.."
 theme = "empire"
 
-Paginate = 3
+[pagination]
+  pagerSize = 3
 
 [params]
   # Specify light/dark colorscheme
