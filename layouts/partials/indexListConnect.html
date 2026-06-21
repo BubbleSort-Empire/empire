@@ -1,5 +1,5 @@
 {{ range $key, $val := .Site.Params.connections }}
-	{{ with index $.Site.Data.socials $key }}
+	{{ with index hugo.Data.socials $key }}
 		<!-- if the social link being constructed is an email address, make it a mailto: link -->
 		{{ if eq .name "Email"}}{{ $val = printf "%s%s" "mailto:" $val }}{{ end }}
 		<a href="{{ $val }}" title="{{ .name }}" alt="{{ .name }}">

@@ -17,7 +17,7 @@
 				</div>
 			</a>
 		{{- end -}}
-		{{- range sort .Site.Data.listenOptions "sortOrder" "asc" -}}
+		{{- range sort hugo.Data.listenOptions "sortOrder" "asc" -}}
 			{{- $feedID := "" -}}
 			{{ $parameterName := printf "listeningoptions.%s" .feedIDParameter}}
 			{{- if ne ($this.CurrentSection.Param $parameterName) nil -}}
